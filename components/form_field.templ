@@ -1,0 +1,151 @@
+package components
+
+type FormInput struct {
+    ID          string
+    Name        string
+    Label       string
+    Description string
+    Error       string
+    Type        string
+    Value       string
+    Placeholder string
+}
+
+templ (i FormInput) HTML() {
+    <div class="space-y-2">
+        <label class="owl-label" for={ i.ID }>{ i.Label }</label>
+        <input class="owl-input"
+            if i.ID != "" {
+                id={ i.ID }
+            }
+            if i.Name != "" {
+                name={ i.Name }
+            }
+            if i.Type != "" {
+                type={ i.Type }
+            }
+            if i.Placeholder != "" {
+                placeholder={ i.Placeholder }
+            }
+            if i.Value != "" {
+                value={ i.Value }
+            }
+        >
+        if i.Error != "" {
+            <p class="text-red-500 text-sm">{ i.Error }</p>
+        } else if i.Description != "" {
+            <p class="text-gray-500 text-sm">{ i.Description }</p>
+        }
+    </div>
+}
+
+type FormTextarea struct {
+    ID          string
+    Name        string
+    Label       string
+    Description string
+    Error       string
+    Value       string
+    Placeholder string
+}
+
+templ (t FormTextarea) HTML() {
+    <div class="space-y-2">
+        <label class="owl-label" for={ t.ID }>{ t.Label }</label>
+        <textarea class="owl-textarea"
+            if t.ID != "" {
+                id={ t.ID }
+            }
+            if t.Name != "" {
+                name={ t.Name }
+            }
+            if t.Placeholder != "" {
+                placeholder={ t.Placeholder }
+            }
+        >{ t.Value }</textarea>
+        if t.Error != "" {
+            <p class="text-red-500 text-sm">{ t.Error }</p>
+        } else if t.Description != "" {
+            <p class="text-gray-500 text-sm">{ t.Description }</p>
+        }
+    </div>
+}
+
+type FormSelect struct {
+    ID          string
+    Name        string
+    Label       string
+    Description string
+    Error       string
+    Options     []string
+    EmptyOption bool
+    Value       string
+}
+
+templ (s FormSelect) HTML() {
+    <div class="space-y-2">
+        <label class="owl-label" for={ s.ID }>{ s.Label }</label>
+        <select class="owl-select"
+            if s.ID != "" {
+                id={ s.ID }
+            }
+            if s.Name != "" {
+                name={ s.Name }
+            }
+        >
+            if s.EmptyOption {
+                <option>Please select..</option>
+            }
+            for _, option := range s.Options {
+                <option value={ option }
+                    if option == s.Value {
+                        selected
+                    }
+                >{ option }</option>
+            }
+        </select>
+        if s.Error != "" {
+            <p class="text-red-500 text-sm">{ s.Error }</p>
+        } else if s.Description != "" {
+            <p class="text-gray-500 text-sm">{ s.Description }</p>
+        }
+    </div>
+}
+
+type FormCheckbox struct {
+    ID          string
+    Name        string
+    Label       string
+    Description string
+    Error       string
+    Checked     bool
+    Value       string
+}
+
+templ (c FormCheckbox) HTML() {
+    <div class="space-y-2">
+        <label class="owl-label flex items-center gap-2" for={ c.ID }>
+            <input class="owl-checkbox"
+                if c.ID != "" {
+                    id={ c.ID }
+                }
+                if c.Name != "" {
+                    name={ c.Name }
+                }
+                type="checkbox"
+                if c.Value != "" {
+                    value={ c.Value }
+                }
+                if c.Checked {
+                    checked
+                }
+            >
+            { c.Label }
+        </label>
+        if c.Error != "" {
+            <p class="text-red-500 text-sm">{ c.Error }</p>
+        } else if c.Description != "" {
+            <p class="text-gray-500 text-sm">{ c.Description }</p>
+        }
+    </div>
+}

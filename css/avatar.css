@@ -1,0 +1,17 @@
+@layer components {
+    .owl-avatar {
+        @apply relative flex shrink-0 h-10 w-10 overflow-hidden rounded-full;
+    }
+    .owl-avatar-image {
+        @apply h-full w-full aspect-square;
+    }
+    .owl-avatar-image.owl-avatar-image-error {
+        @apply hidden;
+    }
+    .owl-avatar-fallback {
+        @apply flex items-center justify-center h-full w-full bg-black text-white;
+    }
+    :where(.owl-avatar-image:not(.owl-avatar-image-error)) + .owl-avatar-fallback {
+        @apply hidden;
+    }
+}

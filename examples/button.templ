@@ -1,0 +1,21 @@
+package examples
+
+import (
+    "github.com/accentdesign/owl/components"
+    "github.com/accentdesign/owl/utils"
+)
+
+templ Button() {
+    @Base() {
+        @utils.InlineCss("css/button.css")
+
+        <h2 class="owl-h2 mb-10">button</h2>
+
+        <div class="flex gap-6">
+            @components.Button("lorem ipsum", "")
+            @components.Button("secondary", "owl-button-secondary")
+            @components.Button("destructive", "owl-button-destructive")
+            @components.Button("outline", "owl-button-outline")
+        </div>
+    }
+}

@@ -1,0 +1,16 @@
+package examples
+
+import (
+    "github.com/accentdesign/owl/components"
+    "github.com/accentdesign/owl/utils"
+)
+
+templ Select() {
+    @Base() {
+        @utils.InlineCss("css/select.css")
+
+        <h2 class="owl-h2 mb-10">select</h2>
+
+        @components.Select()
+    }
+}

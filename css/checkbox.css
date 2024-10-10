@@ -1,0 +1,5 @@
+@layer components {
+    .owl-checkbox {
+        @apply h-4 w-4 shrink-0 rounded-sm border accent-black;
+    }
+}

@@ -1,0 +1,26 @@
+@layer components {
+    .owl-table {
+        @apply w-full caption-bottom text-sm;
+    }
+    .owl-table-header {
+        @apply border-b;
+    }
+    .owl-table-body {
+        @apply [&_tr:last-child]:border-0;
+    }
+    .owl-table-footer {
+        @apply border-t bg-gray-50 font-medium [&>tr]:last:border-b-0;
+    }
+    .owl-table-row {
+        @apply border-b transition-colors hover:bg-gray-50;
+    }
+    .owl-table-head {
+        @apply h-12 px-4 text-left align-middle font-medium;
+    }
+    .owl-table-cell {
+        @apply p-4 align-middle font-medium;
+    }
+    .owl-table-caption {
+        @apply mt-4 text-sm text-gray-500;
+    }
+}

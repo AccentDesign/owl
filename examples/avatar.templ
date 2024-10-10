@@ -1,0 +1,31 @@
+package examples
+
+import (
+    "github.com/accentdesign/owl/components"
+    "github.com/accentdesign/owl/utils"
+)
+
+templ Avatar() {
+    @Base() {
+        @utils.InlineCss("css/avatar.css")
+
+        <h2 class="owl-h2 mb-10">avatar</h2>
+
+        <div class="flex gap-6">
+            @components.Avatar() {
+                @components.AvatarImage("https://github.githubassets.com/images/icons/emoji/unicode/1f436.png?v8")
+            }
+            @components.Avatar() {
+                @components.AvatarImage("https://github.githubassets.com/images/icons/emoji/unicode/1f638.png?v8")
+                @components.AvatarFallback("OK")
+            }
+            @components.Avatar() {
+                @components.AvatarImage("http://error")
+                @components.AvatarFallback("ER")
+            }
+            @components.Avatar() {
+                @components.AvatarFallback("FB")
+            }
+        </div>
+    }
+}

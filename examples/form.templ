@@ -1,0 +1,70 @@
+package examples
+
+import (
+    "github.com/accentdesign/owl/components"
+    "github.com/accentdesign/owl/utils"
+)
+
+var email = &components.FormInput{
+    ID: "email",
+    Name: "email",
+    Type: "email",
+    Placeholder: "owl text",
+    Value: "someone@example.com",
+    Label: "Email",
+    Description: "This is your email address.",
+}
+
+var password = &components.FormInput{
+    ID: "password",
+    Name: "password",
+    Type: "password",
+    Placeholder: "owl password",
+    Label: "Password",
+    Description: "This is your password.",
+    Error: "Invalid username of password.",
+}
+
+var sex = &components.FormSelect{
+    ID: "sex",
+    Name: "sex",
+    Label: "Sex",
+    Description: "This is your sex.",
+    Options: []string{"Male", "Female"},
+    EmptyOption: true,
+}
+
+var comments = &components.FormTextarea{
+    ID: "comments",
+    Name: "comments",
+    Placeholder: "owl comments",
+    Label: "Comments",
+    Description: "Leave us some comments.",
+}
+
+var agree = &components.FormCheckbox{
+    ID: "agree",
+    Name: "agree",
+    Label: "Terms and conditions",
+    Description: "Please agree to the terms.",
+}
+
+templ Form() {
+    @Base() {
+        @utils.InlineCss("css/label.css")
+        @utils.InlineCss("css/checkbox.css")
+        @utils.InlineCss("css/input.css")
+        @utils.InlineCss("css/select.css")
+        @utils.InlineCss("css/textarea.css")
+
+        <h2 class="owl-h2 mb-10">Form</h2>
+
+        <form class="space-y-10 max-w-[500px]">
+            @email.HTML()
+            @password.HTML()
+            @sex.HTML()
+            @comments.HTML()
+            @agree.HTML()
+        </form>
+    }
+}

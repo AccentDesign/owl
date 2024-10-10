@@ -1,0 +1,21 @@
+package examples
+
+import (
+    "github.com/accentdesign/owl/components"
+    "github.com/accentdesign/owl/icons"
+    "github.com/accentdesign/owl/utils"
+)
+
+templ Alert() {
+    @Base() {
+        @utils.InlineCss("css/alert.css")
+
+        <h2 class="owl-h2 mb-10">alert</h2>
+
+        @components.Alert() {
+            @icons.Terminal("")
+            @components.AlertTitle("Lorem ipsum dolor sit amet!")
+            @components.AlertDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+        }
+    }
+}

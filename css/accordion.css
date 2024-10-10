@@ -1,0 +1,23 @@
+@layer components {
+    .owl-accordion {
+        @apply w-full;
+    }
+    .owl-accordion-item {
+        @apply border-b;
+    }
+    :where(.owl-accordion-item.owl-selected) .owl-accordion-trigger svg {
+        @apply rotate-180;
+    }
+    .owl-accordion-trigger {
+        @apply flex items-center justify-between flex-1 py-4;
+    }
+    .owl-accordion-trigger button {
+        @apply font-medium hover:underline;
+    }
+    .owl-accordion-trigger svg {
+        @apply transition-all duration-300;
+    }
+    .owl-accordion-content {
+        @apply overflow-hidden pt-0 text-sm max-h-0 transition-all duration-300;
+    }
+}

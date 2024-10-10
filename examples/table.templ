@@ -1,0 +1,56 @@
+package examples
+
+import (
+    "github.com/accentdesign/owl/components"
+    "github.com/accentdesign/owl/utils"
+)
+
+templ Table() {
+    @Base() {
+        @utils.InlineCss("css/table.css")
+
+        <h2 class="owl-h2 mb-10">table</h2>
+
+        <div class="max-w-4xl">
+            @components.Table() {
+                @components.TableCaption("A list of your recent invoices.")
+                @components.TableHeader() {
+                    @components.TableRow() {
+                        @components.TableHead("Invoice", "")
+                        @components.TableHead("Status", "")
+                        @components.TableHead("Method", "")
+                        @components.TableHead("Amount", "text-right")
+                    }
+                }
+                @components.TableBody() {
+                    @components.TableRow() {
+                        @components.TableCell("INV001", "")
+                        @components.TableCell("Paid", "")
+                        @components.TableCell("Credit Card", "")
+                        @components.TableCell("£250.00", "text-right")
+                    }
+                    @components.TableRow() {
+                        @components.TableCell("INV002", "")
+                        @components.TableCell("Paid", "")
+                        @components.TableCell("Credit Card", "")
+                        @components.TableCell("£500.00", "text-right")
+                    }
+                    @components.TableRow() {
+                        @components.TableCell("INV003", "")
+                        @components.TableCell("Unpaid", "")
+                        @components.TableCell("-", "")
+                        @components.TableCell("£250.00", "text-right")
+                    }
+                }
+                @components.TableFooter() {
+                    @components.TableRow() {
+                        @components.TableCell("Total", "")
+                        @components.TableCell("", "")
+                        @components.TableCell("", "")
+                        @components.TableCell("£1,000.00", "text-right")
+                    }
+                }
+            }
+        </div>
+    }
+}

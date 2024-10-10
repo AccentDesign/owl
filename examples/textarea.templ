@@ -1,0 +1,16 @@
+package examples
+
+import (
+    "github.com/accentdesign/owl/components"
+    "github.com/accentdesign/owl/utils"
+)
+
+templ Textarea() {
+    @Base() {
+        @utils.InlineCss("css/textarea.css")
+
+        <h2 class="owl-h2 mb-10">textarea</h2>
+
+        @components.Textarea()
+    }
+}

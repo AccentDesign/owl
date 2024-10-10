@@ -1,0 +1,27 @@
+package examples
+
+import (
+    "github.com/accentdesign/owl/components"
+    "github.com/accentdesign/owl/utils"
+)
+
+templ Accordion() {
+    @Base() {
+        @utils.InlineCss("css/accordion.css")
+
+        <h2 class="owl-h2 mb-10">accordion</h2>
+
+        @components.Accordion() {
+            for range 3 {
+                @components.AccordionItem() {
+                    @components.AccordionTrigger("Lorem ipsum dolor sit amet")
+                    @components.AccordionContent() {
+                        <p class="mb-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    }
+                }
+            }
+        }
+    }
+}

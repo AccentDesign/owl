@@ -1,0 +1,28 @@
+package examples
+
+import (
+    "github.com/accentdesign/owl/components"
+    "github.com/accentdesign/owl/utils"
+)
+
+templ Code() {
+    @Base() {
+        @utils.InlineCss("css/code.css")
+
+        <h2 class="owl-h2 mb-10">code</h2>
+
+        <p class="mb-6">
+        Some inline
+        @components.Code("mx-1") {
+            code
+        }
+        block.
+        </p>
+
+        @components.Pre("") {
+            @components.Code("") {
+                git clone https://github.com/AccentDesign/owl.git
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+package examples
+
+import (
+    "github.com/accentdesign/owl/components"
+    "github.com/accentdesign/owl/utils"
+)
+
+templ Badge() {
+    @Base() {
+        @utils.InlineCss("css/badge.css")
+
+        <h2 class="owl-h2 mb-10">badge</h2>
+
+        @components.Badge("lorem ipsum")
+    }
+}

@@ -1,0 +1,17 @@
+@layer components {
+    .owl-switch {
+        @apply relative inline-block w-10;
+    }
+    .owl-switch input {
+        @apply absolute block w-6 h-6 rounded-full bg-white border-2 appearance-none cursor-pointer transition-transform duration-200;
+    }
+    .owl-switch input:checked {
+        @apply translate-x-4;
+    }
+    .owl-switch input:checked + span {
+        @apply bg-black;
+    }
+    .owl-switch span {
+        @apply block h-6 rounded-full border bg-gray-200 cursor-pointer transition-colors duration-200;
+    }
+}

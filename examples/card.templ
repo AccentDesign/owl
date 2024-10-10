@@ -1,0 +1,27 @@
+package examples
+
+import (
+    "github.com/accentdesign/owl/components"
+    "github.com/accentdesign/owl/utils"
+)
+
+templ Card() {
+    @Base() {
+        @utils.InlineCss("css/card.css")
+
+        <h2 class="owl-h2 mb-10">card</h2>
+
+        @components.Card("w-[380px]") {
+            @components.CardHeader() {
+                @components.CardTitle("Lorem Ipsum")
+                @components.CardDescription("Lorem ipsum dolor sit amet")
+            }
+            @components.CardContent() {
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            }
+            @components.CardFooter() {
+                <p>&copy; Lorem ipsum</p>
+            }
+        }
+    }
+}

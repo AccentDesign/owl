@@ -1,0 +1,31 @@
+package examples
+
+import (
+    "github.com/accentdesign/owl/components"
+    "github.com/accentdesign/owl/utils"
+)
+
+templ Breadcrumb() {
+    @Base() {
+        @utils.InlineCss("css/breadcrumb.css")
+
+        <h2 class="owl-h2 mb-10">breadcrumb</h2>
+
+        @components.Breadcrumb() {
+            @components.BreadcrumbList() {
+                @components.BreadcrumbItem() {
+                    @components.BreadcrumbLink("/", "Home")
+                }
+                @components.BreadcrumbSeparator()
+                @components.BreadcrumbItem() {
+                    @components.BreadcrumbLink("/", "Components")
+                }
+                @components.BreadcrumbSeparator()
+                @components.BreadcrumbItem() {
+                    @components.BreadcrumbLink("/breadcrumb", "Breadcrumb")
+                }
+
+            }
+        }
+    }
+}

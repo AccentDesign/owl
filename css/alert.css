@@ -1,0 +1,17 @@
+@layer components {
+    .owl-alert {
+        @apply relative w-full rounded-lg border p-4;
+    }
+    .owl-alert-title {
+        @apply mb-1 font-medium leading-none tracking-tight;
+    }
+    .owl-alert-description {
+        @apply text-sm;
+    }
+    .owl-alert svg {
+        @apply absolute top-4 left-4 size-4;
+    }
+    .owl-alert svg~* {
+        @apply pl-7;
+    }
+}

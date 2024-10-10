@@ -1,0 +1,15 @@
+@layer components {
+    .owl-tabs {}
+    .owl-tabs-list {
+        @apply grid w-full h-10 grid-cols-2 items-center justify-center rounded-md bg-gray-100 p-1;
+    }
+    .owl-tabs-trigger {
+        @apply inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium text-gray-500;
+    }
+    .owl-tabs-trigger.owl-selected {
+        @apply bg-white text-black shadow-sm;
+    }
+    .owl-tabs-content {
+        @apply mt-2;
+    }
+}
