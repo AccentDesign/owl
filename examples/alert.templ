@@ -3,12 +3,12 @@ package examples
 import (
     "github.com/accentdesign/owl/components"
     "github.com/accentdesign/owl/icons"
-    "github.com/accentdesign/owl/utils"
+    "github.com/accentdesign/owl/css"
 )
 
 templ Alert() {
     @Base() {
-        @utils.InlineCss("css/alert.css")
+        @css.Include("alert.css")
 
         <h2 class="owl-h2 mb-10">alert</h2>
 

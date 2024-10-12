@@ -2,7 +2,7 @@ package examples
 
 import (
     "github.com/accentdesign/owl/components"
-    "github.com/accentdesign/owl/utils"
+    "github.com/accentdesign/owl/css"
 )
 
 var email = &components.FormInput{
@@ -51,11 +51,11 @@ var agree = &components.FormCheckbox{
 
 templ Form() {
     @Base() {
-        @utils.InlineCss("css/label.css")
-        @utils.InlineCss("css/checkbox.css")
-        @utils.InlineCss("css/input.css")
-        @utils.InlineCss("css/select.css")
-        @utils.InlineCss("css/textarea.css")
+        @css.Include("label.css")
+        @css.Include("checkbox.css")
+        @css.Include("input.css")
+        @css.Include("select.css")
+        @css.Include("textarea.css")
 
         <h2 class="owl-h2 mb-10">Form</h2>
 

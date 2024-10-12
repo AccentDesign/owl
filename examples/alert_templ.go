@@ -10,8 +10,8 @@ import templruntime "github.com/a-h/templ/runtime"
 
 import (
 	"github.com/accentdesign/owl/components"
+	"github.com/accentdesign/owl/css"
 	"github.com/accentdesign/owl/icons"
-	"github.com/accentdesign/owl/utils"
 )
 
 func Alert() templ.Component {
@@ -47,7 +47,7 @@ func Alert() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			templ_7745c5c3_Err = utils.InlineCss("css/alert.css").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = css.Include("alert.css").Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

@@ -2,12 +2,12 @@ package examples
 
 import (
     "github.com/accentdesign/owl/components"
-    "github.com/accentdesign/owl/utils"
+    "github.com/accentdesign/owl/css"
 )
 
 templ Avatar() {
     @Base() {
-        @utils.InlineCss("css/avatar.css")
+        @css.Include("avatar.css")
 
         <h2 class="owl-h2 mb-10">avatar</h2>
 

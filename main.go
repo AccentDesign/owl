@@ -1,7 +1,6 @@
 package main
 
 import (
-	"embed"
 	"fmt"
 	"github.com/a-h/templ"
 	"github.com/accentdesign/owl/examples"
@@ -11,8 +10,6 @@ import (
 
 var (
 	listen = ":80"
-	//go:embed css/*
-	css embed.FS
 )
 
 func main() {
@@ -21,7 +18,6 @@ func main() {
 
 func serve() {
 	http.Handle("/", templ.Handler(examples.Index()))
-	http.Handle("/css/", http.FileServer(http.FS(css)))
 	http.Handle("/accordion", templ.Handler(examples.Accordion()))
 	http.Handle("/alert", templ.Handler(examples.Alert()))
 	http.Handle("/avatar", templ.Handler(examples.Avatar()))

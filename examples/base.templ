@@ -1,7 +1,7 @@
 package examples
 
 import (
-    "github.com/accentdesign/owl/utils"
+    "github.com/accentdesign/owl/css"
 )
 
 templ Base() {
@@ -11,7 +11,7 @@ templ Base() {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.tailwindcss.com"></script>
-        @utils.InlineCss("css/typography.css")
+        @css.Include("typography.css")
     </head>
     <body class="container flex gap-4 mx-auto my-10 antialiased">
         <aside class="w-64">

@@ -1,16 +1,21 @@
-package utils
+package css
 
 import (
 	"context"
+	"embed"
 	"github.com/a-h/templ"
 	"io"
-	"os"
 )
 
-// InlineCss dirty include css file for tailwind cli
-func InlineCss(filename string) templ.Component {
+var (
+	//go:embed *.css
+	fs embed.FS
+)
+
+// Include dirty include css file for tailwind cli
+func Include(filename string) templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, w io.Writer) error {
-		content, err := os.ReadFile(filename)
+		content, err := fs.ReadFile(filename)
 		if err != nil {
 			return err
 		}

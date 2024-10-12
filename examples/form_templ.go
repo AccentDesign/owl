@@ -10,7 +10,7 @@ import templruntime "github.com/a-h/templ/runtime"
 
 import (
 	"github.com/accentdesign/owl/components"
-	"github.com/accentdesign/owl/utils"
+	"github.com/accentdesign/owl/css"
 )
 
 var email = &components.FormInput{
@@ -90,7 +90,7 @@ func Form() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			templ_7745c5c3_Err = utils.InlineCss("css/label.css").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = css.Include("label.css").Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -98,7 +98,7 @@ func Form() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = utils.InlineCss("css/checkbox.css").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = css.Include("checkbox.css").Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -106,7 +106,7 @@ func Form() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = utils.InlineCss("css/input.css").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = css.Include("input.css").Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -114,7 +114,7 @@ func Form() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = utils.InlineCss("css/select.css").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = css.Include("select.css").Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -122,7 +122,7 @@ func Form() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = utils.InlineCss("css/textarea.css").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = css.Include("textarea.css").Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

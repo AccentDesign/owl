@@ -2,12 +2,12 @@ package examples
 
 import (
     "github.com/accentdesign/owl/components"
-    "github.com/accentdesign/owl/utils"
+    "github.com/accentdesign/owl/css"
 )
 
 templ Tabs() {
     @Base() {
-        @utils.InlineCss("css/tabs.css")
+        @css.Include("tabs.css")
 
         <h2 class="owl-h2 mb-10">tabs</h2>
 

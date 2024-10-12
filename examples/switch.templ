@@ -2,12 +2,12 @@ package examples
 
 import (
     "github.com/accentdesign/owl/components"
-    "github.com/accentdesign/owl/utils"
+    "github.com/accentdesign/owl/css"
 )
 
 templ Switch() {
     @Base() {
-        @utils.InlineCss("css/switch.css")
+        @css.Include("switch.css")
 
         <h2 class="owl-h2 mb-10">switch</h2>
 

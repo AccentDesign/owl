@@ -2,12 +2,12 @@ package examples
 
 import (
     "github.com/accentdesign/owl/components"
-    "github.com/accentdesign/owl/utils"
+    "github.com/accentdesign/owl/css"
 )
 
 templ Breadcrumb() {
     @Base() {
-        @utils.InlineCss("css/breadcrumb.css")
+        @css.Include("breadcrumb.css")
 
         <h2 class="owl-h2 mb-10">breadcrumb</h2>
 

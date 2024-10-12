@@ -10,7 +10,7 @@ import templruntime "github.com/a-h/templ/runtime"
 
 import (
 	"github.com/accentdesign/owl/components"
-	"github.com/accentdesign/owl/utils"
+	"github.com/accentdesign/owl/css"
 )
 
 func Select() templ.Component {
@@ -46,7 +46,7 @@ func Select() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			templ_7745c5c3_Err = utils.InlineCss("css/select.css").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = css.Include("select.css").Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

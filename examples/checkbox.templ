@@ -2,12 +2,12 @@ package examples
 
 import (
     "github.com/accentdesign/owl/components"
-    "github.com/accentdesign/owl/utils"
+    "github.com/accentdesign/owl/css"
 )
 
 templ Checkbox() {
     @Base() {
-        @utils.InlineCss("css/checkbox.css")
+        @css.Include("checkbox.css")
 
         <h2 class="owl-h2 mb-10">checkbox</h2>
 

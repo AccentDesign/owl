@@ -2,12 +2,12 @@ package examples
 
 import (
     "github.com/accentdesign/owl/components"
-    "github.com/accentdesign/owl/utils"
+    "github.com/accentdesign/owl/css"
 )
 
 templ DropdownMenu() {
     @Base() {
-        @utils.InlineCss("css/dropdown_menu.css")
+        @css.Include("dropdown_menu.css")
 
         <h2 class="owl-h2 mb-10">dropdown menu</h2>
 
