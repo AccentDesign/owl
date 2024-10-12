@@ -31,6 +31,7 @@ func serve() {
 	http.Handle("/card", templ.Handler(examples.Card()))
 	http.Handle("/checkbox", templ.Handler(examples.Checkbox()))
 	http.Handle("/code", templ.Handler(examples.Code()))
+	http.Handle("/dropdown-menu", templ.Handler(examples.DropdownMenu()))
 	http.Handle("/form", templ.Handler(examples.Form()))
 	http.Handle("/input", templ.Handler(examples.Input()))
 	http.Handle("/label", templ.Handler(examples.Label()))

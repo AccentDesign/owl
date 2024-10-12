@@ -1,0 +1,23 @@
+@layer components {
+    .owl-dropdown-menu {
+        @apply relative inline-flex;
+    }
+    .owl-dropdown-menu-trigger {
+        @apply whitespace-nowrap rounded-md text-sm font-medium border bg-white h-10 px-4 py-2;
+    }
+    .owl-dropdown-menu-content {
+        @apply z-50 min-w-[8rem] overflow-hidden rounded-md border bg-white p-1 shadow-md w-56 absolute top-11;
+    }
+    .owl-dropdown-menu-content:not(.owl-open) {
+        @apply hidden;
+    }
+    .owl-dropdown-menu-label {
+        @apply px-2 py-1.5 text-sm font-semibold;
+    }
+    .owl-dropdown-menu-separator {
+        @apply -mx-1 my-1 h-px bg-gray-200;
+    }
+    .owl-dropdown-menu-item {
+        @apply w-full relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-gray-100;
+    }
+}

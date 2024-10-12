@@ -1,0 +1,26 @@
+package examples
+
+import (
+    "github.com/accentdesign/owl/components"
+    "github.com/accentdesign/owl/utils"
+)
+
+templ DropdownMenu() {
+    @Base() {
+        @utils.InlineCss("css/dropdown_menu.css")
+
+        <h2 class="owl-h2 mb-10">dropdown menu</h2>
+
+        @components.DropdownMenu() {
+            @components.DropdownMenuTrigger("Open")
+            @components.DropdownMenuContent() {
+                @components.DropdownMenuLabel("My Account")
+                @components.DropdownMenuSeparator()
+                @components.DropdownMenuItem("Profile")
+                @components.DropdownMenuItem("Billing")
+                @components.DropdownMenuItem("Team")
+                @components.DropdownMenuItem("Subscription")
+            }
+        }
+    }
+}
