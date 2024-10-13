@@ -29,3 +29,4 @@ air
 * [Icônes](https://icones.js.org/collection/lucide)
 * [Tailwind](https://tailwindcss.com)
 * [Shadcn](https://ui.shadcn.com/docs)
+* [Htmx](https://htmx.org/)

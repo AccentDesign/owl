@@ -13,12 +13,28 @@ templ Tabs() {
 
         @components.Tabs("w-[400px]") {
             @components.TabsList() {
-                @components.TabsTrigger("Account", "owl-selected")
-                @components.TabsTrigger("Password", "")
+                @components.TabsTrigger("Account", "/tabs/account", true)
+                @components.TabsTrigger("Password", "/tabs/password", false)
             }
-            @components.TabsContent() {
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            }
+            @TabContentAccount()
         }
+    }
+}
+
+templ TabContentAccount() {
+    @components.TabsContent() {
+        <div class="p-4 rounded border shadow">
+            <p class="owl-h4">Account</p>
+            <p class="owl-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    }
+}
+
+templ TabContentPassword() {
+    @components.TabsContent() {
+        <div class="p-4 rounded border shadow">
+            <p class="owl-h4">Password</p>
+            <p class="owl-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
     }
 }

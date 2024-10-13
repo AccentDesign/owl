@@ -1,7 +1,19 @@
 package components
 
+var tabsLoadHandle = templ.NewOnceHandle()
+
 templ Tabs(class string) {
-    <div class={ "owl-tabs", class } dir="ltr">
+    @tabsLoadHandle.Once() {
+        <script type="text/javascript">
+            function owlOnTabLoad(event) {
+                let tabs = event.target.closest(".owl-tabs");
+                let current = tabs.querySelector("[aria-selected=true]");
+                current.setAttribute("aria-selected", "false");
+                event.target.setAttribute("aria-selected", "true");
+            }
+        </script>
+    }
+    <div class={ "owl-tabs", class } hx-target="next .owl-tabs-content" hx-swap="outerHTML" hx-on:htmx-after-on-load="owlOnTabLoad(event)">
         { children... }
     </div>
 }

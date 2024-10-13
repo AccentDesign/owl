@@ -1,19 +1,7 @@
 package components
 
-var tabsTriggerHandle = templ.NewOnceHandle()
+import "fmt"
 
-templ TabsTrigger(text, class string) {
-    @tabsTriggerHandle.Once() {
-        <script type="text/javascript">
-            function owlActivateTab(trigger) {
-                const tabsList = trigger.closest(".owl-tabs-list");
-                const allITriggers = tabsList.querySelectorAll(".owl-tabs-trigger");
-                allITriggers.forEach(function (i) {
-                    i.classList.toggle("owl-selected", false);
-                });
-                trigger.classList.toggle("owl-selected", true);
-            }
-        </script>
-    }
-    <button class={ "owl-tabs-trigger", class } role="tab" onclick="owlActivateTab(this)">{ text }</button>
+templ TabsTrigger(text, url string, selected bool) {
+    <button class={ "owl-tabs-trigger" } role="tab" aria-selected={ fmt.Sprintf("%v", selected) } hx-get={ url }>{ text }</button>
 }

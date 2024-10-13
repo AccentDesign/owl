@@ -6,7 +6,7 @@
     .owl-tabs-trigger {
         @apply inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium text-gray-500;
     }
-    .owl-tabs-trigger.owl-selected {
+    .owl-tabs-trigger[aria-selected=true] {
         @apply bg-white text-black shadow-sm;
     }
     .owl-tabs-content {

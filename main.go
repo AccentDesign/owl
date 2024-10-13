@@ -35,6 +35,8 @@ func serve() {
 	http.Handle("/switch", templ.Handler(examples.Switch()))
 	http.Handle("/table", templ.Handler(examples.Table()))
 	http.Handle("/tabs", templ.Handler(examples.Tabs()))
+	http.Handle("/tabs/account", templ.Handler(examples.TabContentAccount()))
+	http.Handle("/tabs/password", templ.Handler(examples.TabContentPassword()))
 	http.Handle("/textarea", templ.Handler(examples.Textarea()))
 	fmt.Printf("listening on %s\n", listen)
 	log.Panic(http.ListenAndServe(listen, nil))
