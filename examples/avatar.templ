@@ -1,9 +1,37 @@
 package examples
 
 import (
-    "github.com/accentdesign/owl/components"
+    "github.com/accentdesign/owl/attrs"
     "github.com/accentdesign/owl/css"
+    "github.com/accentdesign/owl/elem"
 )
+
+var avatarImageErrorHandle = templ.NewOnceHandle()
+
+func avatar() attrs.Attributes {
+    return attrs.Global{
+        Class: templ.CSSClasses{"owl-avatar"},
+    }
+}
+
+func avatarImage(src, alt string) attrs.Attributes {
+    return attrs.Img{
+        Src: src,
+        Alt: alt,
+        Global: attrs.Global{
+            Class: templ.CSSClasses{"owl-avatar-image"},
+            Actions: attrs.Actions{
+                OnError: "owlOnAvatarImageError(this)",
+            },
+        },
+    }
+}
+
+func avatarFallback() attrs.Attributes {
+    return attrs.Global{
+        Class: templ.CSSClasses{"owl-avatar-fallback"},
+    }
+}
 
 templ Avatar() {
     @Base() {
@@ -11,20 +39,28 @@ templ Avatar() {
 
         <h2 class="owl-h2 mb-10">avatar</h2>
 
+        @avatarImageErrorHandle.Once() {
+            <script type="text/javascript">
+                function owlOnAvatarImageError(img) {
+                    img.classList.add("owl-avatar-image-error");
+                }
+            </script>
+        }
+
         <div class="flex gap-6">
-            @components.Avatar() {
-                @components.AvatarImage("https://github.githubassets.com/images/icons/emoji/unicode/1f436.png?v8")
+            @elem.Span(avatar()) {
+                @elem.Image(avatarImage("https://github.githubassets.com/images/icons/emoji/unicode/1f436.png?v8", "dog"))
             }
-            @components.Avatar() {
-                @components.AvatarImage("https://github.githubassets.com/images/icons/emoji/unicode/1f638.png?v8")
-                @components.AvatarFallback("OK")
+            @elem.Span(avatar()) {
+                @elem.Image(avatarImage("https://github.githubassets.com/images/icons/emoji/unicode/1f638.png?v8", "cat"))
+                @elem.Span(avatarFallback()) { OK }
             }
-            @components.Avatar() {
-                @components.AvatarImage("http://error")
-                @components.AvatarFallback("ER")
+            @elem.Span(avatar()) {
+                @elem.Image(avatarImage("http://error", "missing"))
+                @elem.Span(avatarFallback()) { ER }
             }
-            @components.Avatar() {
-                @components.AvatarFallback("FB")
+            @elem.Span(avatar()) {
+                @elem.Span(avatarFallback()) { FB }
             }
         </div>
     }

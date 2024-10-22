@@ -1,9 +1,16 @@
 package examples
 
 import (
-    "github.com/accentdesign/owl/components"
+    "github.com/accentdesign/owl/attrs"
     "github.com/accentdesign/owl/css"
+    "github.com/accentdesign/owl/elem"
 )
+
+func badge() attrs.Attributes {
+    return attrs.Global{
+        Class: templ.CSSClasses{"owl-badge"},
+    }
+}
 
 templ Badge() {
     @Base() {
@@ -11,6 +18,6 @@ templ Badge() {
 
         <h2 class="owl-h2 mb-10">badge</h2>
 
-        @components.Badge("lorem ipsum")
+        @elem.Span(badge()) { lorem ipsum }
     }
 }

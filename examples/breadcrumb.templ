@@ -1,9 +1,54 @@
 package examples
 
 import (
-    "github.com/accentdesign/owl/components"
+    "github.com/accentdesign/owl/attrs"
     "github.com/accentdesign/owl/css"
+    "github.com/accentdesign/owl/elem"
+    "github.com/accentdesign/owl/icons"
 )
+
+func breadcrumb() attrs.Attributes {
+    return attrs.Global{
+        Class: templ.CSSClasses{"owl-breadcrumb"},
+        Aria: attrs.Aria{
+            Label: "breadcrumb",
+        },
+    }
+}
+
+func breadcrumbList() attrs.Attributes {
+    return attrs.Global{
+        Class: templ.CSSClasses{"owl-breadcrumb-list"},
+    }
+}
+
+func breadcrumbItem() attrs.Attributes {
+    return attrs.Global{
+        Class: templ.CSSClasses{"owl-breadcrumb-item"},
+    }
+}
+
+func breadcrumbLink(href, current string) attrs.Attributes {
+    return attrs.Anchor{
+        Href: href,
+        Global: attrs.Global{
+            Class: templ.CSSClasses{"owl-breadcrumb-link"},
+            Aria: attrs.Aria{
+                Current: current,
+            },
+        },
+    }
+}
+
+func breadcrumbSeparator() attrs.Attributes {
+    return attrs.Global{
+        Class: templ.CSSClasses{"owl-breadcrumb-separator"},
+        Role: "presentation",
+        Aria: attrs.Aria{
+            Hidden: true,
+        },
+    }
+}
 
 templ Breadcrumb() {
     @Base() {
@@ -11,20 +56,23 @@ templ Breadcrumb() {
 
         <h2 class="owl-h2 mb-10">breadcrumb</h2>
 
-        @components.Breadcrumb() {
-            @components.BreadcrumbList() {
-                @components.BreadcrumbItem() {
-                    @components.BreadcrumbLink("/", "Home")
+        @elem.Nav(breadcrumb()) {
+            @elem.OrderedList(breadcrumbList()) {
+                @elem.ListItem(breadcrumbItem()) {
+                    @elem.Anchor(breadcrumbLink("/", "")) { Home }
                 }
-                @components.BreadcrumbSeparator()
-                @components.BreadcrumbItem() {
-                    @components.BreadcrumbLink("/", "Components")
+                @elem.ListItem(breadcrumbSeparator()) {
+                    @icons.ChevronRight("")
                 }
-                @components.BreadcrumbSeparator()
-                @components.BreadcrumbItem() {
-                    @components.BreadcrumbLink("/breadcrumb", "Breadcrumb")
+                @elem.ListItem(breadcrumbItem()) {
+                    @elem.Anchor(breadcrumbLink("/", "")) { Components }
                 }
-
+                @elem.ListItem(breadcrumbSeparator()) {
+                    @icons.ChevronRight("")
+                }
+                @elem.ListItem(breadcrumbItem()) {
+                    @elem.Anchor(breadcrumbLink("/breadcrumb", "page")) { Breadcrumb }
+                }
             }
         }
     }

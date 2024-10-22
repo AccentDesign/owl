@@ -1,9 +1,34 @@
 package examples
 
 import (
-    "github.com/accentdesign/owl/components"
+    "github.com/accentdesign/owl/attrs"
     "github.com/accentdesign/owl/css"
+    "github.com/accentdesign/owl/elem"
 )
+
+func button() attrs.Attributes {
+    return attrs.Global{
+        Class: templ.CSSClasses{"owl-button"},
+    }
+}
+
+func buttonSecondary() attrs.Attributes {
+    return attrs.Global{
+        Class: templ.CSSClasses{"owl-button", "owl-button-secondary"},
+    }
+}
+
+func buttonDestructive() attrs.Attributes {
+    return attrs.Global{
+        Class: templ.CSSClasses{"owl-button", "owl-button-destructive"},
+    }
+}
+
+func buttonOutline() attrs.Attributes {
+    return attrs.Global{
+        Class: templ.CSSClasses{"owl-button", "owl-button-outline"},
+    }
+}
 
 templ Button() {
     @Base() {
@@ -12,10 +37,10 @@ templ Button() {
         <h2 class="owl-h2 mb-10">button</h2>
 
         <div class="flex gap-6">
-            @components.Button("lorem ipsum", "")
-            @components.Button("secondary", "owl-button-secondary")
-            @components.Button("destructive", "owl-button-destructive")
-            @components.Button("outline", "owl-button-outline")
+            @elem.Button(button()) { lorem ipsum }
+            @elem.Button(buttonSecondary()) { secondary }
+            @elem.Button(buttonDestructive()) { destructive }
+            @elem.Button(buttonOutline()) { outline }
         </div>
     }
 }

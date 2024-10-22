@@ -1,9 +1,40 @@
 package examples
 
 import (
-    "github.com/accentdesign/owl/components"
+    "github.com/accentdesign/owl/attrs"
     "github.com/accentdesign/owl/css"
+    "github.com/accentdesign/owl/elem"
+    "github.com/accentdesign/owl/icons"
 )
+
+var accordionTriggerHandle = templ.NewOnceHandle()
+
+func accordion() attrs.Attributes {
+    return attrs.Global{
+        Class: templ.CSSClasses{"owl-accordion"},
+    }
+}
+
+func accordionItem() attrs.Attributes {
+    return attrs.Global{
+        Class: templ.CSSClasses{"owl-accordion-item"},
+    }
+}
+
+func accordionTrigger() attrs.Attributes {
+    return attrs.Global{
+        Class: templ.CSSClasses{"owl-accordion-trigger"},
+        Actions: attrs.Actions{
+            OnClick: "owlToggleAccordion(this)",
+        },
+    }
+}
+
+func accordionContent() attrs.Attributes {
+    return attrs.Global{
+        Class: templ.CSSClasses{"owl-accordion-content"},
+    }
+}
 
 templ Accordion() {
     @Base() {
@@ -11,14 +42,36 @@ templ Accordion() {
 
         <h2 class="owl-h2 mb-10">accordion</h2>
 
-        @components.Accordion() {
+        @accordionTriggerHandle.Once() {
+            <script type="text/javascript">
+                function owlToggleAccordion(trigger) {
+                    const item = trigger.closest(".owl-accordion-item");
+                    const accordion = item.closest(".owl-accordion");
+                    const content = item.querySelector(".owl-accordion-content");
+                    const isOpen = item.classList.contains("owl-selected");
+                    const allItems = accordion.querySelectorAll(".owl-accordion-item");
+                    allItems.forEach(function (i) {
+                        const c = i.querySelector(".owl-accordion-content");
+                        i.classList.toggle("owl-selected", false);
+                        c.style.maxHeight = "0";
+                    });
+                    if (!isOpen) {
+                        item.classList.toggle("owl-selected", true);
+                        content.style.maxHeight = `${content.scrollHeight}px`;
+                    }
+                }
+            </script>
+        }
+
+        @elem.Div(accordion()) {
             for range 3 {
-                @components.AccordionItem() {
-                    @components.AccordionTrigger("Lorem ipsum dolor sit amet")
-                    @components.AccordionContent() {
-                        <p class="mb-4">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
+                @elem.Div(accordionItem()) {
+                    @elem.Button(accordionTrigger()) {
+                        @elem.Span(attrs.Empty) { Lorem ipsum dolor sit amet }
+                        @icons.ChevronDown("size-6")
+                    }
+                    @elem.Div(accordionContent()) {
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     }
                 }
             }

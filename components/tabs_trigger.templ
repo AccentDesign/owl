@@ -1,7 +1,0 @@
-package components
-
-import "fmt"
-
-templ TabsTrigger(text, url string, selected bool) {
-    <button class={ "owl-tabs-trigger" } role="tab" aria-selected={ fmt.Sprintf("%v", selected) } hx-get={ url }>{ text }</button>
-}

@@ -1,7 +1,6 @@
 package examples
 
 import (
-    "github.com/accentdesign/owl/components"
     "github.com/accentdesign/owl/css"
 )
 
@@ -12,17 +11,15 @@ templ Code() {
         <h2 class="owl-h2 mb-10">code</h2>
 
         <p class="mb-6">
-        Some inline
-        @components.Code("mx-1") {
-            code
-        }
-        block.
+            Some inline
+            <code class="owl-code mx-1">code</code>
+            block.
         </p>
 
-        @components.Pre("") {
-            @components.Code("") {
+        <pre class="owl-pre">
+            <code class="owl-code">
                 git clone https://github.com/AccentDesign/owl.git
-            }
-        }
+            </code>
+        </pre>
     }
 }

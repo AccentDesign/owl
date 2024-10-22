@@ -1,0 +1,45 @@
+package elem
+
+import (
+    "github.com/accentdesign/owl/attrs"
+)
+
+templ Anchor(a attrs.Attributes) {
+    <a { a.Attrs()... }>{ children... }</a>
+}
+
+templ Div(a attrs.Attributes) {
+    <div { a.Attrs()... }>{ children... }</div>
+}
+
+templ Button(a attrs.Attributes) {
+    <button { a.Attrs()... }>{ children... }</button>
+}
+
+templ Header3(a attrs.Attributes) {
+    <h3 { a.Attrs()... }>{ children... }</h3>
+}
+
+templ Image(a attrs.Attributes) {
+    <img { a.Attrs()... } />
+}
+
+templ ListItem(a attrs.Attributes) {
+    <li { a.Attrs()... }>{ children... }</li>
+}
+
+templ Nav(a attrs.Attributes) {
+    <nav { a.Attrs()... }>{ children... }</nav>
+}
+
+templ OrderedList(a attrs.Attributes) {
+    <ol { a.Attrs()... }>{ children... }</ol>
+}
+
+templ Paragraph(a attrs.Attributes) {
+    <p { a.Attrs()... }>{ children... }</p>
+}
+
+templ Span(a attrs.Attributes) {
+    <span { a.Attrs()... }>{ children... }</span>
+}

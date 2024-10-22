@@ -7,7 +7,7 @@
         @apply inline-flex items-center gap-1.5;
     }
     .owl-breadcrumb-separator svg {
-        @apply size-5;
+        @apply size-4;
     }
     .owl-breadcrumb-link {
         @apply hover:underline;

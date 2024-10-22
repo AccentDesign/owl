@@ -9,10 +9,7 @@
         @apply rotate-180;
     }
     .owl-accordion-trigger {
-        @apply flex items-center justify-between flex-1 py-4;
-    }
-    .owl-accordion-trigger button {
-        @apply font-medium hover:underline;
+        @apply w-full flex items-center justify-between flex-1 py-4 font-medium hover:underline;
     }
     .owl-accordion-trigger svg {
         @apply transition-all duration-300;

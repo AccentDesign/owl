@@ -7,7 +7,7 @@ Things will be added, changed or deleted at will.
 
 ### Usage
 
-Copy the component templ files and css into your own project and see the examples for usage.
+Copy stuff and see the examples for usage.
 
 ### Development
 

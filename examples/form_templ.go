@@ -9,53 +9,8 @@ import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
 import (
-	"github.com/accentdesign/owl/components"
 	"github.com/accentdesign/owl/css"
 )
-
-var email = &components.FormInput{
-	ID:          "email",
-	Name:        "email",
-	Type:        "email",
-	Placeholder: "owl text",
-	Value:       "someone@example.com",
-	Label:       "Email",
-	Description: "This is your email address.",
-}
-
-var password = &components.FormInput{
-	ID:          "password",
-	Name:        "password",
-	Type:        "password",
-	Placeholder: "owl password",
-	Label:       "Password",
-	Description: "This is your password.",
-	Error:       "Invalid username of password.",
-}
-
-var sex = &components.FormSelect{
-	ID:          "sex",
-	Name:        "sex",
-	Label:       "Sex",
-	Description: "This is your sex.",
-	Options:     []string{"Male", "Female"},
-	EmptyOption: true,
-}
-
-var comments = &components.FormTextarea{
-	ID:          "comments",
-	Name:        "comments",
-	Placeholder: "owl comments",
-	Label:       "Comments",
-	Description: "Leave us some comments.",
-}
-
-var agree = &components.FormCheckbox{
-	ID:          "agree",
-	Name:        "agree",
-	Label:       "Terms and conditions",
-	Description: "Please agree to the terms.",
-}
 
 func Form() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
@@ -126,31 +81,7 @@ func Form() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <h2 class=\"owl-h2 mb-10\">Form</h2><form class=\"space-y-10 max-w-[500px]\">")
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			templ_7745c5c3_Err = email.HTML().Render(ctx, templ_7745c5c3_Buffer)
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			templ_7745c5c3_Err = password.HTML().Render(ctx, templ_7745c5c3_Buffer)
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			templ_7745c5c3_Err = sex.HTML().Render(ctx, templ_7745c5c3_Buffer)
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			templ_7745c5c3_Err = comments.HTML().Render(ctx, templ_7745c5c3_Buffer)
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			templ_7745c5c3_Err = agree.HTML().Render(ctx, templ_7745c5c3_Buffer)
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</form>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <h2 class=\"owl-h2 mb-10\">Form</h2><form class=\"space-y-10 max-w-[500px]\"><div class=\"space-y-2\"><label class=\"owl-label\" for=\"email\">Email</label> <input class=\"owl-input\" id=\"email\" name=\"email\" type=\"email\" placeholder=\"owl text\" value=\"someone@example.com\"><p class=\"text-gray-500 text-sm\">This is your email address.</p></div><div class=\"space-y-2\"><label class=\"owl-label\" for=\"password\">Password</label> <input class=\"owl-input\" id=\"password\" name=\"password\" type=\"password\" placeholder=\"owl password\"><p class=\"text-red-500 text-sm\">Invalid username of password.</p></div><div class=\"space-y-2\"><label class=\"owl-label\" for=\"sex\">Sex</label> <select class=\"owl-select\" id=\"sex\" name=\"sex\"><option>Please select..</option> <option value=\"Male\">Male</option> <option value=\"Female\">Female</option></select><p class=\"text-gray-500 text-sm\">This is your sex.</p></div><div class=\"space-y-2\"><label class=\"owl-label\" for=\"comments\">Comments</label> <textarea class=\"owl-textarea\" id=\"comments\" name=\"comments\" placeholder=\"owl comments\"></textarea><p class=\"text-gray-500 text-sm\">Leave us some comments.</p></div><div class=\"space-y-2\"><label class=\"owl-label flex items-center gap-2\" for=\"agree\"><input class=\"owl-checkbox\" id=\"agree\" name=\"agree\" type=\"checkbox\"> Terms and conditions</label><p class=\"text-gray-500 text-sm\">Please agree to the terms.</p></div></form>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
