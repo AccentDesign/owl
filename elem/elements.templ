@@ -16,6 +16,10 @@ templ Button(a attrs.Attributes) {
     <button { a.Attrs()... }>{ children... }</button>
 }
 
+templ Form(a attrs.Attributes) {
+    <form { a.Attrs()... }>{ children... }</form>
+}
+
 templ Header3(a attrs.Attributes) {
     <h3 { a.Attrs()... }>{ children... }</h3>
 }
