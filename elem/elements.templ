@@ -28,6 +28,10 @@ templ Image(a attrs.Attributes) {
     <img { a.Attrs()... } />
 }
 
+templ Label(a attrs.Attributes) {
+    <label { a.Attrs()... }>{ children... }</label>
+}
+
 templ ListItem(a attrs.Attributes) {
     <li { a.Attrs()... }>{ children... }</li>
 }
