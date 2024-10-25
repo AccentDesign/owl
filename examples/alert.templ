@@ -1,29 +1,9 @@
 package examples
 
 import (
-    "github.com/accentdesign/owl/attrs"
     "github.com/accentdesign/owl/css"
-    "github.com/accentdesign/owl/elem"
     "github.com/accentdesign/owl/icons"
 )
-
-func alert() attrs.Attributes {
-    return attrs.Global{
-        Class: templ.CSSClasses{"owl-alert"},
-    }
-}
-
-func alertTitle() attrs.Attributes {
-    return attrs.Global{
-        Class: templ.CSSClasses{"owl-alert-title"},
-    }
-}
-
-func alertDescription() attrs.Attributes {
-    return attrs.Global{
-        Class: templ.CSSClasses{"owl-alert-description"},
-    }
-}
 
 templ Alert() {
     @Base() {
@@ -32,15 +12,19 @@ templ Alert() {
         <h2 class="owl-h2 mb-10">alert</h2>
 
         <div class="space-y-6">
-            @elem.Div(alert()) {
+            <div class="owl-alert">
                 @icons.Terminal("")
-                @elem.Div(alertTitle()) { Lorem ipsum dolor sit amet! }
-                @elem.Div(alertDescription()) { Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. }
-            }
-            @elem.Div(alert()) {
-                @elem.Div(alertTitle()) { Lorem ipsum dolor sit amet! }
-                @elem.Div(alertDescription()) { Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. }
-            }
+                <div class="owl-alert-title">Lorem ipsum dolor sit amet!</div>
+                <div class="owl-alert-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+            </div>
+            <div class="owl-alert">
+                <div class="owl-alert-title">Lorem ipsum dolor sit amet!</div>
+                <div class="owl-alert-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+            </div>
         </div>
     }
 }

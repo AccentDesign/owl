@@ -1,32 +1,21 @@
 package examples
 
 import (
-    "github.com/accentdesign/owl/attrs"
     "github.com/accentdesign/owl/css"
-    "github.com/accentdesign/owl/elem"
 )
 
-func button() attrs.Attributes {
-    return attrs.Global{
-        Class: templ.CSSClasses{"owl-button"},
-    }
-}
+type ButtonStyle string
 
-func buttonSecondary() attrs.Attributes {
-    return attrs.Global{
-        Class: templ.CSSClasses{"owl-button", "owl-button-secondary"},
-    }
-}
+const (
+	ButtonDefault     ButtonStyle = ""
+	ButtonSecondary   ButtonStyle = "owl-button-secondary"
+	ButtonDestructive ButtonStyle = "owl-button-destructive"
+	ButtonOutline     ButtonStyle = "owl-button-outline"
+)
 
-func buttonDestructive() attrs.Attributes {
-    return attrs.Global{
-        Class: templ.CSSClasses{"owl-button", "owl-button-destructive"},
-    }
-}
-
-func buttonOutline() attrs.Attributes {
-    return attrs.Global{
-        Class: templ.CSSClasses{"owl-button", "owl-button-outline"},
+func button(style ButtonStyle) templ.Attributes {
+    return templ.Attributes{
+        "class": templ.CSSClasses{"owl-button", string(style)}.String(),
     }
 }
 
@@ -37,10 +26,10 @@ templ Button() {
         <h2 class="owl-h2 mb-10">button</h2>
 
         <div class="flex gap-6">
-            @elem.Button(button()) { lorem ipsum }
-            @elem.Button(buttonSecondary()) { secondary }
-            @elem.Button(buttonDestructive()) { destructive }
-            @elem.Button(buttonOutline()) { outline }
+            <button { button(ButtonDefault)... }>lorem ipsum</button>
+            <button { button(ButtonSecondary)... }>lorem ipsum</button>
+            <button { button(ButtonDestructive)... }>lorem ipsum</button>
+            <button { button(ButtonOutline)... }>lorem ipsum</button>
         </div>
     }
 }

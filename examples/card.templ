@@ -1,46 +1,8 @@
 package examples
 
 import (
-    "github.com/accentdesign/owl/attrs"
     "github.com/accentdesign/owl/css"
-    "github.com/accentdesign/owl/elem"
 )
-
-func card() attrs.Attributes {
-    return attrs.Global{
-        Class: templ.CSSClasses{"owl-card"},
-    }
-}
-
-func cardHeader() attrs.Attributes {
-    return attrs.Global{
-        Class: templ.CSSClasses{"owl-card-header"},
-    }
-}
-
-func cardTitle() attrs.Attributes {
-    return attrs.Global{
-        Class: templ.CSSClasses{"owl-card-title"},
-    }
-}
-
-func cardDescription() attrs.Attributes {
-    return attrs.Global{
-        Class: templ.CSSClasses{"owl-card-description"},
-    }
-}
-
-func cardContent() attrs.Attributes {
-    return attrs.Global{
-        Class: templ.CSSClasses{"owl-card-content"},
-    }
-}
-
-func cardFooter() attrs.Attributes {
-    return attrs.Global{
-        Class: templ.CSSClasses{"owl-card-footer"},
-    }
-}
 
 templ Card() {
     @Base() {
@@ -52,44 +14,47 @@ templ Card() {
         <h2 class="owl-h2 mb-10">card</h2>
 
         <div class="space-y-6 w-[380px]">
-            @elem.Div(card()) {
-                @elem.Div(cardHeader()) {
-                    @elem.Header3(cardTitle()) { Lorem Ipsum }
-                    @elem.Paragraph(cardDescription()) { Lorem ipsum dolor sit amet }
-                }
-                @elem.Div(cardContent()) {
+            <div class="owl-card">
+                <div class="owl-card-header">
+                    <h3 class="owl-card-title">Lorem Ipsum</h3>
+                    <p class="owl-card-description">Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="owl-card-content">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                }
-                @elem.Div(cardFooter()) {
-                    <p>&copy; Accent Design Group Ltd</p>
-                }
-            }
-            @elem.Div(card()) {
-                @elem.Div(cardHeader()) {
-                    @elem.Header3(cardTitle()) { Lorem Ipsum }
-                }
-                @elem.Div(cardContent()) {
+                </div>
+                <div class="owl-card-footer">
+                    <p>© Accent Design Group Ltd</p>
+                </div>
+            </div>
+
+            <div class="owl-card">
+                <div class="owl-card-header">
+                    <h3 class="owl-card-title">Lorem Ipsum</h3>
+                </div>
+                <div class="owl-card-content">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                }
-                @elem.Div(cardFooter()) {
-                    @elem.Button(button()) { Continue }
-                }
-            }
-            @elem.Form(card()) {
-                @elem.Div(cardHeader()) {
-                    @elem.Header3(cardTitle()) { Form }
-                }
-                @elem.Div(cardContent()) {
+                </div>
+                <div class="owl-card-footer">
+                    <button { button(ButtonDefault)... }>Continue</button>
+                </div>
+            </div>
+
+            <div class="owl-card">
+                <div class="owl-card-header">
+                    <h3 class="owl-card-title">Spam</h3>
+                    <p class="owl-card-description">Let us spam you within an inch of your tolerance</p>
+                </div>
+                <div class="owl-card-content">
                     <div class="space-y-2">
                         <label class="owl-label" for="email">Email</label>
                         <input class="owl-input" id="email" name="email" type="email" placeholder="email@example.com">
                         <p class="text-gray-500 text-sm">Enter your email address.</p>
                     </div>
-                }
-                @elem.Div(cardFooter()) {
-                    @elem.Button(button()) { Submit }
-                }
-            }
+                </div>
+                <div class="owl-card-footer grid">
+                    <button { button(ButtonDefault)... }>Spam Me</button>
+                </div>
+            </div>
         </div>
     }
 }

@@ -1,41 +1,8 @@
 package examples
 
 import (
-    "github.com/accentdesign/owl/attrs"
     "github.com/accentdesign/owl/css"
-	"github.com/accentdesign/owl/elem"
 )
-
-func formField() attrs.Attributes {
-    return attrs.Global{
-        Class: templ.CSSClasses{"space-y-2"},
-    }
-}
-
-func formLabel(idFor string, isCheckbox bool) attrs.Attributes {
-    class := templ.CSSClasses{"owl-label"}
-    if isCheckbox {
-        class = append(class, "flex", "items-center", "gap-2")
-    }
-    return attrs.Label{
-        For: idFor,
-        Global: attrs.Global{
-            Class: class,
-        },
-    }
-}
-
-func formMessage(isError bool) attrs.Attributes {
-    class := templ.CSSClasses{"text-sm"}
-    if isError {
-        class = append(class, "text-red-500")
-    } else {
-        class = append(class, "text-gray-500")
-    }
-    return attrs.Global{
-        Class: class,
-    }
-}
 
 templ Form() {
     @Base() {
@@ -48,35 +15,37 @@ templ Form() {
         <h2 class="owl-h2 mb-10">Form</h2>
 
         <form class="space-y-10 max-w-[500px]">
-            @elem.Div(formField()) {
-                @elem.Label(formLabel("email", false)) { Email }
+            <div class="space-y-2">
+                <label class="owl-label" for="email">Email</label>
                 <input class="owl-input" id="email" name="email" type="email" placeholder="owl text" value="someone@example.com">
-                @elem.Paragraph(formMessage(false)) { This is your email address. }
-            }
-            @elem.Div(formField()) {
-                @elem.Label(formLabel("password", false)) { Password }
+                <p class="text-gray-500 text-sm">This is your email address.</p>
+            </div>
+            <div class="space-y-2">
+                <label class="owl-label" for="password">Password</label>
                 <input class="owl-input" id="password" name="password" type="password" placeholder="owl password">
-                @elem.Paragraph(formMessage(true)) { Invalid username of password. }
-            }
-            @elem.Div(formField()) {
-                @elem.Label(formLabel("sex", false)) { Sex }
+                <p class="text-red-500 text-sm">Invalid username of password.</p>
+            </div>
+            <div class="space-y-2">
+                <label class="owl-label" for="sex">Sex</label>
                 <select class="owl-select" id="sex" name="sex">
                     <option>Please select..</option>
-                    <option value="No">No</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
                 </select>
-                @elem.Paragraph(formMessage(false)) { Any?. }
-            }
-            @elem.Div(formField()) {
-                @elem.Label(formLabel("comments", false)) { Comments }
+                <p class="text-gray-500 text-sm">This is your sex.</p>
+            </div>
+            <div class="space-y-2">
+                <label class="owl-label" for="comments">Comments</label>
                 <textarea class="owl-textarea" id="comments" name="comments" placeholder="owl comments"></textarea>
-                @elem.Paragraph(formMessage(false)) { Leave us some comments. }
-            }
-            @elem.Div(formField()) {
-                @elem.Label(formLabel("agree", true)) {
-                    <input class="owl-checkbox" id="agree" name="agree" type="checkbox"> Terms and conditions
-                }
-                @elem.Paragraph(formMessage(false)) { Please agree to the terms and conditions. }
-            }
+                <p class="text-gray-500 text-sm">Leave us some comments.</p>
+            </div>
+            <div class="space-y-2">
+                <label class="owl-label flex items-center gap-2" for="agree">
+                    <input class="owl-checkbox" id="agree" name="agree" type="checkbox">
+                    Terms and conditions
+                </label>
+                <p class="text-gray-500 text-sm">Please agree to the terms.</p>
+            </div>
         </form>
     }
 }

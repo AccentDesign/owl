@@ -9,32 +9,21 @@ import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
 import (
-	"github.com/accentdesign/owl/attrs"
 	"github.com/accentdesign/owl/css"
-	"github.com/accentdesign/owl/elem"
 )
 
-func button() attrs.Attributes {
-	return attrs.Global{
-		Class: templ.CSSClasses{"owl-button"},
-	}
-}
+type ButtonStyle string
 
-func buttonSecondary() attrs.Attributes {
-	return attrs.Global{
-		Class: templ.CSSClasses{"owl-button", "owl-button-secondary"},
-	}
-}
+const (
+	ButtonDefault     ButtonStyle = ""
+	ButtonSecondary   ButtonStyle = "owl-button-secondary"
+	ButtonDestructive ButtonStyle = "owl-button-destructive"
+	ButtonOutline     ButtonStyle = "owl-button-outline"
+)
 
-func buttonDestructive() attrs.Attributes {
-	return attrs.Global{
-		Class: templ.CSSClasses{"owl-button", "owl-button-destructive"},
-	}
-}
-
-func buttonOutline() attrs.Attributes {
-	return attrs.Global{
-		Class: templ.CSSClasses{"owl-button", "owl-button-outline"},
+func button(style ButtonStyle) templ.Attributes {
+	return templ.Attributes{
+		"class": templ.CSSClasses{"owl-button", string(style)}.String(),
 	}
 }
 
@@ -75,99 +64,39 @@ func Button() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <h2 class=\"owl-h2 mb-10\">button</h2><div class=\"flex gap-6\">")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <h2 class=\"owl-h2 mb-10\">button</h2><div class=\"flex gap-6\"><button")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Var3 := templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
-				templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
-				templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templruntime.GetBuffer(templ_7745c5c3_W)
-				if !templ_7745c5c3_IsBuffer {
-					defer func() {
-						templ_7745c5c3_BufErr := templruntime.ReleaseBuffer(templ_7745c5c3_Buffer)
-						if templ_7745c5c3_Err == nil {
-							templ_7745c5c3_Err = templ_7745c5c3_BufErr
-						}
-					}()
-				}
-				ctx = templ.InitializeContext(ctx)
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("lorem ipsum ")
-				if templ_7745c5c3_Err != nil {
-					return templ_7745c5c3_Err
-				}
-				return templ_7745c5c3_Err
-			})
-			templ_7745c5c3_Err = elem.Button(button()).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = templ.RenderAttributes(ctx, templ_7745c5c3_Buffer, button(ButtonDefault))
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Var4 := templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
-				templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
-				templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templruntime.GetBuffer(templ_7745c5c3_W)
-				if !templ_7745c5c3_IsBuffer {
-					defer func() {
-						templ_7745c5c3_BufErr := templruntime.ReleaseBuffer(templ_7745c5c3_Buffer)
-						if templ_7745c5c3_Err == nil {
-							templ_7745c5c3_Err = templ_7745c5c3_BufErr
-						}
-					}()
-				}
-				ctx = templ.InitializeContext(ctx)
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("secondary ")
-				if templ_7745c5c3_Err != nil {
-					return templ_7745c5c3_Err
-				}
-				return templ_7745c5c3_Err
-			})
-			templ_7745c5c3_Err = elem.Button(buttonSecondary()).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(">lorem ipsum</button> <button")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Var5 := templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
-				templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
-				templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templruntime.GetBuffer(templ_7745c5c3_W)
-				if !templ_7745c5c3_IsBuffer {
-					defer func() {
-						templ_7745c5c3_BufErr := templruntime.ReleaseBuffer(templ_7745c5c3_Buffer)
-						if templ_7745c5c3_Err == nil {
-							templ_7745c5c3_Err = templ_7745c5c3_BufErr
-						}
-					}()
-				}
-				ctx = templ.InitializeContext(ctx)
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("destructive ")
-				if templ_7745c5c3_Err != nil {
-					return templ_7745c5c3_Err
-				}
-				return templ_7745c5c3_Err
-			})
-			templ_7745c5c3_Err = elem.Button(buttonDestructive()).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = templ.RenderAttributes(ctx, templ_7745c5c3_Buffer, button(ButtonSecondary))
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Var6 := templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
-				templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
-				templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templruntime.GetBuffer(templ_7745c5c3_W)
-				if !templ_7745c5c3_IsBuffer {
-					defer func() {
-						templ_7745c5c3_BufErr := templruntime.ReleaseBuffer(templ_7745c5c3_Buffer)
-						if templ_7745c5c3_Err == nil {
-							templ_7745c5c3_Err = templ_7745c5c3_BufErr
-						}
-					}()
-				}
-				ctx = templ.InitializeContext(ctx)
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("outline ")
-				if templ_7745c5c3_Err != nil {
-					return templ_7745c5c3_Err
-				}
-				return templ_7745c5c3_Err
-			})
-			templ_7745c5c3_Err = elem.Button(buttonOutline()).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(">lorem ipsum</button> <button")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div>")
+			templ_7745c5c3_Err = templ.RenderAttributes(ctx, templ_7745c5c3_Buffer, button(ButtonDestructive))
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(">lorem ipsum</button> <button")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = templ.RenderAttributes(ctx, templ_7745c5c3_Buffer, button(ButtonOutline))
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(">lorem ipsum</button></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

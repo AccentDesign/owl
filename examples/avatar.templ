@@ -1,35 +1,17 @@
 package examples
 
 import (
-    "github.com/accentdesign/owl/attrs"
     "github.com/accentdesign/owl/css"
-    "github.com/accentdesign/owl/elem"
 )
 
 var avatarImageErrorHandle = templ.NewOnceHandle()
 
-func avatar() attrs.Attributes {
-    return attrs.Global{
-        Class: templ.CSSClasses{"owl-avatar"},
-    }
-}
-
-func avatarImage(src, alt string) attrs.Attributes {
-    return attrs.Img{
-        Src: src,
-        Alt: alt,
-        Global: attrs.Global{
-            Class: templ.CSSClasses{"owl-avatar-image"},
-            Actions: attrs.Actions{
-                OnError: "owlOnAvatarImageError(this)",
-            },
-        },
-    }
-}
-
-func avatarFallback() attrs.Attributes {
-    return attrs.Global{
-        Class: templ.CSSClasses{"owl-avatar-fallback"},
+func avatar(src, alt string) templ.Attributes {
+    return templ.Attributes{
+        "src": src,
+        "alt": alt,
+        "class": "owl-avatar-image",
+        "onerror": "owlOnAvatarImageError(this)",
     }
 }
 
@@ -48,20 +30,20 @@ templ Avatar() {
         }
 
         <div class="flex gap-6">
-            @elem.Span(avatar()) {
-                @elem.Image(avatarImage("https://github.githubassets.com/images/icons/emoji/unicode/1f436.png?v8", "dog"))
-            }
-            @elem.Span(avatar()) {
-                @elem.Image(avatarImage("https://github.githubassets.com/images/icons/emoji/unicode/1f638.png?v8", "cat"))
-                @elem.Span(avatarFallback()) { OK }
-            }
-            @elem.Span(avatar()) {
-                @elem.Image(avatarImage("http://error", "missing"))
-                @elem.Span(avatarFallback()) { ER }
-            }
-            @elem.Span(avatar()) {
-                @elem.Span(avatarFallback()) { FB }
-            }
+            <div class="owl-avatar">
+                <img { avatar("https://github.githubassets.com/images/icons/emoji/unicode/1f436.png?v8", "dog")... }>
+            </div>
+            <div class="owl-avatar">
+                <img { avatar("https://github.githubassets.com/images/icons/emoji/unicode/1f638.png?v8", "cat")... }>
+                <span class="owl-avatar-fallback">OK</span>
+            </div>
+            <div class="owl-avatar">
+                <img { avatar("http://error", "missing")... }>
+                <span class="owl-avatar-fallback">ER</span>
+            </div>
+            <div class="owl-avatar">
+                <span class="owl-avatar-fallback">FB</span>
+            </div>
         </div>
     }
 }
