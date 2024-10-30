@@ -1,0 +1,32 @@
+@layer components {
+    .owl-dialog-container > * {
+        @apply opacity-100 transition-opacity duration-200;
+    }
+    .owl-dialog-container.htmx-swapping > * {
+        @apply opacity-0;
+    }
+    .owl-dialog-container.htmx-added > * {
+        @apply opacity-0;
+    }
+    .owl-dialog {
+        @apply fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-white p-6 shadow-lg rounded-lg;
+    }
+    .owl-dialog-header {
+        @apply flex flex-col space-y-1.5;
+    }
+    .owl-dialog-title {
+        @apply text-lg font-semibold leading-none tracking-tight;
+    }
+    .owl-dialog-description {
+        @apply text-sm text-gray-500;
+    }
+    .owl-dialog-content {
+        @apply grid gap-4 py-4;
+    }
+    .owl-dialog-footer {
+        @apply flex flex-row justify-end space-x-2;
+    }
+    .owl-dialog-close {
+        @apply absolute right-2 top-2;
+    }
+}

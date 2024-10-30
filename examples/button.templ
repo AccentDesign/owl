@@ -4,20 +4,13 @@ import (
     "github.com/accentdesign/owl/css"
 )
 
-type ButtonStyle string
-
-const (
-	ButtonDefault     ButtonStyle = ""
-	ButtonSecondary   ButtonStyle = "owl-button-secondary"
-	ButtonDestructive ButtonStyle = "owl-button-destructive"
-	ButtonOutline     ButtonStyle = "owl-button-outline"
+var (
+	ButtonDefault     string = "owl-button"
+	ButtonSecondary   string = "owl-button owl-button-secondary"
+	ButtonDestructive string = "owl-button owl-button-destructive"
+	ButtonOutline     string = "owl-button owl-button-outline"
+	ButtonLink        string = "owl-button owl-button-link"
 )
-
-func button(style ButtonStyle) templ.Attributes {
-    return templ.Attributes{
-        "class": templ.CSSClasses{"owl-button", string(style)}.String(),
-    }
-}
 
 templ Button() {
     @Base() {
@@ -26,10 +19,11 @@ templ Button() {
         <h2 class="owl-h2 mb-10">button</h2>
 
         <div class="flex gap-6">
-            <button { button(ButtonDefault)... }>lorem ipsum</button>
-            <button { button(ButtonSecondary)... }>lorem ipsum</button>
-            <button { button(ButtonDestructive)... }>lorem ipsum</button>
-            <button { button(ButtonOutline)... }>lorem ipsum</button>
+            <button class={ ButtonDefault }>lorem ipsum</button>
+            <button class={ ButtonSecondary }>lorem ipsum</button>
+            <button class={ ButtonDestructive }>lorem ipsum</button>
+            <button class={ ButtonOutline }>lorem ipsum</button>
+            <button class={ ButtonLink }>lorem ipsum</button>
         </div>
     }
 }

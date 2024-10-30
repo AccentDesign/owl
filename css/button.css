@@ -11,4 +11,7 @@
     .owl-button.owl-button-outline {
         @apply bg-transparent text-black border;
     }
+    .owl-button.owl-button-link {
+        @apply bg-transparent text-black;
+    }
 }
