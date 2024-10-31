@@ -6,39 +6,22 @@ import (
 
 var avatarImageErrorHandle = templ.NewOnceHandle()
 
-func avatar(src, alt string) templ.Attributes {
-    return templ.Attributes{
-        "src": src,
-        "alt": alt,
-        "class": "owl-avatar-image",
-        "onerror": "owlOnAvatarImageError(this)",
-    }
-}
-
 templ Avatar() {
     @Base() {
         @css.Include("avatar.css")
 
         <h2 class="owl-h2 mb-10">avatar</h2>
 
-        @avatarImageErrorHandle.Once() {
-            <script type="text/javascript">
-                function owlOnAvatarImageError(img) {
-                    img.classList.add("owl-avatar-image-error");
-                }
-            </script>
-        }
-
         <div class="flex gap-6">
             <div class="owl-avatar">
-                <img { avatar("https://github.githubassets.com/images/icons/emoji/unicode/1f436.png?v8", "dog")... }>
+                @AvatarImage("https://github.githubassets.com/images/icons/emoji/unicode/1f436.png?v8", "dog")
             </div>
             <div class="owl-avatar">
-                <img { avatar("https://github.githubassets.com/images/icons/emoji/unicode/1f638.png?v8", "cat")... }>
+                @AvatarImage("https://github.githubassets.com/images/icons/emoji/unicode/1f638.png?v8", "cat")
                 <span class="owl-avatar-fallback">OK</span>
             </div>
             <div class="owl-avatar">
-                <img { avatar("http://error", "missing")... }>
+                @AvatarImage("http://error", "missing")
                 <span class="owl-avatar-fallback">ER</span>
             </div>
             <div class="owl-avatar">
@@ -46,4 +29,15 @@ templ Avatar() {
             </div>
         </div>
     }
+}
+
+templ AvatarImage(src, alt string) {
+    @avatarImageErrorHandle.Once() {
+        <script type="text/javascript">
+            function owlOnAvatarImageError(img) {
+                img.classList.add("owl-avatar-image-error");
+            }
+        </script>
+    }
+    <img class="owl-avatar-image" src={ src } alt={ alt } onerror="owlOnAvatarImageError(this)">
 }
