@@ -6,10 +6,7 @@ import (
 
 templ Card() {
     @Base() {
-        @css.Include("button.css")
-        @css.Include("card.css")
-        @css.Include("input.css")
-        @css.Include("label.css")
+        @css.Include("button.css", "card.css", "input.css", "label.css")
 
         <h2 class="owl-h2 mb-10">card</h2>
 

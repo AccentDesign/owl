@@ -1,6 +1,7 @@
 package css
 
 import (
+	"bytes"
 	"context"
 	"embed"
 	"github.com/a-h/templ"
@@ -13,13 +14,18 @@ var (
 )
 
 // Include dirty include css file for tailwind cli
-func Include(filename string) templ.Component {
+func Include(filenames ...string) templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, w io.Writer) error {
-		content, err := fs.ReadFile(filename)
-		if err != nil {
-			return err
+		var buffer bytes.Buffer
+		for _, filename := range filenames {
+			content, err := fs.ReadFile(filename)
+			if err != nil {
+				return err
+			}
+			buffer.Write(content)
+			buffer.WriteString("\n")
 		}
-		_, err = io.WriteString(w, "<style type='text/tailwindcss'>"+string(content)+"</style>")
+		_, err := io.WriteString(w, "<style type='text/tailwindcss'>"+buffer.String()+"</style>")
 		return err
 	})
 }
