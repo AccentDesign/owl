@@ -17,7 +17,7 @@ templ Dialog() {
 }
 
 templ DialogOpen() {
-    <div class="owl-dialog-container" hx-target=".owl-dialog-container" hx-swap="outerHTML swap:0.3s">
+    <div class="owl-dialog-container" hx-target="this" hx-swap="outerHTML swap:0.3s">
         <div class="owl-backdrop" aria-hidden="true"></div>
         <div class="owl-dialog" role="dialog" aria-labelledby="owl-dialog-title" aria-describedby="owl-dialog-description">
             <div class="owl-dialog-header">
