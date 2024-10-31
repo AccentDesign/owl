@@ -1,0 +1,40 @@
+package examples
+
+import (
+    "github.com/accentdesign/owl/css"
+)
+
+templ AlertDialog() {
+	@Base() {
+        @css.Include("backdrop.css", "button.css", "dialog.css")
+
+        <h2 class="owl-h2 mb-10">alert dialog</h2>
+
+		<button class={ ButtonOutline } hx-get="/alert-dialog/open" hx-target=".owl-dialog-container" hx-swap="outerHTML settle:0.1s" aria-haspopup="dialog">Open</button>
+		@DialogClosed()
+    }
+}
+
+templ AlertDialogOpen() {
+    <div class="owl-dialog-container" hx-target="this" hx-swap="outerHTML swap:0.3s">
+        <div class="owl-backdrop" aria-hidden="true"></div>
+        <div class="owl-dialog" role="alertdialog" aria-labelledby="owl-dialog-title" aria-describedby="owl-dialog-description">
+            <div class="owl-dialog-header">
+                <h2 id="owl-dialog-title" class="owl-dialog-title">Are you absolutely sure?</h2>
+            </div>
+            <div class="owl-dialog-content">
+                <p id="owl-dialog-description" class="owl-dialog-description">
+                    This action cannot be undone. This will permanently delete your account and remove your data from our servers.
+                </p>
+            </div>
+            <div class="owl-dialog-footer">
+                <button class={ ButtonOutline } hx-get="/alert-dialog/closed">Cancel</button>
+                <button class={ ButtonDefault } hx-get="/alert-dialog/closed">Continue</button>
+            </div>
+        </div>
+    </div>
+}
+
+templ AlertDialogClosed() {
+    <div class="owl-dialog-container"></div>
+}
