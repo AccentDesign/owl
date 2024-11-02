@@ -4,7 +4,7 @@ import "github.com/accentdesign/owl/css"
 
 templ Form() {
 	@Base() {
-		@css.Include("form_field.css", "label.css", "checkbox.css", "input.css", "select.css", "textarea.css")
+		@css.Include("form_field.css", "label.css", "checkbox.css", "input.css", "select.css", "textarea.css", "button.css")
 		<h2 class="owl-h2 mb-10">Form</h2>
 		<form class="space-y-10 max-w-[500px]">
 			<div class="owl-form-field">
@@ -20,7 +20,7 @@ templ Form() {
 			<div class="owl-form-field">
 				<label class="owl-label" for="sex">Sex</label>
 				<select class="owl-select" id="sex" name="sex">
-					<option>Please select..</option>
+					<option value="">Please select..</option>
 					<option value="Male">Male</option>
 					<option value="Female">Female</option>
 				</select>
@@ -42,6 +42,9 @@ templ Form() {
 					Terms and conditions
 				</label>
 				<p class="owl-form-field-description">Please agree to the terms.</p>
+			</div>
+			<div>
+			    <button class={ ButtonDefault }>Submit</button>
 			</div>
 		</form>
 	}
