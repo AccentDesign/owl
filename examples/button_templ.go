@@ -8,9 +8,7 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import (
-	"github.com/accentdesign/owl/css"
-)
+import "github.com/accentdesign/owl/css"
 
 var (
 	ButtonDefault     string = "owl-button"

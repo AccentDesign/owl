@@ -1,20 +1,18 @@
 package examples
 
 import (
-    "github.com/accentdesign/owl/css"
-    "github.com/accentdesign/owl/icons"
+	"github.com/accentdesign/owl/css"
+	"github.com/accentdesign/owl/icons"
 )
 
 var accordionTriggerHandle = templ.NewOnceHandle()
 
 templ Accordion() {
-    @Base() {
-        @css.Include("accordion.css")
-
-        <h2 class="owl-h2 mb-10">accordion</h2>
-
-        @accordionTriggerHandle.Once() {
-            <script type="text/javascript">
+	@Base() {
+		@css.Include("accordion.css")
+		<h2 class="owl-h2 mb-10">accordion</h2>
+		@accordionTriggerHandle.Once() {
+			<script type="text/javascript">
                 function owlToggleAccordion(trigger) {
                     const item = trigger.closest(".owl-accordion-item");
                     const accordion = item.closest(".owl-accordion");
@@ -32,20 +30,19 @@ templ Accordion() {
                     }
                 }
             </script>
-        }
-
-        <div class="owl-accordion">
-            for range 3 {
-                <div class="owl-accordion-item">
-                    <button class="owl-accordion-trigger" onclick="owlToggleAccordion(this)">
-                        <span>Lorem ipsum dolor sit amet</span>
-                        @icons.ChevronDown("size-6")
-                    </button>
-                    <div class="owl-accordion-content">
-                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            }
-        </div>
-    }
+		}
+		<div class="owl-accordion">
+			for range 3 {
+				<div class="owl-accordion-item">
+					<button class="owl-accordion-trigger" onclick="owlToggleAccordion(this)">
+						<span>Lorem ipsum dolor sit amet</span>
+						@icons.ChevronDown("size-6")
+					</button>
+					<div class="owl-accordion-content">
+						<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div>
+			}
+		</div>
+	}
 }

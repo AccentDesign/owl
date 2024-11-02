@@ -1,57 +1,51 @@
 package examples
 
-import (
-    "github.com/accentdesign/owl/css"
-)
+import "github.com/accentdesign/owl/css"
 
 templ Card() {
-    @Base() {
-        @css.Include("button.css", "card.css", "input.css", "label.css")
-
-        <h2 class="owl-h2 mb-10">card</h2>
-
-        <div class="space-y-6 w-[380px]">
-            <div class="owl-card">
-                <div class="owl-card-header">
-                    <h3 class="owl-card-title">Lorem Ipsum</h3>
-                    <p class="owl-card-description">Lorem ipsum dolor sit amet</p>
-                </div>
-                <div class="owl-card-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div class="owl-card-footer">
-                    <p>© Accent Design Group Ltd</p>
-                </div>
-            </div>
-
-            <div class="owl-card">
-                <div class="owl-card-header">
-                    <h3 class="owl-card-title">Lorem Ipsum</h3>
-                </div>
-                <div class="owl-card-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div class="owl-card-footer">
-                    <button class={ ButtonDefault }>Continue</button>
-                </div>
-            </div>
-
-            <div class="owl-card">
-                <div class="owl-card-header">
-                    <h3 class="owl-card-title">Spam</h3>
-                    <p class="owl-card-description">Let us spam you within an inch of your tolerance</p>
-                </div>
-                <div class="owl-card-content">
-                    <div class="space-y-2">
-                        <label class="owl-label" for="email">Email</label>
-                        <input class="owl-input" id="email" name="email" type="email" placeholder="email@example.com">
-                        <p class="text-gray-500 text-sm">Enter your email address.</p>
-                    </div>
-                </div>
-                <div class="owl-card-footer grid">
-                    <button class={ ButtonDefault }>Spam Me</button>
-                </div>
-            </div>
-        </div>
-    }
+	@Base() {
+		@css.Include("button.css", "card.css", "input.css", "label.css")
+		<h2 class="owl-h2 mb-10">card</h2>
+		<div class="space-y-6 w-[380px]">
+			<div class="owl-card">
+				<div class="owl-card-header">
+					<h3 class="owl-card-title">Lorem Ipsum</h3>
+					<p class="owl-card-description">Lorem ipsum dolor sit amet</p>
+				</div>
+				<div class="owl-card-content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div class="owl-card-footer">
+					<p>© Accent Design Group Ltd</p>
+				</div>
+			</div>
+			<div class="owl-card">
+				<div class="owl-card-header">
+					<h3 class="owl-card-title">Lorem Ipsum</h3>
+				</div>
+				<div class="owl-card-content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</div>
+				<div class="owl-card-footer">
+					<button class={ ButtonDefault }>Continue</button>
+				</div>
+			</div>
+			<div class="owl-card">
+				<div class="owl-card-header">
+					<h3 class="owl-card-title">Spam</h3>
+					<p class="owl-card-description">Let us spam you within an inch of your tolerance</p>
+				</div>
+				<div class="owl-card-content">
+					<div class="space-y-2">
+						<label class="owl-label" for="email">Email</label>
+						<input class="owl-input" id="email" name="email" type="email" placeholder="email@example.com"/>
+						<p class="text-gray-500 text-sm">Enter your email address.</p>
+					</div>
+				</div>
+				<div class="owl-card-footer grid">
+					<button class={ ButtonDefault }>Spam Me</button>
+				</div>
+			</div>
+		</div>
+	}
 }

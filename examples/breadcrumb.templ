@@ -1,34 +1,32 @@
 package examples
 
 import (
-    "github.com/accentdesign/owl/css"
-    "github.com/accentdesign/owl/icons"
+	"github.com/accentdesign/owl/css"
+	"github.com/accentdesign/owl/icons"
 )
 
 templ Breadcrumb() {
-    @Base() {
-        @css.Include("breadcrumb.css")
-
-        <h2 class="owl-h2 mb-10">breadcrumb</h2>
-
-        <nav aria-label="breadcrumb" class="owl-breadcrumb">
-            <ol class="owl-breadcrumb-list">
-                <li class="owl-breadcrumb-item">
-                    <a class="owl-breadcrumb-link" href="/">Home</a>
-                </li>
-                <li aria-hidden="true" class="owl-breadcrumb-separator" role="presentation">
-                    @icons.ChevronRight("")
-                </li>
-                <li class="owl-breadcrumb-item">
-                    <a class="owl-breadcrumb-link" href="/">Components</a>
-                </li>
-                <li aria-hidden="true" class="owl-breadcrumb-separator" role="presentation">
-                    @icons.ChevronRight("")
-                </li>
-                <li class="owl-breadcrumb-item">
-                    <a aria-current="page" class="owl-breadcrumb-link" href="/breadcrumb">Breadcrumb</a>
-                </li>
-            </ol>
-        </nav>
-    }
+	@Base() {
+		@css.Include("breadcrumb.css")
+		<h2 class="owl-h2 mb-10">breadcrumb</h2>
+		<nav aria-label="breadcrumb" class="owl-breadcrumb">
+			<ol class="owl-breadcrumb-list">
+				<li class="owl-breadcrumb-item">
+					<a class="owl-breadcrumb-link" href="/">Home</a>
+				</li>
+				<li aria-hidden="true" class="owl-breadcrumb-separator" role="presentation">
+					@icons.ChevronRight("")
+				</li>
+				<li class="owl-breadcrumb-item">
+					<a class="owl-breadcrumb-link" href="/">Components</a>
+				</li>
+				<li aria-hidden="true" class="owl-breadcrumb-separator" role="presentation">
+					@icons.ChevronRight("")
+				</li>
+				<li class="owl-breadcrumb-item">
+					<a aria-current="page" class="owl-breadcrumb-link" href="/breadcrumb">Breadcrumb</a>
+				</li>
+			</ol>
+		</nav>
+	}
 }

@@ -1,28 +1,24 @@
 package examples
 
-import (
-    "github.com/accentdesign/owl/css"
-)
+import "github.com/accentdesign/owl/css"
 
 var tabsLoadHandle = templ.NewOnceHandle()
 
 func tab(url string, selected bool) templ.Attributes {
-    return templ.Attributes{
-        "class": "owl-tabs-trigger",
-        "role": "tab",
-        "aria-selected": templ.KeyValue[string, bool]{Key: "true", Value: selected},
-        "hx-get": string(templ.URL(url)),
-    }
+	return templ.Attributes{
+		"class":         "owl-tabs-trigger",
+		"role":          "tab",
+		"aria-selected": templ.KeyValue[string, bool]{Key: "true", Value: selected},
+		"hx-get":        string(templ.URL(url)),
+	}
 }
 
 templ Tabs() {
-    @Base() {
-        @css.Include("tabs.css")
-
-        <h2 class="owl-h2 mb-10">tabs</h2>
-
-        @tabsLoadHandle.Once() {
-            <script type="text/javascript">
+	@Base() {
+		@css.Include("tabs.css")
+		<h2 class="owl-h2 mb-10">tabs</h2>
+		@tabsLoadHandle.Once() {
+			<script type="text/javascript">
                 function owlOnTabLoad(event) {
                     let tabs = event.target.closest(".owl-tabs");
                     let current = tabs.querySelector("[aria-selected=true]");
@@ -30,31 +26,30 @@ templ Tabs() {
                     event.target.setAttribute("aria-selected", "true");
                 }
             </script>
-        }
-
-        <div class="w-[400px]">
-            <div class="owl-tabs" hx-swap="outerHTML" hx-target="next .owl-tabs-content" hx-on:htmx-after-on-load="owlOnTabLoad(event)">
-                <div class="owl-tabs-list" role="tabslist">
-                    <button { tab("/tabs/account", true)... }>Account</button>
-                    <button { tab("/tabs/password", false)... }>Password</button>
-                </div>
-                @TabContentAccount()
-            </div>
-            <p class="owl-p">HTMX is used to load and swap out the tabs content</p>
-        </div>
-    }
+		}
+		<div class="w-[400px]">
+			<div class="owl-tabs" hx-swap="outerHTML" hx-target="next .owl-tabs-content" hx-on:htmx-after-on-load="owlOnTabLoad(event)">
+				<div class="owl-tabs-list" role="tabslist">
+					<button { tab("/tabs/account", true)... }>Account</button>
+					<button { tab("/tabs/password", false)... }>Password</button>
+				</div>
+				@TabContentAccount()
+			</div>
+			<p class="owl-p">HTMX is used to load and swap out the tabs content</p>
+		</div>
+	}
 }
 
 templ TabContentAccount() {
-    <div class="owl-tabs-content p-4 rounded border shadow">
-        <p class="owl-h4">Account</p>
-        <p class="owl-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
+	<div class="owl-tabs-content p-4 rounded border shadow">
+		<p class="owl-h4">Account</p>
+		<p class="owl-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
 }
 
 templ TabContentPassword() {
-    <div class="owl-tabs-content p-4 rounded border shadow">
-        <p class="owl-h4">Password</p>
-        <p class="owl-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
+	<div class="owl-tabs-content p-4 rounded border shadow">
+		<p class="owl-h4">Password</p>
+		<p class="owl-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
 }

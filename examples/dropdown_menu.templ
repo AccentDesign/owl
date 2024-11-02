@@ -1,37 +1,32 @@
 package examples
 
-import (
-    "github.com/accentdesign/owl/css"
-)
+import "github.com/accentdesign/owl/css"
 
 var dropdownMenuTriggerHandle = templ.NewOnceHandle()
 
 templ DropdownMenu() {
-    @Base() {
-        @css.Include("dropdown_menu.css")
-
-        <h2 class="owl-h2 mb-10">dropdown menu</h2>
-
-        @dropdownMenuTriggerHandle.Once() {
-            <script type="text/javascript">
+	@Base() {
+		@css.Include("dropdown_menu.css")
+		<h2 class="owl-h2 mb-10">dropdown menu</h2>
+		@dropdownMenuTriggerHandle.Once() {
+			<script type="text/javascript">
                 function owlToggleDropdownMenu(trigger) {
                     const menu = trigger.closest(".owl-dropdown-menu");
                     const content = menu.querySelector(".owl-dropdown-menu-content");
                     content.classList.toggle("owl-open");
                 }
             </script>
-        }
-
-        <div class="owl-dropdown-menu">
-            <button class="owl-dropdown-menu-trigger" onclick="owlToggleDropdownMenu(this)">Open</button>
-            <div class="owl-dropdown-menu-content" role="menu">
-                <div class="owl-dropdown-menu-label">My Account</div>
-                <div class="owl-dropdown-menu-separator" role="separator"></div>
-                <button class="owl-dropdown-menu-item" role="menuitem">Profile</button>
-                <button class="owl-dropdown-menu-item" role="menuitem">Billing</button>
-                <button class="owl-dropdown-menu-item" role="menuitem">Team</button>
-                <button class="owl-dropdown-menu-item" role="menuitem">Subscription</button>
-            </div>
-        </div>
-    }
+		}
+		<div class="owl-dropdown-menu">
+			<button class="owl-dropdown-menu-trigger" onclick="owlToggleDropdownMenu(this)">Open</button>
+			<div class="owl-dropdown-menu-content" role="menu">
+				<div class="owl-dropdown-menu-label">My Account</div>
+				<div class="owl-dropdown-menu-separator" role="separator"></div>
+				<button class="owl-dropdown-menu-item" role="menuitem">Profile</button>
+				<button class="owl-dropdown-menu-item" role="menuitem">Billing</button>
+				<button class="owl-dropdown-menu-item" role="menuitem">Team</button>
+				<button class="owl-dropdown-menu-item" role="menuitem">Subscription</button>
+			</div>
+		</div>
+	}
 }

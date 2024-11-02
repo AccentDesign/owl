@@ -1,15 +1,11 @@
 package examples
 
-import (
-    "github.com/accentdesign/owl/css"
-)
+import "github.com/accentdesign/owl/css"
 
 templ Badge() {
-    @Base() {
-        @css.Include("badge.css")
-
-        <h2 class="owl-h2 mb-10">badge</h2>
-
-        <span class="owl-badge">lorem ipsum</span>
-    }
+	@Base() {
+		@css.Include("badge.css")
+		<h2 class="owl-h2 mb-10">badge</h2>
+		<span class="owl-badge">lorem ipsum</span>
+	}
 }

@@ -8,9 +8,7 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import (
-	"github.com/accentdesign/owl/css"
-)
+import "github.com/accentdesign/owl/css"
 
 var avatarImageErrorHandle = templ.NewOnceHandle()
 
@@ -139,7 +137,7 @@ func AvatarImage(src, alt string) templ.Component {
 		var templ_7745c5c3_Var5 string
 		templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(src)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `examples/avatar.templ`, Line: 42, Col: 43}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `examples/avatar.templ`, Line: 38, Col: 40}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 		if templ_7745c5c3_Err != nil {
@@ -152,7 +150,7 @@ func AvatarImage(src, alt string) templ.Component {
 		var templ_7745c5c3_Var6 string
 		templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(alt)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `examples/avatar.templ`, Line: 42, Col: 55}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `examples/avatar.templ`, Line: 38, Col: 52}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 		if templ_7745c5c3_Err != nil {

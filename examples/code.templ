@@ -1,25 +1,20 @@
 package examples
 
-import (
-    "github.com/accentdesign/owl/css"
-)
+import "github.com/accentdesign/owl/css"
 
 templ Code() {
-    @Base() {
-        @css.Include("code.css")
-
-        <h2 class="owl-h2 mb-10">code</h2>
-
-        <p class="mb-6">
-            Some inline
-            <code class="owl-code mx-1">code</code>
-            block.
-        </p>
-
-        <pre class="owl-pre">
-            <code class="owl-code">
-                git clone https://github.com/AccentDesign/owl.git
-            </code>
-        </pre>
-    }
+	@Base() {
+		@css.Include("code.css")
+		<h2 class="owl-h2 mb-10">code</h2>
+		<p class="mb-6">
+			Some inline
+			<code class="owl-code mx-1">code</code>
+			block.
+		</p>
+		<pre class="owl-pre">
+			<code class="owl-code">
+				git clone https://github.com/AccentDesign/owl.git
+			</code>
+		</pre>
+	}
 }
