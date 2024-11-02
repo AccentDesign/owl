@@ -8,10 +8,10 @@
     .owl-alert-description {
         @apply text-sm;
     }
-    .owl-alert svg {
+    .owl-alert-icon {
         @apply absolute top-4 left-4 size-4;
     }
-    .owl-alert svg~* {
+    .owl-alert-icon ~ * {
         @apply pl-7;
     }
 }
