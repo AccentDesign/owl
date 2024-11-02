@@ -15,6 +15,6 @@
         @apply bg-transparent text-black hover:bg-gray-100/80;
     }
     .owl-button.owl-button-link {
-        @apply bg-transparent text-black hover:underline;
+        @apply bg-transparent text-black hover:underline hover:underline-offset-4;
     }
 }

@@ -1,7 +1,6 @@
 @layer components {
-    .owl-breadcrumb {}
     .owl-breadcrumb-list {
-        @apply flex flex-wrap items-center gap-1.5 break-words text-sm sm:gap-2.5;
+        @apply flex flex-wrap items-center gap-2.5 break-words text-sm text-gray-500;
     }
     .owl-breadcrumb-item {
         @apply inline-flex items-center gap-1.5;
@@ -10,6 +9,9 @@
         @apply size-4;
     }
     .owl-breadcrumb-link {
-        @apply hover:underline;
+        @apply hover:text-black;
+    }
+    .owl-breadcrumb-link[aria-current=page] {
+        @apply text-black;
     }
 }
