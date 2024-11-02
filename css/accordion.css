@@ -5,14 +5,14 @@
     .owl-accordion-item {
         @apply border-b;
     }
-    :where(.owl-accordion-item.owl-selected) .owl-accordion-trigger svg {
-        @apply rotate-180;
-    }
     .owl-accordion-trigger {
         @apply w-full flex items-center justify-between flex-1 py-4 font-medium hover:underline;
     }
-    .owl-accordion-trigger svg {
-        @apply transition-all duration-300;
+    .owl-accordion-trigger-icon {
+        @apply transition-all duration-300 size-6;
+    }
+    :where(.owl-accordion-item.owl-selected) .owl-accordion-trigger-icon {
+        @apply rotate-180;
     }
     .owl-accordion-content {
         @apply overflow-hidden pt-0 text-sm max-h-0 transition-all duration-300;
