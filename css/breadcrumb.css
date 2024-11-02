@@ -6,7 +6,7 @@
     .owl-breadcrumb-item {
         @apply inline-flex items-center gap-1.5;
     }
-    .owl-breadcrumb-separator svg {
+    .owl-breadcrumb-separator-icon {
         @apply size-4;
     }
     .owl-breadcrumb-link {
