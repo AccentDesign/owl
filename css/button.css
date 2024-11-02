@@ -2,19 +2,19 @@
     .owl-button {
         @apply inline-flex items-center justify-center whitespace-nowrap rounded-md h-10 px-4 py-2 text-sm font-medium bg-black text-white hover:bg-black/80;
     }
-    .owl-button.owl-button-secondary {
+    .owl-button-secondary {
         @apply bg-gray-100 text-black hover:bg-gray-100/80;
     }
-    .owl-button.owl-button-destructive {
+    .owl-button-destructive {
         @apply bg-red-500 text-white hover:bg-red-500/90;
     }
-    .owl-button.owl-button-outline {
+    .owl-button-outline {
         @apply bg-transparent text-black border hover:bg-gray-100/80;
     }
-    .owl-button.owl-button-ghost {
+    .owl-button-ghost {
         @apply bg-transparent text-black hover:bg-gray-100/80;
     }
-    .owl-button.owl-button-link {
-        @apply bg-transparent text-black hover:underline hover:underline-offset-4;
+    .owl-button-link {
+        @apply bg-transparent text-black hover:bg-transparent hover:underline hover:underline-offset-4;
     }
 }
