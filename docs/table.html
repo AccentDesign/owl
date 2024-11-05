@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script><script src="https://cdn.tailwindcss.com"></script><style type='text/tailwindcss'>@layer components {
+    .owl-h1 {
+        @apply text-4xl font-extrabold tracking-tight lg:text-5xl;
+    }
+    .owl-h2 {
+        @apply border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0;
+    }
+    .owl-h3 {
+        @apply text-2xl font-semibold tracking-tight;
+    }
+    .owl-h4 {
+        @apply text-xl font-semibold tracking-tight;
+    }
+    .owl-p {
+        @apply leading-7 [&:not(:first-child)]:mt-6;
+    }
+}
+
+</style></head><body class="container flex gap-4 mx-auto my-10 antialiased"><aside class="w-64"><h4 class="owl-h4 mb-4">components</h4><ul class="list-disc list-inside mb-4 text-gray-500"><li><a href="accordion.html">accordion</a></li><li><a href="alert.html">alert</a></li><li><a href="alert-dialog.html">alert dialog</a></li><li><a href="avatar.html">avatar</a></li><li><a href="badge.html">badge</a></li><li><a href="breadcrumb.html">breadcrumb</a></li><li><a href="button.html">button</a></li><li><a href="card.html">card</a></li><li><a href="code.html">code</a></li><li><a href="dialog.html">dialog</a></li><li><a href="dropdown-menu.html">dropdown menu</a></li><li><a href="form.html">form</a></li><li><a href="switch.html">switch</a></li><li><a href="table.html">table</a></li><li><a href="tabs.html">tabs</a></li></ul><h4 class="owl-h4 mb-4">links</h4><ul class="list-disc list-inside text-gray-500"><li><a href="index.html">home</a></li><li><a target="_blank" href="https://github.com/AccentDesign/owl">github</a></li><li><a target="_blank" href="https://go.dev">golang</a></li><li><a target="_blank" href="https://templ.guide">templ</a></li><li><a target="_blank" href="https://github.com/air-verse/air">air</a></li><li><a target="_blank" href="https://icones.js.org/collection/lucide">icônes</a></li><li><a target="_blank" href="https://tailwindcss.com">tailwind</a></li><li><a target="_blank" href="https://ui.shadcn.com/docs">shadcn</a></li><li><a target="_blank" href="https://htmx.org/">htmx</a></li></ul></aside><main class="w-full"><style type='text/tailwindcss'>@layer components {
+    .owl-table {
+        @apply w-full caption-bottom text-sm;
+    }
+    .owl-table-header {
+        @apply border-b;
+    }
+    .owl-table-body {
+        @apply [&_tr:last-child]:border-0;
+    }
+    .owl-table-footer {
+        @apply border-t bg-gray-50 font-medium [&>tr]:last:border-b-0;
+    }
+    .owl-table-row {
+        @apply border-b transition-colors hover:bg-gray-50;
+    }
+    .owl-table-head {
+        @apply h-12 px-4 text-left align-middle font-medium;
+    }
+    .owl-table-cell {
+        @apply p-4 align-middle font-medium;
+    }
+    .owl-table-caption {
+        @apply mt-4 text-sm text-gray-500;
+    }
+}
+</style> <h2 class="owl-h2 mb-10">table</h2><div class="max-w-4xl"><table class="owl-table"><caption class="owl-table-caption">A list of your recent invoices.</caption> <thead class="owl-table-header"><tr class="owl-table-row"><th class="owl-table-head">Invoice</th><th class="owl-table-head">Status</th><th class="owl-table-head">Method</th><th class="owl-table-head text-right">Amount</th></tr></thead> <tbody class="owl-table-body"><tr class="owl-table-row"><td class="owl-table-cell">INV001</td><td class="owl-table-cell">Paid</td><td class="owl-table-cell">Credit Card</td><td class="owl-table-cell text-right">£250.00</td></tr><tr class="owl-table-row"><td class="owl-table-cell">INV002</td><td class="owl-table-cell">Paid</td><td class="owl-table-cell">Credit Card</td><td class="owl-table-cell text-right">£500.00</td></tr><tr class="owl-table-row"><td class="owl-table-cell">INV003</td><td class="owl-table-cell">Paid</td><td class="owl-table-cell">Credit Card</td><td class="owl-table-cell text-right">£250.00</td></tr></tbody><tfoot class="owl-table-footer"><tr class="owl-table-row"><td class="owl-table-cell">Total</td><td class="owl-table-cell"></td><td class="owl-table-cell"></td><td class="owl-table-cell text-right">£1,000.00</td></tr></tfoot></table></div></main></body></html>

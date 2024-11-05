@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script><script src="https://cdn.tailwindcss.com"></script><style type='text/tailwindcss'>@layer components {
+    .owl-h1 {
+        @apply text-4xl font-extrabold tracking-tight lg:text-5xl;
+    }
+    .owl-h2 {
+        @apply border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0;
+    }
+    .owl-h3 {
+        @apply text-2xl font-semibold tracking-tight;
+    }
+    .owl-h4 {
+        @apply text-xl font-semibold tracking-tight;
+    }
+    .owl-p {
+        @apply leading-7 [&:not(:first-child)]:mt-6;
+    }
+}
+
+</style></head><body class="container flex gap-4 mx-auto my-10 antialiased"><aside class="w-64"><h4 class="owl-h4 mb-4">components</h4><ul class="list-disc list-inside mb-4 text-gray-500"><li><a href="accordion.html">accordion</a></li><li><a href="alert.html">alert</a></li><li><a href="alert-dialog.html">alert dialog</a></li><li><a href="avatar.html">avatar</a></li><li><a href="badge.html">badge</a></li><li><a href="breadcrumb.html">breadcrumb</a></li><li><a href="button.html">button</a></li><li><a href="card.html">card</a></li><li><a href="code.html">code</a></li><li><a href="dialog.html">dialog</a></li><li><a href="dropdown-menu.html">dropdown menu</a></li><li><a href="form.html">form</a></li><li><a href="switch.html">switch</a></li><li><a href="table.html">table</a></li><li><a href="tabs.html">tabs</a></li></ul><h4 class="owl-h4 mb-4">links</h4><ul class="list-disc list-inside text-gray-500"><li><a href="index.html">home</a></li><li><a target="_blank" href="https://github.com/AccentDesign/owl">github</a></li><li><a target="_blank" href="https://go.dev">golang</a></li><li><a target="_blank" href="https://templ.guide">templ</a></li><li><a target="_blank" href="https://github.com/air-verse/air">air</a></li><li><a target="_blank" href="https://icones.js.org/collection/lucide">icônes</a></li><li><a target="_blank" href="https://tailwindcss.com">tailwind</a></li><li><a target="_blank" href="https://ui.shadcn.com/docs">shadcn</a></li><li><a target="_blank" href="https://htmx.org/">htmx</a></li></ul></aside><main class="w-full"><style type='text/tailwindcss'>@layer components {
+    .owl-avatar {
+        @apply relative flex shrink-0 h-10 w-10 overflow-hidden rounded-full;
+    }
+    .owl-avatar-image {
+        @apply h-full w-full aspect-square;
+    }
+    .owl-avatar-image.owl-avatar-image-error {
+        @apply hidden;
+    }
+    .owl-avatar-fallback {
+        @apply flex items-center justify-center h-full w-full bg-black text-white;
+    }
+    :where(.owl-avatar-image:not(.owl-avatar-image-error)) + .owl-avatar-fallback {
+        @apply hidden;
+    }
+}
+</style> <h2 class="owl-h2 mb-10">avatar</h2><div class="flex gap-6"><div class="owl-avatar"><script type="text/javascript">
+            function owlOnAvatarImageError(img) {
+                img.classList.add("owl-avatar-image-error");
+            }
+        </script><img class="owl-avatar-image" src="https://github.githubassets.com/images/icons/emoji/unicode/1f436.png?v8" alt="dog" onerror="owlOnAvatarImageError(this)"></div><div class="owl-avatar"><img class="owl-avatar-image" src="https://github.githubassets.com/images/icons/emoji/unicode/1f638.png?v8" alt="cat" onerror="owlOnAvatarImageError(this)"><span class="owl-avatar-fallback">OK</span></div><div class="owl-avatar"><img class="owl-avatar-image" src="http://error" alt="missing" onerror="owlOnAvatarImageError(this)"><span class="owl-avatar-fallback">ER</span></div><div class="owl-avatar"><span class="owl-avatar-fallback">FB</span></div></div></main></body></html>

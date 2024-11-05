@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script><script src="https://cdn.tailwindcss.com"></script><style type='text/tailwindcss'>@layer components {
+    .owl-h1 {
+        @apply text-4xl font-extrabold tracking-tight lg:text-5xl;
+    }
+    .owl-h2 {
+        @apply border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0;
+    }
+    .owl-h3 {
+        @apply text-2xl font-semibold tracking-tight;
+    }
+    .owl-h4 {
+        @apply text-xl font-semibold tracking-tight;
+    }
+    .owl-p {
+        @apply leading-7 [&:not(:first-child)]:mt-6;
+    }
+}
+
+</style></head><body class="container flex gap-4 mx-auto my-10 antialiased"><aside class="w-64"><h4 class="owl-h4 mb-4">components</h4><ul class="list-disc list-inside mb-4 text-gray-500"><li><a href="accordion.html">accordion</a></li><li><a href="alert.html">alert</a></li><li><a href="alert-dialog.html">alert dialog</a></li><li><a href="avatar.html">avatar</a></li><li><a href="badge.html">badge</a></li><li><a href="breadcrumb.html">breadcrumb</a></li><li><a href="button.html">button</a></li><li><a href="card.html">card</a></li><li><a href="code.html">code</a></li><li><a href="dialog.html">dialog</a></li><li><a href="dropdown-menu.html">dropdown menu</a></li><li><a href="form.html">form</a></li><li><a href="switch.html">switch</a></li><li><a href="table.html">table</a></li><li><a href="tabs.html">tabs</a></li></ul><h4 class="owl-h4 mb-4">links</h4><ul class="list-disc list-inside text-gray-500"><li><a href="index.html">home</a></li><li><a target="_blank" href="https://github.com/AccentDesign/owl">github</a></li><li><a target="_blank" href="https://go.dev">golang</a></li><li><a target="_blank" href="https://templ.guide">templ</a></li><li><a target="_blank" href="https://github.com/air-verse/air">air</a></li><li><a target="_blank" href="https://icones.js.org/collection/lucide">icônes</a></li><li><a target="_blank" href="https://tailwindcss.com">tailwind</a></li><li><a target="_blank" href="https://ui.shadcn.com/docs">shadcn</a></li><li><a target="_blank" href="https://htmx.org/">htmx</a></li></ul></aside><main class="w-full"><style type='text/tailwindcss'>@layer components {
+    .owl-dropdown-menu {
+        @apply relative inline-flex;
+    }
+    .owl-dropdown-menu-trigger {
+        @apply whitespace-nowrap rounded-md text-sm font-medium border bg-white h-10 px-4 py-2;
+    }
+    .owl-dropdown-menu-content {
+        @apply z-50 min-w-[8rem] overflow-hidden rounded-md border bg-white p-1 shadow-md w-56 absolute top-11;
+    }
+    .owl-dropdown-menu-content:not(.owl-open) {
+        @apply hidden;
+    }
+    .owl-dropdown-menu-label {
+        @apply px-2 py-1.5 text-sm font-semibold;
+    }
+    .owl-dropdown-menu-separator {
+        @apply -mx-1 my-1 h-px bg-gray-200;
+    }
+    .owl-dropdown-menu-item {
+        @apply w-full relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-gray-100;
+    }
+}
+</style> <h2 class="owl-h2 mb-10">dropdown menu</h2><script type="text/javascript">
+                function owlToggleDropdownMenu(trigger) {
+                    const menu = trigger.closest(".owl-dropdown-menu");
+                    const content = menu.querySelector(".owl-dropdown-menu-content");
+                    content.classList.toggle("owl-open");
+                }
+            </script> <div class="owl-dropdown-menu"><button class="owl-dropdown-menu-trigger" onclick="owlToggleDropdownMenu(this)">Open</button><div class="owl-dropdown-menu-content" role="menu"><div class="owl-dropdown-menu-label">My Account</div><div class="owl-dropdown-menu-separator" role="separator"></div><button class="owl-dropdown-menu-item" role="menuitem">Profile</button> <button class="owl-dropdown-menu-item" role="menuitem">Billing</button> <button class="owl-dropdown-menu-item" role="menuitem">Team</button> <button class="owl-dropdown-menu-item" role="menuitem">Subscription</button></div></div></main></body></html>

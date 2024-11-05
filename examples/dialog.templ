@@ -9,7 +9,7 @@ templ Dialog() {
 	@Base() {
 		@css.Include("backdrop.css", "button.css", "dialog.css", "input.css", "label.css")
 		<h2 class="owl-h2 mb-10">dialog</h2>
-		<button class={ ButtonOutline } hx-get="/dialog/open" hx-target=".owl-dialog-container" hx-swap="outerHTML settle:0.1s" aria-haspopup="dialog">Open</button>
+		<button class={ ButtonOutline } hx-get="dialog-open.html" hx-target=".owl-dialog-container" hx-swap="outerHTML settle:0.1s" aria-haspopup="dialog">Open</button>
 		@DialogClosed()
 	}
 }
@@ -33,10 +33,10 @@ templ DialogOpen() {
 				</div>
 			</div>
 			<div class="owl-dialog-footer">
-				<button class={ ButtonDefault } hx-get="/dialog/closed">Save changed</button>
+				<button class={ ButtonDefault } hx-get="dialog-closed.html">Save changed</button>
 			</div>
 			<div class="owl-dialog-close">
-				<button class={ ButtonGhost } hx-get="/dialog/closed">
+				<button class={ ButtonGhost } hx-get="dialog-closed.html">
 					@icons.X("size-4")
 					<span class="sr-only">Close</span>
 				</button>

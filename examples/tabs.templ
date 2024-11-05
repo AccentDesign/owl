@@ -30,8 +30,8 @@ templ Tabs() {
 		<div class="w-[400px]">
 			<div class="owl-tabs" hx-swap="outerHTML" hx-target="next .owl-tabs-content" hx-on:htmx-after-on-load="owlOnTabLoad(event)">
 				<div class="owl-tabs-list" role="tabslist">
-					<button { tab("/tabs/account", true)... }>Account</button>
-					<button { tab("/tabs/password", false)... }>Password</button>
+					<button { tab("tabs-account.html", true)... }>Account</button>
+					<button { tab("tabs-password.html", false)... }>Password</button>
 				</div>
 				@TabContentAccount()
 			</div>

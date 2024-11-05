@@ -72,7 +72,7 @@ func Dialog() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" hx-get=\"/dialog/open\" hx-target=\".owl-dialog-container\" hx-swap=\"outerHTML settle:0.1s\" aria-haspopup=\"dialog\">Open</button>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" hx-get=\"dialog-open.html\" hx-target=\".owl-dialog-container\" hx-swap=\"outerHTML settle:0.1s\" aria-haspopup=\"dialog\">Open</button>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -133,7 +133,7 @@ func DialogOpen() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" hx-get=\"/dialog/closed\">Save changed</button></div><div class=\"owl-dialog-close\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" hx-get=\"dialog-closed.html\">Save changed</button></div><div class=\"owl-dialog-close\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -155,7 +155,7 @@ func DialogOpen() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" hx-get=\"/dialog/closed\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" hx-get=\"dialog-closed.html\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

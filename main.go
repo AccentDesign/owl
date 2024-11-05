@@ -1,44 +1,49 @@
 package main
 
 import (
-	"fmt"
+	"context"
 	"github.com/a-h/templ"
 	"github.com/accentdesign/owl/examples"
 	"log"
-	"net/http"
-)
-
-var (
-	listen = ":80"
+	"os"
 )
 
 func main() {
-	serve()
+	build()
 }
 
-func serve() {
-	http.Handle("/", templ.Handler(examples.Index()))
-	http.Handle("/accordion", templ.Handler(examples.Accordion()))
-	http.Handle("/alert", templ.Handler(examples.Alert()))
-	http.Handle("/alert-dialog", templ.Handler(examples.AlertDialog()))
-	http.Handle("/alert-dialog/open", templ.Handler(examples.AlertDialogOpen()))
-	http.Handle("/alert-dialog/closed", templ.Handler(examples.AlertDialogClosed()))
-	http.Handle("/avatar", templ.Handler(examples.Avatar()))
-	http.Handle("/badge", templ.Handler(examples.Badge()))
-	http.Handle("/breadcrumb", templ.Handler(examples.Breadcrumb()))
-	http.Handle("/button", templ.Handler(examples.Button()))
-	http.Handle("/card", templ.Handler(examples.Card()))
-	http.Handle("/code", templ.Handler(examples.Code()))
-	http.Handle("/dialog", templ.Handler(examples.Dialog()))
-	http.Handle("/dialog/open", templ.Handler(examples.DialogOpen()))
-	http.Handle("/dialog/closed", templ.Handler(examples.DialogClosed()))
-	http.Handle("/dropdown-menu", templ.Handler(examples.DropdownMenu()))
-	http.Handle("/form", templ.Handler(examples.Form()))
-	http.Handle("/switch", templ.Handler(examples.Switch()))
-	http.Handle("/table", templ.Handler(examples.Table()))
-	http.Handle("/tabs", templ.Handler(examples.Tabs()))
-	http.Handle("/tabs/account", templ.Handler(examples.TabContentAccount()))
-	http.Handle("/tabs/password", templ.Handler(examples.TabContentPassword()))
-	fmt.Printf("listening on %s\n", listen)
-	log.Panic(http.ListenAndServe(listen, nil))
+func build() {
+	createHtml("docs/index.html", examples.Index())
+	createHtml("docs/accordion.html", examples.Accordion())
+	createHtml("docs/alert.html", examples.Alert())
+	createHtml("docs/alert-dialog.html", examples.AlertDialog())
+	createHtml("docs/alert-dialog-open.html", examples.AlertDialogOpen())
+	createHtml("docs/alert-dialog-closed.html", examples.AlertDialogClosed())
+	createHtml("docs/avatar.html", examples.Avatar())
+	createHtml("docs/badge.html", examples.Badge())
+	createHtml("docs/breadcrumb.html", examples.Breadcrumb())
+	createHtml("docs/button.html", examples.Button())
+	createHtml("docs/card.html", examples.Card())
+	createHtml("docs/code.html", examples.Code())
+	createHtml("docs/dialog.html", examples.Dialog())
+	createHtml("docs/dialog-open.html", examples.DialogOpen())
+	createHtml("docs/dialog-closed.html", examples.DialogClosed())
+	createHtml("docs/dropdown-menu.html", examples.DropdownMenu())
+	createHtml("docs/form.html", examples.Form())
+	createHtml("docs/switch.html", examples.Switch())
+	createHtml("docs/table.html", examples.Table())
+	createHtml("docs/tabs.html", examples.Tabs())
+	createHtml("docs/tabs-account.html", examples.TabContentAccount())
+	createHtml("docs/tabs-password.html", examples.TabContentPassword())
+}
+
+func createHtml(filePath string, component templ.Component) {
+	f, err := os.Create(filePath)
+	if err != nil {
+		log.Fatal(err)
+	}
+	err = component.Render(context.Background(), f)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
