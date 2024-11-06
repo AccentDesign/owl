@@ -5,11 +5,13 @@ import (
 	"github.com/a-h/templ"
 	"github.com/accentdesign/owl/examples"
 	"log"
+	"net/http"
 	"os"
 )
 
 func main() {
 	build()
+	serve()
 }
 
 func build() {
@@ -37,6 +39,12 @@ func build() {
 	createHtml("docs/tabs.html", examples.Tabs())
 	createHtml("docs/tabs-account.html", examples.TabContentAccount())
 	createHtml("docs/tabs-password.html", examples.TabContentPassword())
+}
+
+func serve() {
+	http.Handle("/", http.FileServer(http.Dir("docs")))
+	log.Println("Listening on :80...")
+	log.Fatal(http.ListenAndServe(":80", nil))
 }
 
 func createHtml(filePath string, component templ.Component) {
