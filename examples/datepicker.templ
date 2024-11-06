@@ -1,0 +1,25 @@
+package examples
+
+var datepickerStyles = []string{"typography.css", "input.css"}
+
+var datepickerHandle = templ.NewOnceHandle()
+
+templ Datepicker() {
+	@Base(datepickerStyles) {
+        @datepickerHandle.Once() {
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+            <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+            <script type="text/javascript">
+                document.addEventListener("DOMContentLoaded", function() {
+                    flatpickr("#date", {});
+                });
+            </script>
+        }
+
+		<h1 class="owl-h1 mb-10">datepicker</h1>
+		<div class="space-y-6">
+            <p class="owl-p">Basic example using <a class="owl-anchor" href="https://flatpickr.js.org/" target="_blank">flatpickr</a>.</p>
+            <input class="owl-input w-96" id="date" name="date" type="text" placeholder="Select Date.." />
+		</div>
+	}
+}

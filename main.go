@@ -25,6 +25,7 @@ func build() {
 	createHtml("docs/button.html", examples.Button())
 	createHtml("docs/card.html", examples.Card())
 	createHtml("docs/code.html", examples.Code())
+	createHtml("docs/datepicker.html", examples.Datepicker())
 	createHtml("docs/dialog.html", examples.Dialog())
 	createHtml("docs/dialog-open.html", examples.DialogOpen())
 	createHtml("docs/dialog-closed.html", examples.DialogClosed())
