@@ -1,0 +1,36 @@
+package examples
+
+import "github.com/accentdesign/owl/icons"
+
+var paginationStyles = []string{"typography.css", "pagination.css", "button.css"}
+
+templ Pagination() {
+	@Base(paginationStyles) {
+		<h2 class="owl-h2 mb-10">pagination</h2>
+		<nav role="navigation" aria-label="pagination">
+		    <ul class="owl-pagination">
+		        <li>
+                    <a href="#" class={ ButtonGhost }>
+                        @icons.ChevronLeft("size-4")
+                        <span>Previous</span>
+                    </a>
+		        </li>
+		        <li><a href="#" class={ ButtonGhost }>1</a></li>
+		        <li><a href="#" aria-current="page" class={ ButtonOutline }>2</a></li>
+		        <li><a href="#" class={ ButtonGhost }>3</a></li>
+		        <li>
+                    <span aria-hidden="true" class={ ButtonGhost, ButtonIcon }>
+                        @icons.Ellipsis("size-4")
+                        <span class="sr-only">More pages</span>
+                    </span>
+		        </li>
+		        <li>
+                    <a href="#" class={ ButtonGhost }>
+                        <span>Next</span>
+                        @icons.ChevronRight("size-4")
+                    </a>
+		        </li>
+		    </ul>
+		</nav>
+    }
+}

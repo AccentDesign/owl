@@ -30,6 +30,7 @@ func build() {
 	createHtml("docs/dialog-closed.html", examples.DialogClosed())
 	createHtml("docs/dropdown-menu.html", examples.DropdownMenu())
 	createHtml("docs/form.html", examples.Form())
+	createHtml("docs/pagination.html", examples.Pagination())
 	createHtml("docs/switch.html", examples.Switch())
 	createHtml("docs/table.html", examples.Table())
 	createHtml("docs/tabs.html", examples.Tabs())

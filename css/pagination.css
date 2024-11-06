@@ -1,0 +1,8 @@
+@layer components {
+    .owl-pagination {
+        @apply flex gap-1;
+    }
+    .owl-pagination [aria-hidden] {
+        @apply pointer-events-none;
+    }
+}
