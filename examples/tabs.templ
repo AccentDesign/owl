@@ -1,8 +1,8 @@
 package examples
 
-import "github.com/accentdesign/owl/css"
-
 var tabsLoadHandle = templ.NewOnceHandle()
+
+var tabsStyles = []string{"typography.css", "tabs.css"}
 
 func tab(url string, selected bool) templ.Attributes {
 	return templ.Attributes{
@@ -14,8 +14,7 @@ func tab(url string, selected bool) templ.Attributes {
 }
 
 templ Tabs() {
-	@Base() {
-		@css.Include("tabs.css")
+	@Base(tabsStyles) {
 		<h2 class="owl-h2 mb-10">tabs</h2>
 		@tabsLoadHandle.Once() {
 			<script type="text/javascript">

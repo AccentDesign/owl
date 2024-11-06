@@ -1,13 +1,11 @@
 package examples
 
-import (
-	"github.com/accentdesign/owl/css"
-	"github.com/accentdesign/owl/icons"
-)
+import "github.com/accentdesign/owl/icons"
+
+var breadcrumbStyles = []string{"typography.css", "breadcrumb.css"}
 
 templ Breadcrumb() {
-	@Base() {
-		@css.Include("breadcrumb.css")
+	@Base(breadcrumbStyles) {
 		<h2 class="owl-h2 mb-10">breadcrumb</h2>
 		<nav aria-label="breadcrumb" class="owl-breadcrumb">
 			<ol class="owl-breadcrumb-list">

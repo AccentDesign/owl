@@ -1,13 +1,11 @@
 package examples
 
-import (
-	"github.com/accentdesign/owl/css"
-	"github.com/accentdesign/owl/icons"
-)
+import "github.com/accentdesign/owl/icons"
+
+var dialogStyles = []string{"typography.css", "backdrop.css", "button.css", "dialog.css", "input.css", "label.css"}
 
 templ Dialog() {
-	@Base() {
-		@css.Include("backdrop.css", "button.css", "dialog.css", "input.css", "label.css")
+	@Base(dialogStyles) {
 		<h2 class="owl-h2 mb-10">dialog</h2>
 		<button class={ ButtonOutline } hx-get="dialog-open.html" hx-target=".owl-dialog-container" hx-swap="outerHTML settle:0.1s" aria-haspopup="dialog">Open</button>
 		@DialogClosed()

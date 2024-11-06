@@ -8,7 +8,7 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import "github.com/accentdesign/owl/css"
+var formStyles = []string{"typography.css", "form_field.css", "label.css", "checkbox.css", "input.css", "select.css", "textarea.css", "button.css"}
 
 func Form() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
@@ -43,11 +43,7 @@ func Form() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			templ_7745c5c3_Err = css.Include("form_field.css", "label.css", "checkbox.css", "input.css", "select.css", "textarea.css", "button.css").Render(ctx, templ_7745c5c3_Buffer)
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <h2 class=\"owl-h2 mb-10\">Form</h2><form class=\"space-y-10 max-w-[500px]\"><div class=\"owl-form-field\"><label class=\"owl-label\" for=\"email\">Email</label> <input class=\"owl-input\" id=\"email\" name=\"email\" type=\"email\" placeholder=\"owl text\" value=\"someone@example.com\"><p class=\"owl-form-field-description\">This is your email address.</p></div><div class=\"owl-form-field\"><label class=\"owl-label\" for=\"password\">Password</label> <input class=\"owl-input\" id=\"password\" name=\"password\" type=\"password\" placeholder=\"owl password\"><p class=\"owl-form-field-error\">Invalid username of password.</p></div><div class=\"owl-form-field\"><label class=\"owl-label\" for=\"sex\">Sex</label> <select class=\"owl-select\" id=\"sex\" name=\"sex\"><option value=\"\">Please select..</option> <option value=\"Male\">Male</option> <option value=\"Female\">Female</option></select><p class=\"owl-form-field-description\">This is your sex.</p></div><div class=\"owl-form-field\"><label class=\"owl-label\" for=\"comments\">Comments</label> <textarea class=\"owl-textarea\" id=\"comments\" name=\"comments\" placeholder=\"owl comments\"></textarea><p class=\"owl-form-field-description\">Leave us some comments.</p></div><div class=\"owl-form-field\"><label class=\"owl-label\" for=\"file\">File</label> <input class=\"owl-input\" id=\"file\" name=\"file\" type=\"file\"><p class=\"owl-form-field-description\">Add some random file.</p></div><div class=\"owl-form-field\"><label class=\"owl-label flex items-center gap-2\" for=\"agree\"><input class=\"owl-checkbox\" id=\"agree\" name=\"agree\" type=\"checkbox\"> Terms and conditions</label><p class=\"owl-form-field-description\">Please agree to the terms.</p></div><div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h2 class=\"owl-h2 mb-10\">form</h2><form class=\"space-y-10 max-w-[500px]\"><div class=\"owl-form-field\"><label class=\"owl-label\" for=\"email\">Email</label> <input class=\"owl-input\" id=\"email\" name=\"email\" type=\"email\" placeholder=\"owl text\" value=\"someone@example.com\"><p class=\"owl-form-field-description\">This is your email address.</p></div><div class=\"owl-form-field\"><label class=\"owl-label\" for=\"password\">Password</label> <input class=\"owl-input\" id=\"password\" name=\"password\" type=\"password\" placeholder=\"owl password\"><p class=\"owl-form-field-error\">Invalid username of password.</p></div><div class=\"owl-form-field\"><label class=\"owl-label\" for=\"sex\">Sex</label> <select class=\"owl-select\" id=\"sex\" name=\"sex\"><option value=\"\">Please select..</option> <option value=\"Male\">Male</option> <option value=\"Female\">Female</option></select><p class=\"owl-form-field-description\">This is your sex.</p></div><div class=\"owl-form-field\"><label class=\"owl-label\" for=\"comments\">Comments</label> <textarea class=\"owl-textarea\" id=\"comments\" name=\"comments\" placeholder=\"owl comments\"></textarea><p class=\"owl-form-field-description\">Leave us some comments.</p></div><div class=\"owl-form-field\"><label class=\"owl-label\" for=\"file\">File</label> <input class=\"owl-input\" id=\"file\" name=\"file\" type=\"file\"><p class=\"owl-form-field-description\">Add some random file.</p></div><div class=\"owl-form-field\"><label class=\"owl-label flex items-center gap-2\" for=\"agree\"><input class=\"owl-checkbox\" id=\"agree\" name=\"agree\" type=\"checkbox\"> Terms and conditions</label><p class=\"owl-form-field-description\">Please agree to the terms.</p></div><div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -75,7 +71,7 @@ func Form() templ.Component {
 			}
 			return templ_7745c5c3_Err
 		})
-		templ_7745c5c3_Err = Base().Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = Base(formStyles).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

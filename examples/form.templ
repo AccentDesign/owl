@@ -1,11 +1,10 @@
 package examples
 
-import "github.com/accentdesign/owl/css"
+var formStyles = []string{"typography.css", "form_field.css", "label.css", "checkbox.css", "input.css", "select.css", "textarea.css", "button.css"}
 
 templ Form() {
-	@Base() {
-		@css.Include("form_field.css", "label.css", "checkbox.css", "input.css", "select.css", "textarea.css", "button.css")
-		<h2 class="owl-h2 mb-10">Form</h2>
+	@Base(formStyles) {
+		<h2 class="owl-h2 mb-10">form</h2>
 		<form class="space-y-10 max-w-[500px]">
 			<div class="owl-form-field">
 				<label class="owl-label" for="email">Email</label>

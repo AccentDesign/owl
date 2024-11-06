@@ -8,10 +8,9 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import (
-	"github.com/accentdesign/owl/css"
-	"github.com/accentdesign/owl/icons"
-)
+import "github.com/accentdesign/owl/icons"
+
+var breadcrumbStyles = []string{"typography.css", "breadcrumb.css"}
 
 func Breadcrumb() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
@@ -46,11 +45,7 @@ func Breadcrumb() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			templ_7745c5c3_Err = css.Include("breadcrumb.css").Render(ctx, templ_7745c5c3_Buffer)
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <h2 class=\"owl-h2 mb-10\">breadcrumb</h2><nav aria-label=\"breadcrumb\" class=\"owl-breadcrumb\"><ol class=\"owl-breadcrumb-list\"><li class=\"owl-breadcrumb-item\"><a class=\"owl-breadcrumb-link\" href=\"index.html\">Home</a></li><li class=\"owl-breadcrumb-separator\" aria-hidden=\"true\" role=\"presentation\">")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h2 class=\"owl-h2 mb-10\">breadcrumb</h2><nav aria-label=\"breadcrumb\" class=\"owl-breadcrumb\"><ol class=\"owl-breadcrumb-list\"><li class=\"owl-breadcrumb-item\"><a class=\"owl-breadcrumb-link\" href=\"index.html\">Home</a></li><li class=\"owl-breadcrumb-separator\" aria-hidden=\"true\" role=\"presentation\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -72,7 +67,7 @@ func Breadcrumb() templ.Component {
 			}
 			return templ_7745c5c3_Err
 		})
-		templ_7745c5c3_Err = Base().Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = Base(breadcrumbStyles).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

@@ -1,10 +1,9 @@
 package examples
 
-import "github.com/accentdesign/owl/css"
+var cardStyles = []string{"typography.css", "button.css", "card.css", "input.css", "label.css"}
 
 templ Card() {
-	@Base() {
-		@css.Include("button.css", "card.css", "input.css", "label.css")
+	@Base(cardStyles) {
 		<h2 class="owl-h2 mb-10">card</h2>
 		<div class="space-y-6 w-[380px]">
 			<div class="owl-card">

@@ -1,15 +1,13 @@
 package examples
 
-import (
-	"github.com/accentdesign/owl/css"
-	"github.com/accentdesign/owl/icons"
-)
+import "github.com/accentdesign/owl/icons"
 
 var accordionTriggerHandle = templ.NewOnceHandle()
 
+var accordionStyles = []string{"typography.css", "accordion.css"}
+
 templ Accordion() {
-	@Base() {
-		@css.Include("accordion.css")
+	@Base(accordionStyles) {
 		<h2 class="owl-h2 mb-10">accordion</h2>
 		@accordionTriggerHandle.Once() {
 			<script type="text/javascript">

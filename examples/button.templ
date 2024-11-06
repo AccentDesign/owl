@@ -1,7 +1,5 @@
 package examples
 
-import "github.com/accentdesign/owl/css"
-
 var (
 	ButtonDefault     string = "owl-button"
 	ButtonSecondary   string = "owl-button owl-button-secondary"
@@ -11,9 +9,10 @@ var (
 	ButtonLink        string = "owl-button owl-button-link"
 )
 
+var buttonStyles = []string{"typography.css", "button.css"}
+
 templ Button() {
-	@Base() {
-		@css.Include("button.css")
+	@Base(buttonStyles) {
 		<h2 class="owl-h2 mb-10">button</h2>
 		<div class="flex gap-6">
 			<button class={ ButtonDefault }>lorem ipsum</button>

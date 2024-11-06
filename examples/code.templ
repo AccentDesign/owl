@@ -1,10 +1,9 @@
 package examples
 
-import "github.com/accentdesign/owl/css"
+var codeStyles = []string{"typography.css", "code.css"}
 
 templ Code() {
-	@Base() {
-		@css.Include("code.css")
+	@Base(codeStyles) {
 		<h2 class="owl-h2 mb-10">code</h2>
 		<p class="mb-6">
 			Some inline

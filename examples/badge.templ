@@ -1,10 +1,9 @@
 package examples
 
-import "github.com/accentdesign/owl/css"
+var badgeStyles = []string{"typography.css", "badge.css"}
 
 templ Badge() {
-	@Base() {
-		@css.Include("badge.css")
+	@Base(badgeStyles) {
 		<h2 class="owl-h2 mb-10">badge</h2>
 		<span class="owl-badge">lorem ipsum</span>
 	}

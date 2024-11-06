@@ -8,7 +8,7 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import "github.com/accentdesign/owl/css"
+var tableStyles = []string{"typography.css", "table.css"}
 
 func Table() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
@@ -43,17 +43,13 @@ func Table() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			templ_7745c5c3_Err = css.Include("table.css").Render(ctx, templ_7745c5c3_Buffer)
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <h2 class=\"owl-h2 mb-10\">table</h2><div class=\"max-w-4xl\"><table class=\"owl-table\"><caption class=\"owl-table-caption\">A list of your recent invoices.</caption> <thead class=\"owl-table-header\"><tr class=\"owl-table-row\"><th class=\"owl-table-head\">Invoice</th><th class=\"owl-table-head\">Status</th><th class=\"owl-table-head\">Method</th><th class=\"owl-table-head text-right\">Amount</th></tr></thead> <tbody class=\"owl-table-body\"><tr class=\"owl-table-row\"><td class=\"owl-table-cell\">INV001</td><td class=\"owl-table-cell\">Paid</td><td class=\"owl-table-cell\">Credit Card</td><td class=\"owl-table-cell text-right\">£250.00</td></tr><tr class=\"owl-table-row\"><td class=\"owl-table-cell\">INV002</td><td class=\"owl-table-cell\">Paid</td><td class=\"owl-table-cell\">Credit Card</td><td class=\"owl-table-cell text-right\">£500.00</td></tr><tr class=\"owl-table-row\"><td class=\"owl-table-cell\">INV003</td><td class=\"owl-table-cell\">Paid</td><td class=\"owl-table-cell\">Credit Card</td><td class=\"owl-table-cell text-right\">£250.00</td></tr></tbody><tfoot class=\"owl-table-footer\"><tr class=\"owl-table-row\"><td class=\"owl-table-cell\">Total</td><td class=\"owl-table-cell\"></td><td class=\"owl-table-cell\"></td><td class=\"owl-table-cell text-right\">£1,000.00</td></tr></tfoot></table></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h2 class=\"owl-h2 mb-10\">table</h2><div class=\"max-w-4xl\"><table class=\"owl-table\"><caption class=\"owl-table-caption\">A list of your recent invoices.</caption> <thead class=\"owl-table-header\"><tr class=\"owl-table-row\"><th class=\"owl-table-head\">Invoice</th><th class=\"owl-table-head\">Status</th><th class=\"owl-table-head\">Method</th><th class=\"owl-table-head text-right\">Amount</th></tr></thead> <tbody class=\"owl-table-body\"><tr class=\"owl-table-row\"><td class=\"owl-table-cell\">INV001</td><td class=\"owl-table-cell\">Paid</td><td class=\"owl-table-cell\">Credit Card</td><td class=\"owl-table-cell text-right\">£250.00</td></tr><tr class=\"owl-table-row\"><td class=\"owl-table-cell\">INV002</td><td class=\"owl-table-cell\">Paid</td><td class=\"owl-table-cell\">Credit Card</td><td class=\"owl-table-cell text-right\">£500.00</td></tr><tr class=\"owl-table-row\"><td class=\"owl-table-cell\">INV003</td><td class=\"owl-table-cell\">Paid</td><td class=\"owl-table-cell\">Credit Card</td><td class=\"owl-table-cell text-right\">£250.00</td></tr></tbody><tfoot class=\"owl-table-footer\"><tr class=\"owl-table-row\"><td class=\"owl-table-cell\">Total</td><td class=\"owl-table-cell\"></td><td class=\"owl-table-cell\"></td><td class=\"owl-table-cell text-right\">£1,000.00</td></tr></tfoot></table></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return templ_7745c5c3_Err
 		})
-		templ_7745c5c3_Err = Base().Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = Base(tableStyles).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

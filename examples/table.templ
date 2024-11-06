@@ -1,10 +1,9 @@
 package examples
 
-import "github.com/accentdesign/owl/css"
+var tableStyles = []string{"typography.css", "table.css"}
 
 templ Table() {
-	@Base() {
-		@css.Include("table.css")
+	@Base(tableStyles) {
 		<h2 class="owl-h2 mb-10">table</h2>
 		<div class="max-w-4xl">
 			<table class="owl-table">
