@@ -1,8 +1,10 @@
 package examples
 
+import "github.com/accentdesign/owl/icons"
+
 var dropdownMenuTriggerHandle = templ.NewOnceHandle()
 
-var dropdownMenuStyles = []string{"typography.css", "dropdown_menu.css"}
+var dropdownMenuStyles = []string{"typography.css", "dropdown_menu.css", "button.css"}
 
 templ DropdownMenu() {
 	@Base(dropdownMenuStyles) {
@@ -17,7 +19,10 @@ templ DropdownMenu() {
             </script>
 		}
 		<div class="owl-dropdown-menu">
-			<button class="owl-dropdown-menu-trigger" onclick="owlToggleDropdownMenu(this)">Open</button>
+			<button class={ ButtonOutline } onclick="owlToggleDropdownMenu(this)">
+			    <span>Account Menu</span>
+			    @icons.ChevronDown("size-4")
+			</button>
 			<div class="owl-dropdown-menu-content" role="menu">
 				<div class="owl-dropdown-menu-label">My Account</div>
 				<div class="owl-dropdown-menu-separator" role="separator"></div>

@@ -8,9 +8,11 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
+import "github.com/accentdesign/owl/icons"
+
 var dropdownMenuTriggerHandle = templ.NewOnceHandle()
 
-var dropdownMenuStyles = []string{"typography.css", "dropdown_menu.css"}
+var dropdownMenuStyles = []string{"typography.css", "dropdown_menu.css", "button.css"}
 
 func DropdownMenu() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
@@ -71,7 +73,37 @@ func DropdownMenu() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <div class=\"owl-dropdown-menu\"><button class=\"owl-dropdown-menu-trigger\" onclick=\"owlToggleDropdownMenu(this)\">Open</button><div class=\"owl-dropdown-menu-content\" role=\"menu\"><div class=\"owl-dropdown-menu-label\">My Account</div><div class=\"owl-dropdown-menu-separator\" role=\"separator\"></div><button class=\"owl-dropdown-menu-item\" role=\"menuitem\">Profile</button> <button class=\"owl-dropdown-menu-item\" role=\"menuitem\">Billing</button> <button class=\"owl-dropdown-menu-item\" role=\"menuitem\">Team</button> <button class=\"owl-dropdown-menu-item\" role=\"menuitem\">Subscription</button></div></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <div class=\"owl-dropdown-menu\">")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			var templ_7745c5c3_Var4 = []any{ButtonOutline}
+			templ_7745c5c3_Err = templ.RenderCSSItems(ctx, templ_7745c5c3_Buffer, templ_7745c5c3_Var4...)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<button class=\"")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			var templ_7745c5c3_Var5 string
+			templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(templ.CSSClasses(templ_7745c5c3_Var4).String())
+			if templ_7745c5c3_Err != nil {
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `examples/dropdown_menu.templ`, Line: 1, Col: 0}
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" onclick=\"owlToggleDropdownMenu(this)\"><span>Account Menu</span>")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = icons.ChevronDown("size-4").Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</button><div class=\"owl-dropdown-menu-content\" role=\"menu\"><div class=\"owl-dropdown-menu-label\">My Account</div><div class=\"owl-dropdown-menu-separator\" role=\"separator\"></div><button class=\"owl-dropdown-menu-item\" role=\"menuitem\">Profile</button> <button class=\"owl-dropdown-menu-item\" role=\"menuitem\">Billing</button> <button class=\"owl-dropdown-menu-item\" role=\"menuitem\">Team</button> <button class=\"owl-dropdown-menu-item\" role=\"menuitem\">Subscription</button></div></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
