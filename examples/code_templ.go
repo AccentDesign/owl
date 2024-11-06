@@ -43,7 +43,7 @@ func Code() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1 class=\"owl-h1 mb-10\">code</h1><p class=\"mb-6\">Some inline <code class=\"owl-code mx-1\">code</code> block.</p><pre class=\"owl-pre\"><code class=\"owl-code\">git clone https://github.com/AccentDesign/owl.git</code></pre>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1 class=\"owl-h1 mb-10\">code</h1><div class=\"grid gap-6\"><p>Some inline <code class=\"owl-code mx-1\">code</code> block.</p><pre class=\"owl-pre\"><code class=\"owl-code\">git clone https://github.com/AccentDesign/owl.git</code></pre></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

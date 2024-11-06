@@ -5,7 +5,7 @@ var formStyles = []string{"typography.css", "form.css", "button.css"}
 templ Form() {
 	@Base(formStyles) {
 		<h1 class="owl-h1 mb-10">form</h1>
-		<form class="space-y-10 max-w-[500px]">
+		<form class="grid gap-10 max-w-[500px]">
 			<div class="owl-form-field">
 				<label class="owl-label" for="email">Email</label>
 				<input class="owl-input" id="email" name="email" type="email" placeholder="owl text" value="someone@example.com"/>

@@ -43,7 +43,7 @@ func Card() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1 class=\"owl-h1 mb-10\">card</h1><div class=\"space-y-6 w-[380px]\"><div class=\"owl-card\"><div class=\"owl-card-header\"><h3 class=\"owl-card-title\">Lorem Ipsum</h3><p class=\"owl-card-description\">Lorem ipsum dolor sit amet</p></div><div class=\"owl-card-content\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><div class=\"owl-card-footer\"><p>© Accent Design Group Ltd</p></div></div><div class=\"owl-card\"><div class=\"owl-card-header\"><h3 class=\"owl-card-title\">Lorem Ipsum</h3></div><div class=\"owl-card-content\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div><div class=\"owl-card-footer\">")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1 class=\"owl-h1 mb-10\">card</h1><div class=\"grid gap-6 w-[380px]\"><div class=\"owl-card\"><div class=\"owl-card-header\"><h3 class=\"owl-card-title\">Lorem Ipsum</h3><p class=\"owl-card-description\">Lorem ipsum dolor sit amet</p></div><div class=\"owl-card-content\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><div class=\"owl-card-footer\"><p>© Accent Design Group Ltd</p></div></div><div class=\"owl-card\"><div class=\"owl-card-header\"><h3 class=\"owl-card-title\">Lorem Ipsum</h3></div><div class=\"owl-card-content\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div><div class=\"owl-card-footer\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
