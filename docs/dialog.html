@@ -1,15 +1,15 @@
 <!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script><script src="https://cdn.tailwindcss.com"></script><style type='text/tailwindcss'>@layer components {
     .owl-h1 {
-        @apply text-4xl font-extrabold tracking-tight lg:text-5xl;
+        @apply text-3xl font-semibold tracking-tight;
     }
     .owl-h2 {
-        @apply border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0;
-    }
-    .owl-h3 {
         @apply text-2xl font-semibold tracking-tight;
     }
-    .owl-h4 {
+    .owl-h3 {
         @apply text-xl font-semibold tracking-tight;
+    }
+    .owl-h4 {
+        @apply text-lg font-semibold tracking-tight;
     }
     .owl-p {
         @apply leading-7 [&:not(:first-child)]:mt-6;
@@ -86,4 +86,4 @@
         @apply text-sm font-medium leading-none;
     }
 }
-</style></head><body class="container flex gap-4 mx-auto my-10 antialiased"><aside class="w-64"><h4 class="owl-h4 mb-4">components</h4><ul class="list-disc list-inside mb-4 text-gray-500"><li><a href="accordion.html">accordion</a></li><li><a href="alert.html">alert</a></li><li><a href="alert-dialog.html">alert dialog</a></li><li><a href="avatar.html">avatar</a></li><li><a href="badge.html">badge</a></li><li><a href="breadcrumb.html">breadcrumb</a></li><li><a href="button.html">button</a></li><li><a href="card.html">card</a></li><li><a href="code.html">code</a></li><li><a href="dialog.html">dialog</a></li><li><a href="dropdown-menu.html">dropdown menu</a></li><li><a href="form.html">form</a></li><li><a href="pagination.html">pagination</a></li><li><a href="switch.html">switch</a></li><li><a href="table.html">table</a></li><li><a href="tabs.html">tabs</a></li></ul><h4 class="owl-h4 mb-4">links</h4><ul class="list-disc list-inside text-gray-500"><li><a href="index.html">home</a></li><li><a target="_blank" href="https://github.com/AccentDesign/owl">github</a></li><li><a target="_blank" href="https://go.dev">golang</a></li><li><a target="_blank" href="https://templ.guide">templ</a></li><li><a target="_blank" href="https://github.com/air-verse/air">air</a></li><li><a target="_blank" href="https://icones.js.org/collection/lucide">icônes</a></li><li><a target="_blank" href="https://tailwindcss.com">tailwind</a></li><li><a target="_blank" href="https://ui.shadcn.com/docs">shadcn</a></li><li><a target="_blank" href="https://htmx.org/">htmx</a></li></ul></aside><main class="w-full"><h2 class="owl-h2 mb-10">dialog</h2><button class="owl-button owl-button-outline" hx-get="dialog-open.html" hx-target=".owl-dialog-container" hx-swap="outerHTML settle:0.1s" aria-haspopup="dialog">Open</button><div class="owl-dialog-container"></div></main></body></html>
+</style></head><body class="container flex gap-4 mx-auto my-10 antialiased"><aside class="w-64"><h4 class="owl-h4 mb-4">components</h4><ul class="list-disc list-inside mb-4 text-gray-500"><li><a href="accordion.html">accordion</a></li><li><a href="alert.html">alert</a></li><li><a href="alert-dialog.html">alert dialog</a></li><li><a href="avatar.html">avatar</a></li><li><a href="badge.html">badge</a></li><li><a href="breadcrumb.html">breadcrumb</a></li><li><a href="button.html">button</a></li><li><a href="card.html">card</a></li><li><a href="code.html">code</a></li><li><a href="dialog.html">dialog</a></li><li><a href="dropdown-menu.html">dropdown menu</a></li><li><a href="form.html">form</a></li><li><a href="pagination.html">pagination</a></li><li><a href="switch.html">switch</a></li><li><a href="table.html">table</a></li><li><a href="tabs.html">tabs</a></li></ul><h4 class="owl-h4 mb-4">links</h4><ul class="list-disc list-inside text-gray-500"><li><a href="index.html">home</a></li><li><a target="_blank" href="https://github.com/AccentDesign/owl">github</a></li><li><a target="_blank" href="https://go.dev">golang</a></li><li><a target="_blank" href="https://templ.guide">templ</a></li><li><a target="_blank" href="https://github.com/air-verse/air">air</a></li><li><a target="_blank" href="https://icones.js.org/collection/lucide">icônes</a></li><li><a target="_blank" href="https://tailwindcss.com">tailwind</a></li><li><a target="_blank" href="https://ui.shadcn.com/docs">shadcn</a></li><li><a target="_blank" href="https://htmx.org/">htmx</a></li></ul></aside><main class="w-full"><h1 class="owl-h1 mb-10">dialog</h1><button class="owl-button owl-button-outline" hx-get="dialog-open.html" hx-target=".owl-dialog-container" hx-swap="outerHTML settle:0.1s" aria-haspopup="dialog">Open</button><div class="owl-dialog-container"></div></main></body></html>

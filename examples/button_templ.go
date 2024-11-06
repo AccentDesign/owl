@@ -55,7 +55,7 @@ func Button() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h2 class=\"owl-h2 mb-10\">button</h2><div class=\"grid gap-6\"><p class=\"owp-p\">basic</p><div class=\"flex gap-6\">")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1 class=\"owl-h1 mb-10\">button</h1><div class=\"grid gap-6\"><p class=\"owp-p\">basic</p><div class=\"flex gap-6\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

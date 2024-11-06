@@ -43,7 +43,7 @@ func Badge() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h2 class=\"owl-h2 mb-10\">badge</h2><span class=\"owl-badge\">lorem ipsum</span>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1 class=\"owl-h1 mb-10\">badge</h1><span class=\"owl-badge\">lorem ipsum</span>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

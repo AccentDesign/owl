@@ -4,7 +4,7 @@ var alertDialogStyles = []string{"typography.css", "backdrop.css", "button.css",
 
 templ AlertDialog() {
 	@Base(alertDialogStyles) {
-		<h2 class="owl-h2 mb-10">alert dialog</h2>
+		<h1 class="owl-h1 mb-10">alert dialog</h1>
 		<button class={ ButtonOutline } hx-get="alert-dialog-open.html" hx-target=".owl-dialog-container" hx-swap="outerHTML settle:0.1s" aria-haspopup="dialog">Open</button>
 		@DialogClosed()
 	}

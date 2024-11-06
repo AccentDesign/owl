@@ -45,7 +45,7 @@ func Avatar() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h2 class=\"owl-h2 mb-10\">avatar</h2><div class=\"flex gap-6\"><div class=\"owl-avatar\">")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1 class=\"owl-h1 mb-10\">avatar</h1><div class=\"flex gap-6\"><div class=\"owl-avatar\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

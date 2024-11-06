@@ -15,7 +15,7 @@ func tab(url string, selected bool) templ.Attributes {
 
 templ Tabs() {
 	@Base(tabsStyles) {
-		<h2 class="owl-h2 mb-10">tabs</h2>
+		<h1 class="owl-h1 mb-10">tabs</h1>
 		@tabsLoadHandle.Once() {
 			<script type="text/javascript">
                 function owlOnTabLoad(event) {

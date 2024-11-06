@@ -8,7 +8,7 @@ var dropdownMenuStyles = []string{"typography.css", "dropdown_menu.css", "button
 
 templ DropdownMenu() {
 	@Base(dropdownMenuStyles) {
-		<h2 class="owl-h2 mb-10">dropdown menu</h2>
+		<h1 class="owl-h1 mb-10">dropdown menu</h1>
 		@dropdownMenuTriggerHandle.Once() {
 			<script type="text/javascript">
                 function owlToggleDropdownMenu(trigger) {

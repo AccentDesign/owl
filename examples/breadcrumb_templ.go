@@ -45,7 +45,7 @@ func Breadcrumb() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h2 class=\"owl-h2 mb-10\">breadcrumb</h2><nav aria-label=\"breadcrumb\" class=\"owl-breadcrumb\"><ol class=\"owl-breadcrumb-list\"><li class=\"owl-breadcrumb-item\"><a class=\"owl-breadcrumb-link\" href=\"index.html\">Home</a></li><li class=\"owl-breadcrumb-separator\" aria-hidden=\"true\" role=\"presentation\">")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1 class=\"owl-h1 mb-10\">breadcrumb</h1><nav aria-label=\"breadcrumb\" class=\"owl-breadcrumb\"><ol class=\"owl-breadcrumb-list\"><li class=\"owl-breadcrumb-item\"><a class=\"owl-breadcrumb-link\" href=\"index.html\">Home</a></li><li class=\"owl-breadcrumb-separator\" aria-hidden=\"true\" role=\"presentation\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

@@ -6,7 +6,7 @@ var dialogStyles = []string{"typography.css", "backdrop.css", "button.css", "dia
 
 templ Dialog() {
 	@Base(dialogStyles) {
-		<h2 class="owl-h2 mb-10">dialog</h2>
+		<h1 class="owl-h1 mb-10">dialog</h1>
 		<button class={ ButtonOutline } hx-get="dialog-open.html" hx-target=".owl-dialog-container" hx-swap="outerHTML settle:0.1s" aria-haspopup="dialog">Open</button>
 		@DialogClosed()
 	}
