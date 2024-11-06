@@ -8,7 +8,7 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-var datepickerStyles = []string{"typography.css", "input.css"}
+var datepickerStyles = []string{"typography.css", "form.css"}
 
 var datepickerHandle = templ.NewOnceHandle()
 

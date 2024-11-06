@@ -8,7 +8,7 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-var cardStyles = []string{"typography.css", "button.css", "card.css", "input.css", "label.css"}
+var cardStyles = []string{"typography.css", "button.css", "card.css", "form.css"}
 
 func Card() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {

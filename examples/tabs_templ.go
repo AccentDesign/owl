@@ -10,7 +10,7 @@ import templruntime "github.com/a-h/templ/runtime"
 
 var tabsLoadHandle = templ.NewOnceHandle()
 
-var tabsStyles = []string{"typography.css", "tabs.css"}
+var tabsStyles = []string{"typography.css", "tab.css"}
 
 func tab(url string, selected bool) templ.Attributes {
 	return templ.Attributes{

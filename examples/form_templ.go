@@ -8,7 +8,7 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-var formStyles = []string{"typography.css", "form_field.css", "label.css", "checkbox.css", "input.css", "select.css", "textarea.css", "button.css"}
+var formStyles = []string{"typography.css", "form.css", "button.css"}
 
 func Form() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {

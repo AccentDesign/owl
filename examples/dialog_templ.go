@@ -10,7 +10,7 @@ import templruntime "github.com/a-h/templ/runtime"
 
 import "github.com/accentdesign/owl/icons"
 
-var dialogStyles = []string{"typography.css", "backdrop.css", "button.css", "dialog.css", "input.css", "label.css"}
+var dialogStyles = []string{"typography.css", "backdrop.css", "button.css", "dialog.css", "form.css"}
 
 func Dialog() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {

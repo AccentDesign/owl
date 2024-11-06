@@ -1,5 +1,0 @@
-@layer components {
-    .owl-label {
-        @apply text-sm font-medium leading-none;
-    }
-}
