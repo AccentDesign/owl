@@ -23,7 +23,10 @@
 }
 @layer components {
     .owl-button {
-        @apply inline-flex items-center justify-center whitespace-nowrap rounded-md h-10 px-4 py-2 text-sm font-medium bg-black text-white hover:bg-black/80;
+        @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md h-10 px-4 py-2 text-sm font-medium bg-black text-white hover:bg-black/80;
+    }
+    .owl-button-icon {
+        @apply w-10 h-10 p-0;
     }
     .owl-button-secondary {
         @apply bg-gray-100 text-black hover:bg-gray-100/80;

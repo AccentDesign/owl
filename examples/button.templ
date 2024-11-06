@@ -1,7 +1,10 @@
 package examples
 
+import "github.com/accentdesign/owl/icons"
+
 var (
 	ButtonDefault     string = "owl-button"
+	ButtonIcon        string = "owl-button-icon"
 	ButtonSecondary   string = "owl-button owl-button-secondary"
 	ButtonDestructive string = "owl-button owl-button-destructive"
 	ButtonOutline     string = "owl-button owl-button-outline"
@@ -14,13 +17,58 @@ var buttonStyles = []string{"typography.css", "button.css"}
 templ Button() {
 	@Base(buttonStyles) {
 		<h2 class="owl-h2 mb-10">button</h2>
-		<div class="flex gap-6">
-			<button class={ ButtonDefault }>lorem ipsum</button>
-			<button class={ ButtonSecondary }>lorem ipsum</button>
-			<button class={ ButtonDestructive }>lorem ipsum</button>
-			<button class={ ButtonOutline }>lorem ipsum</button>
-			<button class={ ButtonGhost }>lorem ipsum</button>
-			<button class={ ButtonLink }>lorem ipsum</button>
-		</div>
-	}
+		<div class="grid gap-6">
+		    <p class="owp-p">basic</p>
+            <div class="flex gap-6">
+                <button class={ ButtonDefault }>Button</button>
+                <button class={ ButtonSecondary }>Button</button>
+                <button class={ ButtonDestructive }>Button</button>
+                <button class={ ButtonOutline }>Button</button>
+                <button class={ ButtonGhost }>Button</button>
+                <button class={ ButtonLink }>Button</button>
+            </div>
+		    <p class="owp-p">icon</p>
+            <div class="flex gap-6">
+                <button class={ ButtonDefault, ButtonIcon }>
+                    @icons.X("size-4")
+                </button>
+                <button class={ ButtonSecondary, ButtonIcon }>
+                    @icons.X("size-4")
+                </button>
+                <button class={ ButtonDestructive, ButtonIcon }>
+                    @icons.X("size-4")
+                </button>
+                <button class={ ButtonOutline, ButtonIcon }>
+                    @icons.X("size-4")
+                </button>
+                <button class={ ButtonGhost, ButtonIcon }>
+                    @icons.X("size-4")
+                </button>
+                <button class={ ButtonLink, ButtonIcon }>
+                    @icons.X("size-4")
+                </button>
+            </div>
+		    <p class="owp-p">with icon</p>
+            <div class="flex gap-6">
+                <button class={ ButtonDefault }>
+                    @icons.Mail("size-4") Login with Email
+                </button>
+                <button class={ ButtonSecondary }>
+                    @icons.Mail("size-4") Login with Email
+                </button>
+                <button class={ ButtonDestructive }>
+                    @icons.Mail("size-4") Login with Email
+                </button>
+                <button class={ ButtonOutline }>
+                    @icons.Mail("size-4") Login with Email
+                </button>
+                <button class={ ButtonGhost }>
+                    @icons.Mail("size-4") Login with Email
+                </button>
+                <button class={ ButtonLink }>
+                    @icons.Mail("size-4") Login with Email
+                </button>
+            </div>
+        </div>
+    }
 }
