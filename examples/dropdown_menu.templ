@@ -2,35 +2,37 @@ package examples
 
 import "github.com/accentdesign/owl/icons"
 
-var dropdownMenuTriggerHandle = templ.NewOnceHandle()
-
 var dropdownMenuStyles = []string{"typography.css", "dropdown_menu.css", "button.css"}
 
 templ DropdownMenu() {
 	@Base(dropdownMenuStyles) {
 		<h1 class="owl-h1 mb-10">dropdown menu</h1>
-		@dropdownMenuTriggerHandle.Once() {
-			<script type="text/javascript">
-                function owlToggleDropdownMenu(trigger) {
-                    const menu = trigger.closest(".owl-dropdown-menu");
-                    const content = menu.querySelector(".owl-dropdown-menu-content");
-                    content.classList.toggle("owl-open");
-                }
-            </script>
-		}
-		<div class="owl-dropdown-menu">
-			<button class={ ButtonOutline } onclick="owlToggleDropdownMenu(this)">
-			    <span>Account Menu</span>
-			    @icons.ChevronDown("size-4")
-			</button>
-			<div class="owl-dropdown-menu-content" role="menu">
-				<div class="owl-dropdown-menu-label">My Account</div>
-				<div class="owl-dropdown-menu-separator" role="separator"></div>
-				<button class="owl-dropdown-menu-item" role="menuitem">Profile</button>
-				<button class="owl-dropdown-menu-item" role="menuitem">Billing</button>
-				<button class="owl-dropdown-menu-item" role="menuitem">Team</button>
-				<button class="owl-dropdown-menu-item" role="menuitem">Subscription</button>
-			</div>
-		</div>
+		@DropdownMenuComponent(false)
 	}
+}
+
+templ DropdownMenuComponent(opened bool) {
+    <div class="owl-dropdown-menu" hx-target="this" hx-swap="outerHTML">
+        <button class={ ButtonOutline }
+            if opened {
+                hx-get="dropdown-menu-closed.html"
+                hx-trigger="click from:body, load delay:5s"
+            } else {
+                hx-get="dropdown-menu-open.html"
+            }
+        >
+            <span>Account Menu</span>
+            @icons.ChevronDown("size-4")
+        </button>
+        <div class={ "owl-dropdown-menu-content", templ.KV("owl-open", opened) } role="menu">
+            if opened {
+                <div class="owl-dropdown-menu-label">My Account</div>
+                <div class="owl-dropdown-menu-separator" role="separator"></div>
+                <a href="#" class="owl-dropdown-menu-item" role="menuitem">Profile</a>
+                <a href="#" class="owl-dropdown-menu-item" role="menuitem">Billing</a>
+                <a href="#" class="owl-dropdown-menu-item" role="menuitem">Team</a>
+                <a href="#" class="owl-dropdown-menu-item" role="menuitem">Subscription</a>
+            }
+        </div>
+    </div>
 }
