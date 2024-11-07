@@ -1,0 +1,23 @@
+@layer components {
+    .owl-tooltip {
+        @apply relative;
+    }
+    .owl-tooltip-text {
+        @apply absolute z-50 hidden px-2.5 py-1.5 border rounded bg-white font-medium text-sm text-black whitespace-nowrap shadow-sm opacity-0 transition-opacity duration-300 pointer-events-none;
+    }
+    .owl-tooltip:hover .owl-tooltip-text {
+        @apply opacity-100 inline-block;
+    }
+    .owl-tooltip-top .owl-tooltip-text {
+        @apply bottom-full left-1/2 transform -translate-x-1/2 mb-1;
+    }
+    .owl-tooltip-bottom .owl-tooltip-text {
+        @apply top-full left-1/2 transform -translate-x-1/2 mt-1;
+    }
+    .owl-tooltip-left .owl-tooltip-text {
+        @apply right-full top-1/2 transform -translate-y-1/2 mr-1;
+    }
+    .owl-tooltip-right .owl-tooltip-text {
+        @apply left-full top-1/2 transform -translate-y-1/2 ml-1;
+    }
+}

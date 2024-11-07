@@ -39,6 +39,7 @@ func build() {
 	createHtml("docs/switch.html", examples.Switch())
 	createHtml("docs/table.html", examples.Table())
 	createHtml("docs/tabs.html", examples.Tabs())
+	createHtml("docs/tooltip.html", examples.Tooltip())
 	createHtml("docs/tabs-account.html", examples.TabContentAccount())
 	createHtml("docs/tabs-password.html", examples.TabContentPassword())
 }
