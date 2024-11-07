@@ -15,15 +15,15 @@ templ Accordion() {
                     const item = trigger.closest(".owl-accordion-item");
                     const accordion = item.closest(".owl-accordion");
                     const content = item.querySelector(".owl-accordion-content");
-                    const isOpen = item.classList.contains("owl-selected");
+                    const isOpen = item.classList.contains("owl-open");
                     const allItems = accordion.querySelectorAll(".owl-accordion-item");
                     allItems.forEach(function (i) {
                         const c = i.querySelector(".owl-accordion-content");
-                        i.classList.toggle("owl-selected", false);
+                        i.classList.toggle("owl-open", false);
                         c.style.maxHeight = "0";
                     });
                     if (!isOpen) {
-                        item.classList.toggle("owl-selected", true);
+                        item.classList.toggle("owl-open", true);
                         content.style.maxHeight = `${content.scrollHeight}px`;
                     }
                 }

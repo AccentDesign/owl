@@ -11,7 +11,7 @@
     .owl-accordion-trigger-icon {
         @apply transition-all duration-300 size-6;
     }
-    :where(.owl-accordion-item.owl-selected) .owl-accordion-trigger-icon {
+    :where(.owl-accordion-item.owl-open) .owl-accordion-trigger-icon {
         @apply rotate-180;
     }
     .owl-accordion-content {
