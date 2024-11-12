@@ -8,7 +8,7 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-var datepickerStyles = []string{"typography.css", "form.css"}
+var datepickerStyles = []string{"typography.css", "pikaday.css", "form.css"}
 
 var datepickerHandle = templ.NewOnceHandle()
 
@@ -57,7 +57,7 @@ func Datepicker() templ.Component {
 					}()
 				}
 				ctx = templ.InitializeContext(ctx)
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css\"><script src=\"https://cdn.jsdelivr.net/npm/flatpickr\"></script> <script type=\"text/javascript\">\n                document.addEventListener(\"DOMContentLoaded\", function() {\n                    flatpickr(\"#date\", {});\n                });\n            </script>")
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css\"><script src=\"https://cdn.jsdelivr.net/npm/pikaday/pikaday.js\"></script> <script type=\"text/javascript\">\n                document.addEventListener(\"DOMContentLoaded\", function() {\n                    var picker = new Pikaday({\n                        field: document.getElementById(\"date\"),\n                        theme: \"owl-pika\",\n                    });\n                });\n            </script>")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -67,7 +67,7 @@ func Datepicker() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <h1 class=\"owl-h1 mb-10\">datepicker</h1><div class=\"space-y-6\"><p class=\"owl-p\">Basic example using <a class=\"owl-anchor\" href=\"https://flatpickr.js.org/\" target=\"_blank\">flatpickr</a>.</p><input class=\"owl-input w-96\" id=\"date\" name=\"date\" type=\"text\" placeholder=\"Select Date..\"></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <h1 class=\"owl-h1 mb-10\">datepicker</h1><form class=\"grid gap-10 max-w-[500px]\"><div class=\"owl-form-field\"><label class=\"owl-label\" for=\"date\">Date</label> <input class=\"owl-input\" id=\"date\" name=\"date\" type=\"text\" placeholder=\"Pick a date\"><p class=\"owl-form-field-description\">Basic example using <a class=\"owl-anchor\" href=\"https://pikaday.com\" target=\"_blank\">pikaday</a>.</p></div></form>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

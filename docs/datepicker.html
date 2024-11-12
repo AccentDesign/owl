@@ -20,6 +20,43 @@
 }
 
 @layer components {
+    .owl-pika.pika-single {
+        @apply bg-white text-black rounded-md shadow-md;
+    }
+    .owl-pika .pika-lendar {
+        @apply w-auto;
+    }
+    .owl-pika .pika-table abbr {
+        @apply w-9;
+    }
+    .owl-pika .pika-label {}
+    .owl-pika .pika-prev,
+    .owl-pika .is-rtl .pika-next {}
+    .owl-pika .pika-next,
+    .owl-pika .is-rtl .pika-prev {}
+    .owl-pika .pika-table th {
+        @apply text-black text-center;
+    }
+    .owl-pika .pika-button {
+        @apply flex items-center justify-center bg-white text-black w-9 h-9 rounded;
+    }
+    .owl-pika .pika-week {
+        @apply text-black;
+    }
+    .owl-pika .is-today .pika-button {
+        @apply bg-gray-100 text-black;
+    }
+    .owl-pika .is-selected .pika-button {
+        @apply bg-black text-white;
+    }
+    .owl-pika .is-disabled .pika-button {
+        @apply bg-white text-gray-200;
+    }
+    .owl-pika .pika-button:hover {
+        @apply bg-black text-white;
+    }
+}
+@layer components {
     .owl-label {
         @apply text-sm font-medium leading-none;
     }
@@ -53,8 +90,11 @@
         }
     }
 }
-</style></head><body class="container flex gap-4 mx-auto my-10 antialiased"><aside class="w-64"><h4 class="owl-h4 mb-4">components</h4><ul class="list-disc list-inside mb-4 text-gray-500"><li><a href="accordion.html">accordion</a></li><li><a href="alert.html">alert</a></li><li><a href="alert-dialog.html">alert dialog</a></li><li><a href="avatar.html">avatar</a></li><li><a href="badge.html">badge</a></li><li><a href="breadcrumb.html">breadcrumb</a></li><li><a href="button.html">button</a></li><li><a href="card.html">card</a></li><li><a href="code.html">code</a></li><li><a href="datepicker.html">datepicker</a></li><li><a href="dialog.html">dialog</a></li><li><a href="dropdown-menu.html">dropdown menu</a></li><li><a href="form.html">form</a></li><li><a href="pagination.html">pagination</a></li><li><a href="switch.html">switch</a></li><li><a href="table.html">table</a></li><li><a href="tabs.html">tabs</a></li><li><a href="tooltip.html">tooltip</a></li></ul><h4 class="owl-h4 mb-4">links</h4><ul class="list-disc list-inside text-gray-500"><li><a href="index.html">home</a></li><li><a target="_blank" href="https://github.com/AccentDesign/owl">github</a></li><li><a target="_blank" href="https://go.dev">golang</a></li><li><a target="_blank" href="https://templ.guide">templ</a></li><li><a target="_blank" href="https://github.com/air-verse/air">air</a></li><li><a target="_blank" href="https://icones.js.org/collection/lucide">icônes</a></li><li><a target="_blank" href="https://tailwindcss.com">tailwind</a></li><li><a target="_blank" href="https://ui.shadcn.com/docs">shadcn</a></li><li><a target="_blank" href="https://htmx.org/">htmx</a></li></ul></aside><main class="w-full"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"><script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> <script type="text/javascript">
+</style></head><body class="container flex gap-4 mx-auto my-10 antialiased"><aside class="w-64"><h4 class="owl-h4 mb-4">components</h4><ul class="list-disc list-inside mb-4 text-gray-500"><li><a href="accordion.html">accordion</a></li><li><a href="alert.html">alert</a></li><li><a href="alert-dialog.html">alert dialog</a></li><li><a href="avatar.html">avatar</a></li><li><a href="badge.html">badge</a></li><li><a href="breadcrumb.html">breadcrumb</a></li><li><a href="button.html">button</a></li><li><a href="card.html">card</a></li><li><a href="code.html">code</a></li><li><a href="datepicker.html">datepicker</a></li><li><a href="dialog.html">dialog</a></li><li><a href="dropdown-menu.html">dropdown menu</a></li><li><a href="form.html">form</a></li><li><a href="pagination.html">pagination</a></li><li><a href="switch.html">switch</a></li><li><a href="table.html">table</a></li><li><a href="tabs.html">tabs</a></li><li><a href="tooltip.html">tooltip</a></li></ul><h4 class="owl-h4 mb-4">links</h4><ul class="list-disc list-inside text-gray-500"><li><a href="index.html">home</a></li><li><a target="_blank" href="https://github.com/AccentDesign/owl">github</a></li><li><a target="_blank" href="https://go.dev">golang</a></li><li><a target="_blank" href="https://templ.guide">templ</a></li><li><a target="_blank" href="https://github.com/air-verse/air">air</a></li><li><a target="_blank" href="https://icones.js.org/collection/lucide">icônes</a></li><li><a target="_blank" href="https://tailwindcss.com">tailwind</a></li><li><a target="_blank" href="https://ui.shadcn.com/docs">shadcn</a></li><li><a target="_blank" href="https://htmx.org/">htmx</a></li></ul></aside><main class="w-full"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"><script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script> <script type="text/javascript">
                 document.addEventListener("DOMContentLoaded", function() {
-                    flatpickr("#date", {});
+                    var picker = new Pikaday({
+                        field: document.getElementById("date"),
+                        theme: "owl-pika",
+                    });
                 });
-            </script> <h1 class="owl-h1 mb-10">datepicker</h1><div class="space-y-6"><p class="owl-p">Basic example using <a class="owl-anchor" href="https://flatpickr.js.org/" target="_blank">flatpickr</a>.</p><input class="owl-input w-96" id="date" name="date" type="text" placeholder="Select Date.."></div></main></body></html>
+            </script> <h1 class="owl-h1 mb-10">datepicker</h1><form class="grid gap-10 max-w-[500px]"><div class="owl-form-field"><label class="owl-label" for="date">Date</label> <input class="owl-input" id="date" name="date" type="text" placeholder="Pick a date"><p class="owl-form-field-description">Basic example using <a class="owl-anchor" href="https://pikaday.com" target="_blank">pikaday</a>.</p></div></form></main></body></html>

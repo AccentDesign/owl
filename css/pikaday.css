@@ -1,0 +1,37 @@
+@layer components {
+    .owl-pika.pika-single {
+        @apply bg-white text-black rounded-md shadow-md;
+    }
+    .owl-pika .pika-lendar {
+        @apply w-auto;
+    }
+    .owl-pika .pika-table abbr {
+        @apply w-9;
+    }
+    .owl-pika .pika-label {}
+    .owl-pika .pika-prev,
+    .owl-pika .is-rtl .pika-next {}
+    .owl-pika .pika-next,
+    .owl-pika .is-rtl .pika-prev {}
+    .owl-pika .pika-table th {
+        @apply text-black text-center;
+    }
+    .owl-pika .pika-button {
+        @apply flex items-center justify-center bg-white text-black w-9 h-9 rounded;
+    }
+    .owl-pika .pika-week {
+        @apply text-black;
+    }
+    .owl-pika .is-today .pika-button {
+        @apply bg-gray-100 text-black;
+    }
+    .owl-pika .is-selected .pika-button {
+        @apply bg-black text-white;
+    }
+    .owl-pika .is-disabled .pika-button {
+        @apply bg-white text-gray-200;
+    }
+    .owl-pika .pika-button:hover {
+        @apply bg-black text-white;
+    }
+}
