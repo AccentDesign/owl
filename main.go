@@ -36,6 +36,7 @@ func build() {
 	createHtml("docs/dropdown-menu-closed.html", examples.DropdownMenuComponent(false))
 	createHtml("docs/form.html", examples.Form())
 	createHtml("docs/pagination.html", examples.Pagination())
+	createHtml("docs/separator.html", examples.Separator())
 	createHtml("docs/switch.html", examples.Switch())
 	createHtml("docs/table.html", examples.Table())
 	createHtml("docs/tabs.html", examples.Tabs())
