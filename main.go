@@ -42,6 +42,10 @@ func build() {
 	createHtml("docs/tooltip.html", examples.Tooltip())
 	createHtml("docs/tabs-account.html", examples.TabContentAccount())
 	createHtml("docs/tabs-password.html", examples.TabContentPassword())
+	createHtml("docs/toast.html", examples.Toast())
+	createHtml("docs/toaster.html", examples.Toaster())
+	createHtml("docs/toast-message.html", examples.ToastMessage(true))
+	createHtml("docs/toast-message-confirm.html", examples.ToastMessage(false))
 }
 
 func serve() {

@@ -1,0 +1,63 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script><script src="https://cdn.tailwindcss.com"></script><style type='text/tailwindcss'>@layer components {
+    .owl-h1 {
+        @apply text-3xl font-semibold tracking-tight;
+    }
+    .owl-h2 {
+        @apply text-2xl font-semibold tracking-tight;
+    }
+    .owl-h3 {
+        @apply text-xl font-semibold tracking-tight;
+    }
+    .owl-h4 {
+        @apply text-lg font-semibold tracking-tight;
+    }
+    .owl-p {
+        @apply leading-7 [&:not(:first-child)]:mt-6;
+    }
+    .owl-anchor {
+        @apply font-medium hover:underline hover:underline-offset-4;
+    }
+}
+
+@layer components {
+    .owl-toaster {
+        @apply fixed bottom-4 right-4 grid gap-4 max-w-[500px] ;
+    }
+    .owl-toast {
+        @apply flex items-center justify-between gap-6 bg-white text-black border shadow-lg p-4 text-sm transition-all duration-200 translate-x-0 opacity-100 overflow-hidden;
+    }
+    .owl-toast.htmx-swapping {
+        @apply translate-x-full opacity-0;
+    }
+    .owl-toast.htmx-added {
+        @apply translate-y-full opacity-0;
+    }
+    .owl-toast-title {}
+    .owl-toast-description {
+        @apply text-gray-500;
+    }
+}
+@layer components {
+    .owl-button {
+        @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md h-10 px-4 py-2 text-sm font-medium bg-black text-white hover:bg-black/80;
+    }
+    .owl-button-icon {
+        @apply size-10 p-0;
+    }
+    .owl-button-secondary {
+        @apply bg-gray-100 text-black hover:bg-gray-100/80;
+    }
+    .owl-button-destructive {
+        @apply bg-red-500 text-white hover:bg-red-500/90;
+    }
+    .owl-button-outline {
+        @apply bg-transparent text-black border hover:bg-gray-100/80;
+    }
+    .owl-button-ghost {
+        @apply bg-transparent text-black hover:bg-gray-100/80;
+    }
+    .owl-button-link {
+        @apply bg-transparent text-black hover:bg-transparent hover:underline hover:underline-offset-4;
+    }
+}
+</style></head><body class="container flex gap-4 mx-auto my-10 antialiased"><aside class="w-64"><h4 class="owl-h4 mb-4">components</h4><ul class="list-disc list-inside mb-4 text-gray-500"><li><a href="accordion.html">accordion</a></li><li><a href="alert.html">alert</a></li><li><a href="alert-dialog.html">alert dialog</a></li><li><a href="avatar.html">avatar</a></li><li><a href="badge.html">badge</a></li><li><a href="breadcrumb.html">breadcrumb</a></li><li><a href="button.html">button</a></li><li><a href="card.html">card</a></li><li><a href="code.html">code</a></li><li><a href="datepicker.html">datepicker</a></li><li><a href="dialog.html">dialog</a></li><li><a href="dropdown-menu.html">dropdown menu</a></li><li><a href="form.html">form</a></li><li><a href="pagination.html">pagination</a></li><li><a href="switch.html">switch</a></li><li><a href="table.html">table</a></li><li><a href="tabs.html">tabs</a></li><li><a href="toast.html">toast</a></li><li><a href="tooltip.html">tooltip</a></li></ul><h4 class="owl-h4 mb-4">links</h4><ul class="list-disc list-inside text-gray-500"><li><a href="index.html">home</a></li><li><a target="_blank" href="https://github.com/AccentDesign/owl">github</a></li><li><a target="_blank" href="https://go.dev">golang</a></li><li><a target="_blank" href="https://templ.guide">templ</a></li><li><a target="_blank" href="https://github.com/air-verse/air">air</a></li><li><a target="_blank" href="https://icones.js.org/collection/lucide">icônes</a></li><li><a target="_blank" href="https://tailwindcss.com">tailwind</a></li><li><a target="_blank" href="https://ui.shadcn.com/docs">shadcn</a></li><li><a target="_blank" href="https://htmx.org/">htmx</a></li></ul></aside><main class="w-full"><h1 class="owl-h1 mb-10">toast</h1><button class="owl-button owl-button-outline" hx-get="toast-message.html" hx-target=".owl-toaster" hx-swap="beforeend settle:0.1s">Show</button><ol tabindex="-1" class="owl-toaster"></ol></main></body></html>

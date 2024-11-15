@@ -1,0 +1,27 @@
+package examples
+
+var toastStyles = []string{"typography.css", "toast.css", "button.css"}
+
+templ Toast() {
+	@Base(toastStyles) {
+		<h1 class="owl-h1 mb-10">toast</h1>
+		<button class={ ButtonOutline } hx-get="toast-message.html" hx-target=".owl-toaster" hx-swap="beforeend settle:0.1s">Show</button>
+		@Toaster()
+	}
+}
+
+templ Toaster() {
+    <ol tabindex="-1" class="owl-toaster"></ol>
+}
+
+templ ToastMessage(show bool) {
+    if show {
+        <li class="owl-toast" hx-target="this" hx-swap="outerHTML swap:0.3s">
+            <div>
+                <div class="owl-toast-title">Event has been created</div>
+                <div class="owl-toast-description">Friday, November 15, 2024 at 10:00 AM</div>
+            </div>
+            <button class={ ButtonDefault, "px-2", "py-1", "h-auto" } hx-get="toast-message-confirm.html" hx-trigger="click, load delay:5s">Close</button>
+        </li>
+    }
+}
