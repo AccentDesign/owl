@@ -14,10 +14,13 @@ var tabsStyles = []string{"typography.css", "tab.css"}
 
 func tab(url string, selected bool) templ.Attributes {
 	return templ.Attributes{
-		"class":         "owl-tabs-trigger",
-		"role":          "tab",
-		"aria-selected": templ.KeyValue[string, bool]{Key: "true", Value: selected},
-		"hx-get":        string(templ.URL(url)),
+		"class":                    "owl-tabs-trigger",
+		"role":                     "tab",
+		"aria-selected":            templ.KeyValue[string, bool]{Key: "true", Value: selected},
+		"hx-get":                   string(templ.URL(url)),
+		"hx-target":                ".owl-tabs-content",
+		"hx-swap":                  "outerHTML",
+		"hx-on:htmx-after-on-load": "owlTabAfterOnLoad(event)",
 	}
 }
 
@@ -70,7 +73,7 @@ func Tabs() templ.Component {
 					}()
 				}
 				ctx = templ.InitializeContext(ctx)
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<script type=\"text/javascript\">\n                function owlOnTabLoad(event) {\n                    let tabs = event.target.closest(\".owl-tabs\");\n                    let current = tabs.querySelector(\"[aria-selected=true]\");\n                    current.setAttribute(\"aria-selected\", \"false\");\n                    event.target.setAttribute(\"aria-selected\", \"true\");\n                }\n            </script>")
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<script type=\"text/javascript\">\n                function owlTabAfterOnLoad(event) {\n                    let tabs = event.target.closest(\".owl-tabs\");\n                    let current = tabs.querySelector(\"[aria-selected=true]\");\n                    current.setAttribute(\"aria-selected\", \"false\");\n                    event.target.setAttribute(\"aria-selected\", \"true\");\n                }\n            </script>")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -80,7 +83,7 @@ func Tabs() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <div class=\"w-[400px]\"><div class=\"owl-tabs\" hx-swap=\"outerHTML\" hx-target=\"next .owl-tabs-content\" hx-on:htmx-after-on-load=\"owlOnTabLoad(event)\"><div class=\"owl-tabs-list\" role=\"tabslist\"><button")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <div class=\"w-[400px]\"><div class=\"owl-tabs\"><div class=\"owl-tabs-list\" role=\"tabslist\"><button")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

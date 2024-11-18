@@ -6,11 +6,14 @@ var tabsStyles = []string{"typography.css", "tab.css"}
 
 func tab(url string, selected bool) templ.Attributes {
 	return templ.Attributes{
-		"class":         "owl-tabs-trigger",
-		"role":          "tab",
-		"aria-selected": templ.KeyValue[string, bool]{Key: "true", Value: selected},
-		"hx-get":        string(templ.URL(url)),
-	}
+    		"class":                     "owl-tabs-trigger",
+    		"role":                      "tab",
+    		"aria-selected":             templ.KeyValue[string, bool]{Key: "true", Value: selected},
+    		"hx-get":                    string(templ.URL(url)),
+    		"hx-target":                 ".owl-tabs-content",
+    		"hx-swap":                   "outerHTML",
+    		"hx-on:htmx-after-on-load":  "owlTabAfterOnLoad(event)",
+    	}
 }
 
 templ Tabs() {
@@ -18,7 +21,7 @@ templ Tabs() {
 		<h1 class="owl-h1 mb-10">tabs</h1>
 		@tabsLoadHandle.Once() {
 			<script type="text/javascript">
-                function owlOnTabLoad(event) {
+                function owlTabAfterOnLoad(event) {
                     let tabs = event.target.closest(".owl-tabs");
                     let current = tabs.querySelector("[aria-selected=true]");
                     current.setAttribute("aria-selected", "false");
@@ -27,7 +30,7 @@ templ Tabs() {
             </script>
 		}
 		<div class="w-[400px]">
-			<div class="owl-tabs" hx-swap="outerHTML" hx-target="next .owl-tabs-content" hx-on:htmx-after-on-load="owlOnTabLoad(event)">
+			<div class="owl-tabs">
 				<div class="owl-tabs-list" role="tabslist">
 					<button { tab("tabs-account.html", true)... }>Account</button>
 					<button { tab("tabs-password.html", false)... }>Password</button>
