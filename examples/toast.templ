@@ -11,17 +11,17 @@ templ Toast() {
 }
 
 templ Toaster() {
-    <ol tabindex="-1" class="owl-toaster"></ol>
+	<ol tabindex="-1" class="owl-toaster"></ol>
 }
 
 templ ToastMessage(show bool) {
-    if show {
-        <li class="owl-toast" hx-target="this" hx-swap="outerHTML swap:0.3s">
-            <div>
-                <div class="owl-toast-title">Event has been created</div>
-                <div class="owl-toast-description">Friday, November 15, 2024 at 10:00 AM</div>
-            </div>
-            <button class={ ButtonDefault, "px-2", "py-1", "h-auto" } hx-get="toast-message-confirm.html" hx-trigger="click, load delay:5s">Close</button>
-        </li>
-    }
+	if show {
+		<li class="owl-toast" hx-target="this" hx-swap="outerHTML swap:0.3s">
+			<div>
+				<div class="owl-toast-title">Event has been created</div>
+				<div class="owl-toast-description">Friday, November 15, 2024 at 10:00 AM</div>
+			</div>
+			<button class={ ButtonDefault, "px-2", "py-1", "h-auto" } hx-get="toast-message-confirm.html" hx-trigger="click, load delay:5s">Close</button>
+		</li>
+	}
 }

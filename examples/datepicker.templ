@@ -6,10 +6,10 @@ var datepickerHandle = templ.NewOnceHandle()
 
 templ Datepicker() {
 	@Base(datepickerStyles) {
-        @datepickerHandle.Once() {
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
-            <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
-            <script type="text/javascript">
+		@datepickerHandle.Once() {
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"/>
+			<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+			<script type="text/javascript">
                 document.addEventListener("DOMContentLoaded", function() {
                     var picker = new Pikaday({
                         field: document.getElementById("date"),
@@ -17,15 +17,14 @@ templ Datepicker() {
                     });
                 });
             </script>
-        }
-
+		}
 		<h1 class="owl-h1 mb-10">datepicker</h1>
 		<form class="grid gap-10 max-w-[500px]">
-            <div class="owl-form-field">
-                <label class="owl-label" for="date">Date</label>
-                <input class="owl-input" id="date" name="date" type="text" placeholder="Pick a date"/>
-                <p class="owl-form-field-description">Basic example using <a class="owl-anchor" href="https://pikaday.com" target="_blank">pikaday</a>.</p>
-            </div>
-        </form>
+			<div class="owl-form-field">
+				<label class="owl-label" for="date">Date</label>
+				<input class="owl-input" id="date" name="date" type="text" placeholder="Pick a date"/>
+				<p class="owl-form-field-description">Basic example using <a class="owl-anchor" href="https://pikaday.com" target="_blank">pikaday</a>.</p>
+			</div>
+		</form>
 	}
 }

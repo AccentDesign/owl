@@ -6,14 +6,14 @@ var tabsStyles = []string{"typography.css", "tab.css"}
 
 func tab(url string, selected bool) templ.Attributes {
 	return templ.Attributes{
-    		"class":                     "owl-tabs-trigger",
-    		"role":                      "tab",
-    		"aria-selected":             templ.KeyValue[string, bool]{Key: "true", Value: selected},
-    		"hx-get":                    string(templ.URL(url)),
-    		"hx-target":                 ".owl-tabs-content",
-    		"hx-swap":                   "outerHTML",
-    		"hx-on:htmx-after-on-load":  "owlTabAfterOnLoad(event)",
-    	}
+		"class":                    "owl-tabs-trigger",
+		"role":                     "tab",
+		"aria-selected":            templ.KeyValue[string, bool]{Key: "true", Value: selected},
+		"hx-get":                   string(templ.URL(url)),
+		"hx-target":                ".owl-tabs-content",
+		"hx-swap":                  "outerHTML",
+		"hx-on:htmx-after-on-load": "owlTabAfterOnLoad(event)",
+	}
 }
 
 templ Tabs() {
