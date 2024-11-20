@@ -10,7 +10,7 @@ import templruntime "github.com/a-h/templ/runtime"
 
 var tabsLoadHandle = templ.NewOnceHandle()
 
-var tabsStyles = []string{"typography.css", "tab.css"}
+var tabsStyles = []string{"typography.css", "tab.css", "card.css"}
 
 func tab(url string, selected bool) templ.Attributes {
 	return templ.Attributes{
@@ -142,7 +142,7 @@ func TabContentAccount() templ.Component {
 			templ_7745c5c3_Var4 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"owl-tabs-content p-4 rounded border shadow\"><p class=\"owl-h4\">Account</p><p class=\"owl-p\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"owl-tabs-content\"><div class=\"owl-card\"><div class=\"owl-card-header\"><h2 class=\"owl-card-title\">Account</h2></div><div class=\"owl-card-content\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -171,7 +171,7 @@ func TabContentPassword() templ.Component {
 			templ_7745c5c3_Var5 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"owl-tabs-content p-4 rounded border shadow\"><p class=\"owl-h4\">Password</p><p class=\"owl-p\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"owl-tabs-content\"><div class=\"owl-card\"><div class=\"owl-card-header\"><h2 class=\"owl-card-title\">Password</h2></div><div class=\"owl-card-content\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

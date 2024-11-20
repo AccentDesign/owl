@@ -20,18 +20,38 @@
 }
 
 @layer components {
-    .owl-tabs {}
+    .owl-tabs {
+        @apply grid gap-6;
+    }
     .owl-tabs-list {
-        @apply grid w-full h-10 grid-cols-2 items-center justify-center rounded-md bg-gray-100 p-1;
+        @apply grid grid-flow-col auto-cols-auto gap-1 rounded-md bg-gray-100 p-1;
     }
     .owl-tabs-trigger {
-        @apply inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium text-gray-500;
+        @apply flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium text-gray-500 hover:text-black;
     }
     .owl-tabs-trigger[aria-selected=true] {
         @apply bg-white text-black shadow-sm;
     }
-    .owl-tabs-content {
-        @apply mt-2;
+    .owl-tabs-content {}
+}
+@layer components {
+    .owl-card {
+        @apply w-full rounded-lg border bg-white shadow-sm;
+    }
+    .owl-card-header {
+        @apply flex flex-col space-y-1.5 p-6;
+    }
+    .owl-card-title {
+        @apply text-2xl font-semibold leading-none tracking-tight;
+    }
+    .owl-card-description {
+        @apply text-sm text-gray-500;
+    }
+    .owl-card-content {
+        @apply grid gap-4 p-6 pt-0;
+    }
+    .owl-card-footer {
+        @apply flex items-center p-6 pt-0;
     }
 }
 </style></head><body class="container flex gap-4 mx-auto py-10 min-h-screen antialiased"><aside class="w-64"><h4 class="owl-h4 mb-4">components</h4><ul class="list-disc list-inside mb-4 text-gray-500"><li><a href="accordion.html">accordion</a></li><li><a href="alert.html">alert</a></li><li><a href="alert-dialog.html">alert dialog</a></li><li><a href="avatar.html">avatar</a></li><li><a href="badge.html">badge</a></li><li><a href="breadcrumb.html">breadcrumb</a></li><li><a href="button.html">button</a></li><li><a href="card.html">card</a></li><li><a href="code.html">code</a></li><li><a href="datepicker.html">datepicker</a></li><li><a href="dialog.html">dialog</a></li><li><a href="dropdown-menu.html">dropdown menu</a></li><li><a href="form.html">form</a></li><li><a href="pagination.html">pagination</a></li><li><a href="separator.html">separator</a></li><li><a href="switch.html">switch</a></li><li><a href="table.html">table</a></li><li><a href="tabs.html">tabs</a></li><li><a href="toast.html">toast</a></li><li><a href="tooltip.html">tooltip</a></li></ul><h4 class="owl-h4 mb-4">links</h4><ul class="list-disc list-inside text-gray-500"><li><a href="index.html">home</a></li><li><a target="_blank" href="https://github.com/AccentDesign/owl">github</a></li><li><a target="_blank" href="https://go.dev">golang</a></li><li><a target="_blank" href="https://templ.guide">templ</a></li><li><a target="_blank" href="https://github.com/air-verse/air">air</a></li><li><a target="_blank" href="https://icones.js.org/collection/lucide">icônes</a></li><li><a target="_blank" href="https://tailwindcss.com">tailwind</a></li><li><a target="_blank" href="https://ui.shadcn.com/docs">shadcn</a></li><li><a target="_blank" href="https://htmx.org/">htmx</a></li></ul></aside><main class="w-full"><h1 class="owl-h1 mb-10">tabs</h1><script type="text/javascript">
@@ -41,4 +61,4 @@
                     current.setAttribute("aria-selected", "false");
                     event.target.setAttribute("aria-selected", "true");
                 }
-            </script> <div class="w-[400px]"><div class="owl-tabs"><div class="owl-tabs-list" role="tabslist"><button aria-selected="true" class="owl-tabs-trigger" hx-get="tabs-account.html" hx-on:htmx-after-on-load="owlTabAfterOnLoad(event)" hx-swap="outerHTML" hx-target=".owl-tabs-content" role="tab">Account</button> <button class="owl-tabs-trigger" hx-get="tabs-password.html" hx-on:htmx-after-on-load="owlTabAfterOnLoad(event)" hx-swap="outerHTML" hx-target=".owl-tabs-content" role="tab">Password</button></div><div class="owl-tabs-content p-4 rounded border shadow"><p class="owl-h4">Account</p><p class="owl-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div><p class="owl-p">HTMX is used to load and swap out the tabs content</p></div></main></body></html>
+            </script> <div class="w-[400px]"><div class="owl-tabs"><div class="owl-tabs-list" role="tabslist"><button aria-selected="true" class="owl-tabs-trigger" hx-get="tabs-account.html" hx-on:htmx-after-on-load="owlTabAfterOnLoad(event)" hx-swap="outerHTML" hx-target=".owl-tabs-content" role="tab">Account</button> <button class="owl-tabs-trigger" hx-get="tabs-password.html" hx-on:htmx-after-on-load="owlTabAfterOnLoad(event)" hx-swap="outerHTML" hx-target=".owl-tabs-content" role="tab">Password</button></div><div class="owl-tabs-content"><div class="owl-card"><div class="owl-card-header"><h2 class="owl-card-title">Account</h2></div><div class="owl-card-content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div></div></div><p class="owl-p">HTMX is used to load and swap out the tabs content</p></div></main></body></html>
