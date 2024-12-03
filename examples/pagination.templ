@@ -1,7 +1,5 @@
 package examples
 
-import "github.com/accentdesign/owl/icons"
-
 var paginationStyles = []string{"typography.css", "pagination.css", "button.css"}
 
 templ Pagination() {
@@ -11,7 +9,7 @@ templ Pagination() {
 			<ul class="owl-pagination">
 				<li>
 					<a href="#" class={ ButtonGhost }>
-						@icons.ChevronLeft("size-4")
+					    <owl-icon icon="chevron-left"></owl-icon>
 						<span>Previous</span>
 					</a>
 				</li>
@@ -20,14 +18,14 @@ templ Pagination() {
 				<li><a href="#" class={ ButtonGhost }>3</a></li>
 				<li>
 					<span aria-hidden="true" class={ ButtonGhost, ButtonIcon }>
-						@icons.Ellipsis("size-4")
+						<owl-icon icon="ellipsis"></owl-icon>
 						<span class="sr-only">More pages</span>
 					</span>
 				</li>
 				<li>
 					<a href="#" class={ ButtonGhost }>
 						<span>Next</span>
-						@icons.ChevronRight("size-4")
+					    <owl-icon icon="chevron-right"></owl-icon>
 					</a>
 				</li>
 			</ul>

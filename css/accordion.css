@@ -9,7 +9,7 @@
         @apply w-full flex items-center justify-between flex-1 py-4 font-medium hover:underline hover:underline-offset-4;
     }
     .owl-accordion-trigger-icon {
-        @apply transition-all duration-300 size-6;
+        @apply transition-all duration-300 text-[24px];
     }
     :where(.owl-accordion-item.owl-open) .owl-accordion-trigger-icon {
         @apply rotate-180;

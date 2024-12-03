@@ -1,7 +1,5 @@
 package examples
 
-import "github.com/accentdesign/owl/icons"
-
 var (
 	ButtonDefault     string = "owl-button"
 	ButtonIcon        string = "owl-button-icon"
@@ -30,48 +28,48 @@ templ Button() {
 			<p class="owp-p">icon</p>
 			<div class="flex gap-6">
 				<button class={ ButtonDefault, ButtonIcon }>
-					@icons.X("size-4")
+				    <owl-icon icon="x"></owl-icon>
 				</button>
 				<button class={ ButtonSecondary, ButtonIcon }>
-					@icons.X("size-4")
+				    <owl-icon icon="x"></owl-icon>
 				</button>
 				<button class={ ButtonDestructive, ButtonIcon }>
-					@icons.X("size-4")
+				    <owl-icon icon="x"></owl-icon>
 				</button>
 				<button class={ ButtonOutline, ButtonIcon }>
-					@icons.X("size-4")
+				    <owl-icon icon="x"></owl-icon>
 				</button>
 				<button class={ ButtonGhost, ButtonIcon }>
-					@icons.X("size-4")
+				    <owl-icon icon="x"></owl-icon>
 				</button>
 				<button class={ ButtonLink, ButtonIcon }>
-					@icons.X("size-4")
+				    <owl-icon icon="x"></owl-icon>
 				</button>
 			</div>
 			<p class="owp-p">with icon</p>
 			<div class="flex gap-6">
 				<button class={ ButtonDefault }>
-					@icons.Mail("size-4")
+				    <owl-icon icon="mail"></owl-icon>
 					<span>Login with Email</span>
 				</button>
 				<button class={ ButtonSecondary }>
-					@icons.Mail("size-4")
+				    <owl-icon icon="mail"></owl-icon>
 					<span>Login with Email</span>
 				</button>
 				<button class={ ButtonDestructive }>
-					@icons.Mail("size-4")
+				    <owl-icon icon="mail"></owl-icon>
 					<span>Login with Email</span>
 				</button>
 				<button class={ ButtonOutline }>
-					@icons.Mail("size-4")
+				    <owl-icon icon="mail"></owl-icon>
 					<span>Login with Email</span>
 				</button>
 				<button class={ ButtonGhost }>
-					@icons.Mail("size-4")
+				    <owl-icon icon="mail"></owl-icon>
 					<span>Login with Email</span>
 				</button>
 				<button class={ ButtonLink }>
-					@icons.Mail("size-4")
+				    <owl-icon icon="mail"></owl-icon>
 					<span>Login with Email</span>
 				</button>
 			</div>

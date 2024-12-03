@@ -1,7 +1,5 @@
 package examples
 
-import "github.com/accentdesign/owl/icons"
-
 var alertStyles = []string{"typography.css", "alert.css"}
 
 templ Alert() {
@@ -9,7 +7,7 @@ templ Alert() {
 		<h1 class="owl-h1 mb-10">alert</h1>
 		<div class="grid gap-6">
 			<div class="owl-alert">
-				@icons.Terminal("owl-alert-icon")
+			    <owl-icon icon="terminal" class="owl-alert-icon"></owl-icon>
 				<div class="owl-alert-title">Lorem ipsum dolor sit amet!</div>
 				<div class="owl-alert-description">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

@@ -17,4 +17,7 @@
     .owl-anchor {
         @apply font-medium hover:underline hover:underline-offset-4;
     }
+    [icon] {
+        @apply inline-flex;
+    }
 }

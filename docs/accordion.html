@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script><script src="https://cdn.tailwindcss.com"></script><style type='text/tailwindcss'>@layer components {
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script><script src="https://cdn.tailwindcss.com"></script><script src="icons/icons.js"></script><style type='text/tailwindcss'>@layer components {
     .owl-h1 {
         @apply text-3xl font-semibold tracking-tight;
     }
@@ -17,6 +17,9 @@
     .owl-anchor {
         @apply font-medium hover:underline hover:underline-offset-4;
     }
+    [icon] {
+        @apply inline-flex;
+    }
 }
 
 @layer components {
@@ -30,7 +33,7 @@
         @apply w-full flex items-center justify-between flex-1 py-4 font-medium hover:underline hover:underline-offset-4;
     }
     .owl-accordion-trigger-icon {
-        @apply transition-all duration-300 size-6;
+        @apply transition-all duration-300 text-[24px];
     }
     :where(.owl-accordion-item.owl-open) .owl-accordion-trigger-icon {
         @apply rotate-180;
@@ -56,4 +59,4 @@
                         content.style.maxHeight = `${content.scrollHeight}px`;
                     }
                 }
-            </script> <div class="owl-accordion"><div class="owl-accordion-item"><button class="owl-accordion-trigger" onclick="owlToggleAccordion(this)"><span>Lorem ipsum dolor sit amet</span><svg class="owl-accordion-trigger-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"></path></svg></button><div class="owl-accordion-content"><p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div><div class="owl-accordion-item"><button class="owl-accordion-trigger" onclick="owlToggleAccordion(this)"><span>Lorem ipsum dolor sit amet</span><svg class="owl-accordion-trigger-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"></path></svg></button><div class="owl-accordion-content"><p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div><div class="owl-accordion-item"><button class="owl-accordion-trigger" onclick="owlToggleAccordion(this)"><span>Lorem ipsum dolor sit amet</span><svg class="owl-accordion-trigger-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"></path></svg></button><div class="owl-accordion-content"><p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div></div></main></body></html>
+            </script> <div class="owl-accordion"><div class="owl-accordion-item"><button class="owl-accordion-trigger" onclick="owlToggleAccordion(this)"><span>Lorem ipsum dolor sit amet</span> <owl-icon icon="chevron-down" class="owl-accordion-trigger-icon"></owl-icon></button><div class="owl-accordion-content"><p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div><div class="owl-accordion-item"><button class="owl-accordion-trigger" onclick="owlToggleAccordion(this)"><span>Lorem ipsum dolor sit amet</span> <owl-icon icon="chevron-down" class="owl-accordion-trigger-icon"></owl-icon></button><div class="owl-accordion-content"><p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div><div class="owl-accordion-item"><button class="owl-accordion-trigger" onclick="owlToggleAccordion(this)"><span>Lorem ipsum dolor sit amet</span> <owl-icon icon="chevron-down" class="owl-accordion-trigger-icon"></owl-icon></button><div class="owl-accordion-content"><p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div></div></main></body></html>

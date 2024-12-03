@@ -1,7 +1,5 @@
 package examples
 
-import "github.com/accentdesign/owl/icons"
-
 var breadcrumbStyles = []string{"typography.css", "breadcrumb.css"}
 
 templ Breadcrumb() {
@@ -13,13 +11,13 @@ templ Breadcrumb() {
 					<a class="owl-breadcrumb-link" href="index.html">Home</a>
 				</li>
 				<li class="owl-breadcrumb-separator" aria-hidden="true" role="presentation">
-					@icons.ChevronRight("owl-breadcrumb-separator-icon")
+				    <owl-icon icon="chevron-right" class="owl-breadcrumb-separator-icon"></owl-icon>
 				</li>
 				<li class="owl-breadcrumb-item">
 					<a class="owl-breadcrumb-link" href="index.html">Components</a>
 				</li>
 				<li class="owl-breadcrumb-separator" aria-hidden="true" role="presentation">
-					@icons.ChevronRight("owl-breadcrumb-separator-icon")
+				    <owl-icon icon="chevron-right" class="owl-breadcrumb-separator-icon"></owl-icon>
 				</li>
 				<li class="owl-breadcrumb-item">
 					<span class="owl-breadcrumb-link" role="link" aria-disabled="true" aria-current="page">Breadcrumb</span>

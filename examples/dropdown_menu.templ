@@ -1,7 +1,5 @@
 package examples
 
-import "github.com/accentdesign/owl/icons"
-
 var dropdownMenuStyles = []string{"typography.css", "dropdown_menu.css", "button.css"}
 
 templ DropdownMenu() {
@@ -23,7 +21,7 @@ templ DropdownMenuComponent(opened bool) {
 			}
 		>
 			<span>Account Menu</span>
-			@icons.ChevronDown("size-4")
+			<owl-icon icon="chevron-down"></owl-icon>
 		</button>
 		<div class={ "owl-dropdown-menu-content", templ.KV("owl-open", opened) } role="menu">
 			if opened {

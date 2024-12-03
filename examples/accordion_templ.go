@@ -8,8 +8,6 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import "github.com/accentdesign/owl/icons"
-
 var accordionTriggerHandle = templ.NewOnceHandle()
 
 var accordionStyles = []string{"typography.css", "accordion.css"}
@@ -78,15 +76,7 @@ func Accordion() templ.Component {
 				return templ_7745c5c3_Err
 			}
 			for range 3 {
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"owl-accordion-item\"><button class=\"owl-accordion-trigger\" onclick=\"owlToggleAccordion(this)\"><span>Lorem ipsum dolor sit amet</span>")
-				if templ_7745c5c3_Err != nil {
-					return templ_7745c5c3_Err
-				}
-				templ_7745c5c3_Err = icons.ChevronDown("owl-accordion-trigger-icon").Render(ctx, templ_7745c5c3_Buffer)
-				if templ_7745c5c3_Err != nil {
-					return templ_7745c5c3_Err
-				}
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</button><div class=\"owl-accordion-content\"><p class=\"mb-4\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div>")
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"owl-accordion-item\"><button class=\"owl-accordion-trigger\" onclick=\"owlToggleAccordion(this)\"><span>Lorem ipsum dolor sit amet</span> <owl-icon icon=\"chevron-down\" class=\"owl-accordion-trigger-icon\"></owl-icon></button><div class=\"owl-accordion-content\"><p class=\"mb-4\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div>")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}

@@ -1,7 +1,5 @@
 package examples
 
-import "github.com/accentdesign/owl/icons"
-
 var accordionTriggerHandle = templ.NewOnceHandle()
 
 var accordionStyles = []string{"typography.css", "accordion.css"}
@@ -34,7 +32,7 @@ templ Accordion() {
 				<div class="owl-accordion-item">
 					<button class="owl-accordion-trigger" onclick="owlToggleAccordion(this)">
 						<span>Lorem ipsum dolor sit amet</span>
-						@icons.ChevronDown("owl-accordion-trigger-icon")
+						<owl-icon icon="chevron-down" class="owl-accordion-trigger-icon"></owl-icon>
 					</button>
 					<div class="owl-accordion-content">
 						<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

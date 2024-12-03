@@ -1,7 +1,5 @@
 package examples
 
-import "github.com/accentdesign/owl/icons"
-
 var dialogStyles = []string{"typography.css", "backdrop.css", "button.css", "dialog.css", "form.css"}
 
 templ Dialog() {
@@ -35,7 +33,7 @@ templ DialogOpen() {
 			</div>
 			<div class="owl-dialog-close">
 				<button class={ ButtonGhost, ButtonIcon } hx-get="dialog-closed.html">
-					@icons.X("size-4")
+					<owl-icon icon="x"></owl-icon>
 					<span class="sr-only">Close</span>
 				</button>
 			</div>

@@ -8,8 +8,6 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import "github.com/accentdesign/owl/icons"
-
 var breadcrumbStyles = []string{"typography.css", "breadcrumb.css"}
 
 func Breadcrumb() templ.Component {
@@ -45,23 +43,7 @@ func Breadcrumb() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1 class=\"owl-h1 mb-10\">breadcrumb</h1><nav aria-label=\"breadcrumb\" class=\"owl-breadcrumb\"><ol class=\"owl-breadcrumb-list\"><li class=\"owl-breadcrumb-item\"><a class=\"owl-breadcrumb-link\" href=\"index.html\">Home</a></li><li class=\"owl-breadcrumb-separator\" aria-hidden=\"true\" role=\"presentation\">")
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			templ_7745c5c3_Err = icons.ChevronRight("owl-breadcrumb-separator-icon").Render(ctx, templ_7745c5c3_Buffer)
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</li><li class=\"owl-breadcrumb-item\"><a class=\"owl-breadcrumb-link\" href=\"index.html\">Components</a></li><li class=\"owl-breadcrumb-separator\" aria-hidden=\"true\" role=\"presentation\">")
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			templ_7745c5c3_Err = icons.ChevronRight("owl-breadcrumb-separator-icon").Render(ctx, templ_7745c5c3_Buffer)
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</li><li class=\"owl-breadcrumb-item\"><span class=\"owl-breadcrumb-link\" role=\"link\" aria-disabled=\"true\" aria-current=\"page\">Breadcrumb</span></li></ol></nav>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1 class=\"owl-h1 mb-10\">breadcrumb</h1><nav aria-label=\"breadcrumb\" class=\"owl-breadcrumb\"><ol class=\"owl-breadcrumb-list\"><li class=\"owl-breadcrumb-item\"><a class=\"owl-breadcrumb-link\" href=\"index.html\">Home</a></li><li class=\"owl-breadcrumb-separator\" aria-hidden=\"true\" role=\"presentation\"><owl-icon icon=\"chevron-right\" class=\"owl-breadcrumb-separator-icon\"></owl-icon></li><li class=\"owl-breadcrumb-item\"><a class=\"owl-breadcrumb-link\" href=\"index.html\">Components</a></li><li class=\"owl-breadcrumb-separator\" aria-hidden=\"true\" role=\"presentation\"><owl-icon icon=\"chevron-right\" class=\"owl-breadcrumb-separator-icon\"></owl-icon></li><li class=\"owl-breadcrumb-item\"><span class=\"owl-breadcrumb-link\" role=\"link\" aria-disabled=\"true\" aria-current=\"page\">Breadcrumb</span></li></ol></nav>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

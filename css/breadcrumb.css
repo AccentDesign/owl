@@ -5,8 +5,11 @@
     .owl-breadcrumb-item {
         @apply inline-flex items-center gap-1.5;
     }
+    .owl-breadcrumb-separator {
+        @apply inline-flex items-center;
+    }
     .owl-breadcrumb-separator-icon {
-        @apply size-4;
+        @apply text-[16px];
     }
     .owl-breadcrumb-link {
         @apply hover:text-black;
