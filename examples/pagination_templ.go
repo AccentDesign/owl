@@ -43,7 +43,7 @@ func Pagination() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1 class=\"owl-h1 mb-10\">pagination</h1><nav role=\"navigation\" aria-label=\"pagination\"><ul class=\"owl-pagination\"><li>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<nav role=\"navigation\" aria-label=\"pagination\"><ul class=\"owl-pagination\"><li>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -181,7 +181,7 @@ func Pagination() templ.Component {
 			}
 			return templ_7745c5c3_Err
 		})
-		templ_7745c5c3_Err = Base(paginationStyles).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = Base(paginationStyles, "pagination").Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

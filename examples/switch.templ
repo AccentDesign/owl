@@ -3,8 +3,7 @@ package examples
 var switchStyles = []string{"typography.css", "switch.css"}
 
 templ Switch() {
-	@Base(switchStyles) {
-		<h1 class="owl-h1 mb-10">switch</h1>
+	@Base(switchStyles, "switch") {
 		<label class="owl-switch">
 			<input type="checkbox" role="switch"/>
 			<span></span>

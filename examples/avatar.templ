@@ -5,8 +5,7 @@ var avatarImageErrorHandle = templ.NewOnceHandle()
 var avatarStyles = []string{"typography.css", "avatar.css"}
 
 templ Avatar() {
-	@Base(avatarStyles) {
-		<h1 class="owl-h1 mb-10">avatar</h1>
+	@Base(avatarStyles, "avatar") {
 		<div class="flex gap-6">
 			<div class="owl-avatar">
 				@AvatarImage("https://github.githubassets.com/images/icons/emoji/unicode/1f436.png?v8", "dog")

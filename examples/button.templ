@@ -13,8 +13,7 @@ var (
 var buttonStyles = []string{"typography.css", "button.css"}
 
 templ Button() {
-	@Base(buttonStyles) {
-		<h1 class="owl-h1 mb-10">button</h1>
+	@Base(buttonStyles, "button") {
 		<div class="grid gap-6">
 			<p class="owp-p">basic</p>
 			<div class="flex gap-6">

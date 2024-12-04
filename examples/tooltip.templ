@@ -3,8 +3,7 @@ package examples
 var tooltipStyles = []string{"typography.css", "tooltip.css"}
 
 templ Tooltip() {
-	@Base(tooltipStyles) {
-		<h1 class="owl-h1 mb-10">tooltip</h1>
+	@Base(tooltipStyles, "tooltip") {
 		<div class="grid gap-6">
 			<div class="flex gap-10">
 				<a href="#" class="owl-tooltip owl-tooltip-top">

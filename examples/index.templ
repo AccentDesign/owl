@@ -3,8 +3,7 @@ package examples
 var indexStyles = []string{"typography.css"}
 
 templ Index() {
-	@Base(indexStyles) {
-		<h1 class="owl-h1 mb-10">index</h1>
+	@Base(indexStyles, "index") {
 		<p class="owl-p">Some basic examples of components built using templ and tailwind.</p>
 	}
 }

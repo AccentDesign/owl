@@ -3,8 +3,7 @@ package examples
 var badgeStyles = []string{"typography.css", "badge.css"}
 
 templ Badge() {
-	@Base(badgeStyles) {
-		<h1 class="owl-h1 mb-10">badge</h1>
+	@Base(badgeStyles, "badge") {
 		<span class="owl-badge">lorem ipsum</span>
 	}
 }

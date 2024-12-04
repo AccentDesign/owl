@@ -5,8 +5,7 @@ var accordionTriggerHandle = templ.NewOnceHandle()
 var accordionStyles = []string{"typography.css", "accordion.css"}
 
 templ Accordion() {
-	@Base(accordionStyles) {
-		<h1 class="owl-h1 mb-10">accordion</h1>
+	@Base(accordionStyles, "accordion") {
 		@accordionTriggerHandle.Once() {
 			<script type="text/javascript">
                 function owlToggleAccordion(trigger) {

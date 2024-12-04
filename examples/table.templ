@@ -3,8 +3,7 @@ package examples
 var tableStyles = []string{"typography.css", "table.css"}
 
 templ Table() {
-	@Base(tableStyles) {
-		<h1 class="owl-h1 mb-10">table</h1>
+	@Base(tableStyles, "table") {
 		<div class="max-w-4xl">
 			<table class="owl-table">
 				<caption class="owl-table-caption">A list of your recent invoices.</caption>

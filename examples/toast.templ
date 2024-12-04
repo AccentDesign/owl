@@ -3,8 +3,7 @@ package examples
 var toastStyles = []string{"typography.css", "toast.css", "button.css"}
 
 templ Toast() {
-	@Base(toastStyles) {
-		<h1 class="owl-h1 mb-10">toast</h1>
+	@Base(toastStyles, "toast") {
 		<button class={ ButtonOutline } hx-get="toast-message.html" hx-target=".owl-toaster" hx-swap="beforeend settle:0.1s">Show</button>
 		@Toaster()
 	}

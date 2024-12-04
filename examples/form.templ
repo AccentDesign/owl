@@ -3,8 +3,7 @@ package examples
 var formStyles = []string{"typography.css", "form.css", "button.css"}
 
 templ Form() {
-	@Base(formStyles) {
-		<h1 class="owl-h1 mb-10">form</h1>
+	@Base(formStyles, "form") {
 		<form class="grid gap-10 max-w-[500px]">
 			<div class="owl-form-field">
 				<label class="owl-label" for="email">Email</label>

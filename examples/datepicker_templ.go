@@ -67,13 +67,13 @@ func Datepicker() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <h1 class=\"owl-h1 mb-10\">datepicker</h1><form class=\"grid gap-10 max-w-[500px]\"><div class=\"owl-form-field\"><label class=\"owl-label\" for=\"date\">Date</label> <input class=\"owl-input\" id=\"date\" name=\"date\" type=\"text\" placeholder=\"Pick a date\"><p class=\"owl-form-field-description\">Basic example using <a class=\"owl-anchor\" href=\"https://pikaday.com\" target=\"_blank\">pikaday</a>.</p></div></form>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <form class=\"grid gap-10 max-w-[500px]\"><div class=\"owl-form-field\"><label class=\"owl-label\" for=\"date\">Date</label> <input class=\"owl-input\" id=\"date\" name=\"date\" type=\"text\" placeholder=\"Pick a date\"><p class=\"owl-form-field-description\">Basic example using <a class=\"owl-anchor\" href=\"https://pikaday.com\" target=\"_blank\">pikaday</a>.</p></div></form>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return templ_7745c5c3_Err
 		})
-		templ_7745c5c3_Err = Base(datepickerStyles).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = Base(datepickerStyles, "datepicker").Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

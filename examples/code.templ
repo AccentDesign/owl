@@ -3,8 +3,7 @@ package examples
 var codeStyles = []string{"typography.css", "code.css"}
 
 templ Code() {
-	@Base(codeStyles) {
-		<h1 class="owl-h1 mb-10">code</h1>
+	@Base(codeStyles, "code") {
 		<div class="grid gap-6">
 			<p>
 				Some inline

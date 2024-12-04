@@ -43,13 +43,13 @@ func Separator() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1 class=\"owl-h1 mb-10\">separator</h1><div class=\"max-w-96\"><div class=\"space-y-1\"><h4 class=\"font-medium leading-none\">Some Awesome Stuff</h4><div class=\"text-gray-600\">Some awesome words to describe stuff</div></div><div data-orientation=\"horizontal\" class=\"owl-separator\" role=\"none\"></div><div class=\"flex h-5 items-center space-x-4\"><div>Some</div><div data-orientation=\"vertical\" role=\"none\" class=\"owl-separator\"></div><div>Awesome</div><div data-orientation=\"vertical\" role=\"none\" class=\"owl-separator\"></div><div>Stuff</div></div></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"max-w-96\"><div class=\"space-y-1\"><h4 class=\"font-medium leading-none\">Some Awesome Stuff</h4><div class=\"text-gray-600\">Some awesome words to describe stuff</div></div><div data-orientation=\"horizontal\" class=\"owl-separator\" role=\"none\"></div><div class=\"flex h-5 items-center space-x-4\"><div>Some</div><div data-orientation=\"vertical\" role=\"none\" class=\"owl-separator\"></div><div>Awesome</div><div data-orientation=\"vertical\" role=\"none\" class=\"owl-separator\"></div><div>Stuff</div></div></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return templ_7745c5c3_Err
 		})
-		templ_7745c5c3_Err = Base(separatorStyles).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = Base(separatorStyles, "separator").Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

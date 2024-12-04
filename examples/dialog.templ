@@ -3,8 +3,7 @@ package examples
 var dialogStyles = []string{"typography.css", "backdrop.css", "button.css", "dialog.css", "form.css"}
 
 templ Dialog() {
-	@Base(dialogStyles) {
-		<h1 class="owl-h1 mb-10">dialog</h1>
+	@Base(dialogStyles, "dialog") {
 		<button class={ ButtonOutline } hx-get="dialog-open.html" hx-target=".owl-dialog-container" hx-swap="outerHTML settle:0.1s" aria-haspopup="dialog">Open</button>
 		@DialogClosed()
 	}

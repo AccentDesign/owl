@@ -3,8 +3,7 @@ package examples
 var paginationStyles = []string{"typography.css", "pagination.css", "button.css"}
 
 templ Pagination() {
-	@Base(paginationStyles) {
-		<h1 class="owl-h1 mb-10">pagination</h1>
+	@Base(paginationStyles, "pagination") {
 		<nav role="navigation" aria-label="pagination">
 			<ul class="owl-pagination">
 				<li>

@@ -3,8 +3,7 @@ package examples
 var dropdownMenuStyles = []string{"typography.css", "dropdown_menu.css", "button.css"}
 
 templ DropdownMenu() {
-	@Base(dropdownMenuStyles) {
-		<h1 class="owl-h1 mb-10">dropdown menu</h1>
+	@Base(dropdownMenuStyles, "dropdown menu") {
 		@DropdownMenuComponent(false)
 	}
 }

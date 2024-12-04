@@ -3,8 +3,7 @@ package examples
 var alertStyles = []string{"typography.css", "alert.css"}
 
 templ Alert() {
-	@Base(alertStyles) {
-		<h1 class="owl-h1 mb-10">alert</h1>
+	@Base(alertStyles, "alert") {
 		<div class="grid gap-6">
 			<div class="owl-alert">
 				<owl-icon icon="terminal" class="owl-alert-icon"></owl-icon>

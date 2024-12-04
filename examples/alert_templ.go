@@ -43,13 +43,13 @@ func Alert() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1 class=\"owl-h1 mb-10\">alert</h1><div class=\"grid gap-6\"><div class=\"owl-alert\"><owl-icon icon=\"terminal\" class=\"owl-alert-icon\"></owl-icon><div class=\"owl-alert-title\">Lorem ipsum dolor sit amet!</div><div class=\"owl-alert-description\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div></div><div class=\"owl-alert\"><div class=\"owl-alert-title\">Lorem ipsum dolor sit amet!</div><div class=\"owl-alert-description\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div></div></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"grid gap-6\"><div class=\"owl-alert\"><owl-icon icon=\"terminal\" class=\"owl-alert-icon\"></owl-icon><div class=\"owl-alert-title\">Lorem ipsum dolor sit amet!</div><div class=\"owl-alert-description\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div></div><div class=\"owl-alert\"><div class=\"owl-alert-title\">Lorem ipsum dolor sit amet!</div><div class=\"owl-alert-description\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div></div></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return templ_7745c5c3_Err
 		})
-		templ_7745c5c3_Err = Base(alertStyles).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = Base(alertStyles, "alert").Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

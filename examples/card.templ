@@ -3,8 +3,7 @@ package examples
 var cardStyles = []string{"typography.css", "button.css", "card.css", "form.css"}
 
 templ Card() {
-	@Base(cardStyles) {
-		<h1 class="owl-h1 mb-10">card</h1>
+	@Base(cardStyles, "card") {
 		<div class="grid gap-6 w-[380px]">
 			<div class="owl-card">
 				<div class="owl-card-header">

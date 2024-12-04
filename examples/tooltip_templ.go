@@ -43,13 +43,13 @@ func Tooltip() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1 class=\"owl-h1 mb-10\">tooltip</h1><div class=\"grid gap-6\"><div class=\"flex gap-10\"><a href=\"#\" class=\"owl-tooltip owl-tooltip-top\"><span>On the top</span><div class=\"owl-tooltip-text\" role=\"tooltip\">some text</div></a> <a href=\"#\" class=\"owl-tooltip owl-tooltip-bottom\"><span>On the bottom</span><div class=\"owl-tooltip-text\" role=\"tooltip\">some text</div></a> <a href=\"#\" class=\"owl-tooltip owl-tooltip-left\"><span>On the left</span><div class=\"owl-tooltip-text\" role=\"tooltip\">some text</div></a> <a href=\"#\" class=\"owl-tooltip owl-tooltip-right\"><span>On the right</span><div class=\"owl-tooltip-text\" role=\"tooltip\">some text</div></a></div></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"grid gap-6\"><div class=\"flex gap-10\"><a href=\"#\" class=\"owl-tooltip owl-tooltip-top\"><span>On the top</span><div class=\"owl-tooltip-text\" role=\"tooltip\">some text</div></a> <a href=\"#\" class=\"owl-tooltip owl-tooltip-bottom\"><span>On the bottom</span><div class=\"owl-tooltip-text\" role=\"tooltip\">some text</div></a> <a href=\"#\" class=\"owl-tooltip owl-tooltip-left\"><span>On the left</span><div class=\"owl-tooltip-text\" role=\"tooltip\">some text</div></a> <a href=\"#\" class=\"owl-tooltip owl-tooltip-right\"><span>On the right</span><div class=\"owl-tooltip-text\" role=\"tooltip\">some text</div></a></div></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return templ_7745c5c3_Err
 		})
-		templ_7745c5c3_Err = Base(tooltipStyles).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = Base(tooltipStyles, "tooltip").Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

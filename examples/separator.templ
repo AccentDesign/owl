@@ -3,8 +3,7 @@ package examples
 var separatorStyles = []string{"typography.css", "separator.css"}
 
 templ Separator() {
-	@Base(separatorStyles) {
-		<h1 class="owl-h1 mb-10">separator</h1>
+	@Base(separatorStyles, "separator") {
 		<div class="max-w-96">
 			<div class="space-y-1">
 				<h4 class="font-medium leading-none">Some Awesome Stuff</h4>
