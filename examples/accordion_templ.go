@@ -57,7 +57,7 @@ func Accordion() templ.Component {
 					}()
 				}
 				ctx = templ.InitializeContext(ctx)
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<script type=\"text/javascript\">\n                function owlToggleAccordion(trigger) {\n                    const item = trigger.closest(\".owl-accordion-item\");\n                    const accordion = item.closest(\".owl-accordion\");\n                    const content = item.querySelector(\".owl-accordion-content\");\n                    const isOpen = item.classList.contains(\"owl-open\");\n                    const allItems = accordion.querySelectorAll(\".owl-accordion-item\");\n                    allItems.forEach(function (i) {\n                        const c = i.querySelector(\".owl-accordion-content\");\n                        i.classList.toggle(\"owl-open\", false);\n                        c.style.maxHeight = \"0\";\n                    });\n                    if (!isOpen) {\n                        item.classList.toggle(\"owl-open\", true);\n                        content.style.maxHeight = `${content.scrollHeight}px`;\n                    }\n                }\n\t\t\t</script>")
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<script type=\"text/javascript\">\n                function owlToggleAccordion(trigger) {\n                    const item = trigger.closest(\".owl-accordion-item\");\n                    const accordion = item.closest(\".owl-accordion\");\n                    const content = item.querySelector(\".owl-accordion-content\");\n                    const isOpen = item.classList.contains(\"owl-open\");\n                    const allItems = accordion.querySelectorAll(\".owl-accordion-item\");\n                    allItems.forEach(function (i) {\n                        const c = i.querySelector(\".owl-accordion-content\");\n                        i.classList.toggle(\"owl-open\", false);\n                        c.style.height = \"0\";\n                    });\n                    if (!isOpen) {\n                        item.classList.toggle(\"owl-open\", true);\n                        content.style.height = `calc(${content.scrollHeight}px + 1rem)`;\n                    }\n                }\n\t\t\t</script>")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -72,7 +72,7 @@ func Accordion() templ.Component {
 				return templ_7745c5c3_Err
 			}
 			for range 3 {
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"owl-accordion-item\"><button class=\"owl-accordion-trigger\" onclick=\"owlToggleAccordion(this)\"><span>Lorem ipsum dolor sit amet</span> <owl-icon icon=\"chevron-down\" class=\"owl-accordion-trigger-icon\"></owl-icon></button><div class=\"owl-accordion-content\"><p class=\"mb-4\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div>")
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"owl-accordion-item\"><button class=\"owl-accordion-trigger\" onclick=\"owlToggleAccordion(this)\"><span>Lorem ipsum dolor sit amet</span> <owl-icon icon=\"chevron-down\" class=\"owl-accordion-trigger-icon\"></owl-icon></button><div class=\"owl-accordion-content\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div>")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}

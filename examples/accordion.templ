@@ -17,11 +17,11 @@ templ Accordion() {
                     allItems.forEach(function (i) {
                         const c = i.querySelector(".owl-accordion-content");
                         i.classList.toggle("owl-open", false);
-                        c.style.maxHeight = "0";
+                        c.style.height = "0";
                     });
                     if (!isOpen) {
                         item.classList.toggle("owl-open", true);
-                        content.style.maxHeight = `${content.scrollHeight}px`;
+                        content.style.height = `calc(${content.scrollHeight}px + 1rem)`;
                     }
                 }
 			</script>
@@ -34,7 +34,7 @@ templ Accordion() {
 						<owl-icon icon="chevron-down" class="owl-accordion-trigger-icon"></owl-icon>
 					</button>
 					<div class="owl-accordion-content">
-						<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</div>
 				</div>
 			}

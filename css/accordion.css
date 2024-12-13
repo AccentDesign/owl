@@ -15,6 +15,6 @@
         @apply rotate-180;
     }
     .owl-accordion-content {
-        @apply overflow-hidden pt-0 max-h-0 transition-all duration-300;
+        @apply overflow-hidden pt-0 h-0 transition-all duration-300;
     }
 }
