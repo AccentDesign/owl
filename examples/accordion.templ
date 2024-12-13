@@ -1,43 +1,49 @@
 package examples
 
-var accordionTriggerHandle = templ.NewOnceHandle()
+var accordionItemHandle = templ.NewOnceHandle()
 
 var accordionStyles = []string{"typography.css", "accordion.css"}
 
 templ Accordion() {
 	@Base(accordionStyles, "accordion") {
-		@accordionTriggerHandle.Once() {
-			<script type="text/javascript">
-                function owlToggleAccordion(trigger) {
-                    const item = trigger.closest(".owl-accordion-item");
-                    const accordion = item.closest(".owl-accordion");
-                    const content = item.querySelector(".owl-accordion-content");
-                    const isOpen = item.classList.contains("owl-open");
-                    const allItems = accordion.querySelectorAll(".owl-accordion-item");
-                    allItems.forEach(function (i) {
-                        const c = i.querySelector(".owl-accordion-content");
-                        i.classList.toggle("owl-open", false);
-                        c.style.height = "0";
-                    });
-                    if (!isOpen) {
-                        item.classList.toggle("owl-open", true);
-                        content.style.height = `calc(${content.scrollHeight}px + 1rem)`;
-                    }
-                }
-			</script>
-		}
 		<div class="owl-accordion">
 			for range 3 {
-				<div class="owl-accordion-item">
-					<button class="owl-accordion-trigger" onclick="owlToggleAccordion(this)">
-						<span>Lorem ipsum dolor sit amet</span>
-						<owl-icon icon="chevron-down" class="owl-accordion-trigger-icon"></owl-icon>
-					</button>
-					<div class="owl-accordion-content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-				</div>
+				@AccordionItem("Lorem ipsum dolor sit amet") {
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				}
 			}
 		</div>
 	}
+}
+
+templ AccordionItem(title string) {
+	@accordionItemHandle.Once() {
+		<script type="text/javascript">
+            function owlToggleAccordion(trigger) {
+                const item = trigger.closest(".owl-accordion-item");
+                const accordion = item.closest(".owl-accordion");
+                const content = item.querySelector(".owl-accordion-content");
+                const isOpen = item.classList.contains("owl-open");
+                const allItems = accordion.querySelectorAll(".owl-accordion-item");
+                allItems.forEach(function (i) {
+                    const c = i.querySelector(".owl-accordion-content");
+                    i.classList.toggle("owl-open", false);
+                    c.style.height = "0";
+                });
+                if (!isOpen) {
+                    item.classList.toggle("owl-open", true);
+                    content.style.height = `calc(${content.scrollHeight}px + 1rem)`;
+                }
+            }
+        </script>
+	}
+	<div class="owl-accordion-item">
+		<button class="owl-accordion-trigger" onclick="owlToggleAccordion(this)">
+			<span>Lorem ipsum dolor sit amet</span>
+			<owl-icon icon="chevron-down" class="owl-accordion-trigger-icon"></owl-icon>
+		</button>
+		<div class="owl-accordion-content">
+			{ children... }
+		</div>
+	</div>
 }
