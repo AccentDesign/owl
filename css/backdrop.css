@@ -1,5 +1,5 @@
 @layer components {
     .owl-backdrop {
-        @apply fixed inset-0 z-50 bg-black/80 pointer-events-none;
+        @apply fixed inset-0 z-50 bg-black/80 pointer-events-auto;
     }
 }
