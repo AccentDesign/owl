@@ -1,6 +1,6 @@
 @layer components {
     .owl-card {
-        @apply w-full rounded-lg border border-gray-200 bg-white shadow-sm;
+        @apply w-full rounded-lg border border-border bg-background shadow-sm;
     }
     .owl-card-header {
         @apply flex flex-col space-y-1.5 p-6;
@@ -9,7 +9,7 @@
         @apply text-2xl font-semibold leading-none tracking-tight;
     }
     .owl-card-description {
-        @apply text-sm text-gray-500;
+        @apply text-sm text-muted-foreground;
     }
     .owl-card-content {
         @apply grid gap-4 p-6 pt-0;

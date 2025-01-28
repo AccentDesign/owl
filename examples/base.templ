@@ -13,8 +13,8 @@ templ Base(styles []string, title string) {
 			<script src="icons/icons.js"></script>
 			@css.Include(styles...)
 		</head>
-		<body class="min-h-screen antialiased">
-			<header class="bg-black text-white py-6">
+		<body class="min-h-screen antialiased bg-background text-foreground">
+			<header class="bg-header text-header-foreground py-6">
 				<div class="container mx-auto flex items-center justify-between">
 					<a class="flex items-center gap-4 font-medium" href="index.html">
 						<svg width="23" height="30" viewBox="0 0 275 352" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +28,7 @@ templ Base(styles []string, title string) {
 			<main class="flex gap-4 container mx-auto py-10">
 				<aside class="w-64">
 					<h4 class="owl-h4 mb-4">components</h4>
-					<ul class="list-disc list-inside mb-4 text-gray-500">
+					<ul class="list-disc list-inside mb-4 text-muted-foreground">
 						<li><a href="accordion.html">accordion</a></li>
 						<li><a href="alert.html">alert</a></li>
 						<li><a href="alert-dialog.html">alert dialog</a></li>
@@ -51,7 +51,7 @@ templ Base(styles []string, title string) {
 						<li><a href="tooltip.html">tooltip</a></li>
 					</ul>
 					<h4 class="owl-h4 mb-4">links</h4>
-					<ul class="list-disc list-inside text-gray-500">
+					<ul class="list-disc list-inside text-muted-foreground">
 						<li><a href="index.html">home</a></li>
 						<li><a target="_blank" href="https://github.com/AccentDesign/owl">github</a></li>
 						<li><a target="_blank" href="https://go.dev">golang</a></li>

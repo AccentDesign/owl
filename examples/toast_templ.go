@@ -8,7 +8,7 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-var toastStyles = []string{"typography.css", "toast.css", "button.css"}
+var toastStyles = []string{"theme.css", "typography.css", "toast.css", "button.css"}
 
 func Toast() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {

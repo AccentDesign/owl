@@ -10,7 +10,7 @@ import templruntime "github.com/a-h/templ/runtime"
 
 var accordionItemHandle = templ.NewOnceHandle()
 
-var accordionStyles = []string{"typography.css", "accordion.css"}
+var accordionStyles = []string{"theme.css", "typography.css", "accordion.css"}
 
 func Accordion() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {

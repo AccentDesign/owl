@@ -3,7 +3,7 @@
         @apply relative;
     }
     .owl-tooltip-text {
-        @apply absolute z-50 hidden px-2.5 py-1.5 border border-gray-200 rounded bg-white font-medium text-sm text-black whitespace-nowrap shadow-sm opacity-0 transition-opacity duration-300 pointer-events-none;
+        @apply absolute z-50 hidden px-2.5 py-1.5 border border-border rounded bg-background font-medium text-sm text-foreground whitespace-nowrap shadow-sm opacity-0 transition-opacity duration-300 pointer-events-none;
     }
     .owl-tooltip:hover .owl-tooltip-text {
         @apply opacity-100 inline-block;

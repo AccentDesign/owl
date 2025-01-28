@@ -8,7 +8,7 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-var separatorStyles = []string{"typography.css", "separator.css"}
+var separatorStyles = []string{"theme.css", "typography.css", "separator.css"}
 
 func Separator() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
@@ -43,7 +43,7 @@ func Separator() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"max-w-96\"><div class=\"space-y-1\"><h4 class=\"font-medium leading-none\">Some Awesome Stuff</h4><div class=\"text-gray-600\">Some awesome words to describe stuff</div></div><div data-orientation=\"horizontal\" class=\"owl-separator\" role=\"none\"></div><div class=\"flex h-5 items-center space-x-4\"><div>Some</div><div data-orientation=\"vertical\" role=\"none\" class=\"owl-separator\"></div><div>Awesome</div><div data-orientation=\"vertical\" role=\"none\" class=\"owl-separator\"></div><div>Stuff</div></div></div>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"max-w-96\"><div class=\"space-y-1\"><h4 class=\"font-medium leading-none\">Some Awesome Stuff</h4><div class=\"text-muted-foreground\">Some awesome words to describe stuff</div></div><div data-orientation=\"horizontal\" class=\"owl-separator\" role=\"none\"></div><div class=\"flex h-5 items-center space-x-4\"><div>Some</div><div data-orientation=\"vertical\" role=\"none\" class=\"owl-separator\"></div><div>Awesome</div><div data-orientation=\"vertical\" role=\"none\" class=\"owl-separator\"></div><div>Stuff</div></div></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

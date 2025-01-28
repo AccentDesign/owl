@@ -8,7 +8,7 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-var alertStyles = []string{"typography.css", "alert.css"}
+var alertStyles = []string{"theme.css", "typography.css", "alert.css"}
 
 func Alert() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
@@ -43,7 +43,7 @@ func Alert() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"grid gap-6\"><div class=\"owl-alert\"><owl-icon icon=\"terminal\" class=\"owl-alert-icon\"></owl-icon><div class=\"owl-alert-title\">Lorem ipsum dolor sit amet!</div><div class=\"owl-alert-description\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div></div><div class=\"owl-alert\"><div class=\"owl-alert-title\">Lorem ipsum dolor sit amet!</div><div class=\"owl-alert-description\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div></div></div>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"grid gap-6\"><div>with icon</div><div class=\"owl-alert\"><owl-icon icon=\"terminal\" class=\"owl-alert-icon\"></owl-icon><div class=\"owl-alert-title\">Lorem ipsum dolor sit amet!</div><div class=\"owl-alert-description\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div></div><div>without icon</div><div class=\"owl-alert\"><div class=\"owl-alert-title\">Lorem ipsum dolor sit amet!</div><div class=\"owl-alert-description\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div></div></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

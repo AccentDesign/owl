@@ -8,7 +8,7 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-var paginationStyles = []string{"typography.css", "pagination.css", "button.css"}
+var paginationStyles = []string{"theme.css", "typography.css", "pagination.css", "button.css"}
 
 func Pagination() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {

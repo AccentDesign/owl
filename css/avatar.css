@@ -9,7 +9,7 @@
         @apply hidden;
     }
     .owl-avatar-fallback {
-        @apply flex items-center justify-center h-full w-full bg-black text-white;
+        @apply flex items-center justify-center h-full w-full bg-primary text-primary-foreground;
     }
     :where(.owl-avatar-image:not(.owl-avatar-image-error)) + .owl-avatar-fallback {
         @apply hidden;

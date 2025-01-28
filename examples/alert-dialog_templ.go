@@ -8,7 +8,7 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-var alertDialogStyles = []string{"typography.css", "backdrop.css", "button.css", "dialog.css"}
+var alertDialogStyles = []string{"theme.css", "typography.css", "backdrop.css", "button.css", "dialog.css"}
 
 func AlertDialog() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {

@@ -1,13 +1,13 @@
 package examples
 
-var separatorStyles = []string{"typography.css", "separator.css"}
+var separatorStyles = []string{"theme.css", "typography.css", "separator.css"}
 
 templ Separator() {
 	@Base(separatorStyles, "separator") {
 		<div class="max-w-96">
 			<div class="space-y-1">
 				<h4 class="font-medium leading-none">Some Awesome Stuff</h4>
-				<div class="text-gray-600">Some awesome words to describe stuff</div>
+				<div class="text-muted-foreground">Some awesome words to describe stuff</div>
 			</div>
 			<div data-orientation="horizontal" class="owl-separator" role="none"></div>
 			<div class="flex h-5 items-center space-x-4">

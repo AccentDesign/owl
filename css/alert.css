@@ -1,6 +1,6 @@
 @layer components {
     .owl-alert {
-        @apply relative w-full rounded-lg border border-gray-200 p-4;
+        @apply relative w-full rounded-lg border border-border p-4;
     }
     .owl-alert-title {
         @apply mb-2 font-medium leading-none tracking-tight;

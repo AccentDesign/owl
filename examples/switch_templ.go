@@ -8,7 +8,7 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-var switchStyles = []string{"typography.css", "switch.css"}
+var switchStyles = []string{"theme.css", "typography.css", "switch.css"}
 
 func Switch() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {

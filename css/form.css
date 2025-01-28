@@ -1,9 +1,9 @@
 @layer components {
     .owl-label {
-        @apply text-sm font-medium leading-none;
+        @apply inline-block text-sm font-medium leading-none cursor-pointer;
     }
     .owl-input, .owl-select, .owl-textarea {
-        @apply flex w-full rounded-md border border-gray-200 px-3 py-2 text-sm;
+        @apply flex w-full rounded-md border border-input px-3 py-2 text-sm;
     }
     .owl-input {
         @apply h-10 file:border-0 file:bg-transparent file:text-sm file:font-medium;
@@ -15,23 +15,23 @@
         @apply min-h-[80px];
     }
     .owl-checkbox {
-        @apply size-4 shrink-0 rounded-sm border border-gray-200 accent-black;
+        @apply size-4 shrink-0 rounded-sm border border-input accent-primary;
     }
     .owl-form-field {
         @apply space-y-2;
     }
     .owl-form-field-error {
-        @apply text-sm text-red-500;
+        @apply text-sm text-destructive;
     }
     .owl-form-field-description {
-        @apply text-sm text-gray-500;
+        @apply text-sm text-muted-foreground;
     }
     .owl-form-field:has(.owl-form-field-error) {
         .owl-label {
-            @apply text-red-500;
+            @apply text-destructive;
         }
         .owl-input, .owl-select, .owl-textarea, .owl-checkbox {
-            @apply border-red-500;
+            @apply border-destructive;
         }
     }
 }

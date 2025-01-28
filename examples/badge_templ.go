@@ -8,7 +8,7 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-var badgeStyles = []string{"typography.css", "badge.css"}
+var badgeStyles = []string{"theme.css", "typography.css", "badge.css"}
 
 func Badge() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {

@@ -1,10 +1,11 @@
 package examples
 
-var alertStyles = []string{"typography.css", "alert.css"}
+var alertStyles = []string{"theme.css", "typography.css", "alert.css"}
 
 templ Alert() {
 	@Base(alertStyles, "alert") {
 		<div class="grid gap-6">
+		    <div>with icon</div>
 			<div class="owl-alert">
 				<owl-icon icon="terminal" class="owl-alert-icon"></owl-icon>
 				<div class="owl-alert-title">Lorem ipsum dolor sit amet!</div>
@@ -12,6 +13,7 @@ templ Alert() {
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				</div>
 			</div>
+		    <div>without icon</div>
 			<div class="owl-alert">
 				<div class="owl-alert-title">Lorem ipsum dolor sit amet!</div>
 				<div class="owl-alert-description">

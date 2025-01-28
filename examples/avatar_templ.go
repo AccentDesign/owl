@@ -10,7 +10,7 @@ import templruntime "github.com/a-h/templ/runtime"
 
 var avatarImageErrorHandle = templ.NewOnceHandle()
 
-var avatarStyles = []string{"typography.css", "avatar.css"}
+var avatarStyles = []string{"theme.css", "typography.css", "avatar.css"}
 
 func Avatar() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {

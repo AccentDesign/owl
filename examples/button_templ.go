@@ -18,7 +18,7 @@ var (
 	ButtonLink        string = "owl-button owl-button-link"
 )
 
-var buttonStyles = []string{"typography.css", "button.css"}
+var buttonStyles = []string{"theme.css", "typography.css", "button.css"}
 
 func Button() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {

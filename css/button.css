@@ -1,23 +1,23 @@
 @layer components {
     .owl-button {
-        @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md h-10 px-4 py-2 text-sm font-medium cursor-pointer bg-black text-white hover:bg-black/80;
+        @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md h-10 px-4 py-2 text-sm font-medium cursor-pointer bg-primary text-primary-foreground hover:bg-primary/80;
     }
     .owl-button-icon {
         @apply size-10 p-0 text-base;
     }
     .owl-button-secondary {
-        @apply bg-gray-100 text-black hover:bg-gray-100/80;
+        @apply bg-secondary text-secondary-foreground hover:bg-secondary/80;
     }
     .owl-button-destructive {
-        @apply bg-red-500 text-white hover:bg-red-500/90;
+        @apply bg-destructive text-destructive-foreground hover:bg-destructive/90;
     }
     .owl-button-outline {
-        @apply bg-transparent text-black border border-gray-200 hover:bg-gray-100/80;
+        @apply bg-transparent text-foreground border border-input hover:bg-secondary/80;
     }
     .owl-button-ghost {
-        @apply bg-transparent text-black hover:bg-gray-100/80;
+        @apply bg-transparent text-foreground hover:bg-secondary/80;
     }
     .owl-button-link {
-        @apply bg-transparent text-black hover:bg-transparent hover:underline hover:underline-offset-4;
+        @apply bg-transparent text-foreground hover:bg-transparent hover:underline hover:underline-offset-4;
     }
 }

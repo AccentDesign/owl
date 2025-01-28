@@ -8,7 +8,7 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-var datepickerStyles = []string{"typography.css", "pikaday.css", "form.css"}
+var datepickerStyles = []string{"theme.css", "typography.css", "form.css"}
 
 var datepickerHandle = templ.NewOnceHandle()
 
@@ -57,7 +57,7 @@ func Datepicker() templ.Component {
 					}()
 				}
 				ctx = templ.InitializeContext(ctx)
-				templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css\"><script src=\"https://cdn.jsdelivr.net/npm/pikaday/pikaday.js\"></script> <script type=\"text/javascript\">\n                document.addEventListener(\"DOMContentLoaded\", function() {\n                    var picker = new Pikaday({\n                        field: document.getElementById(\"date\"),\n                        theme: \"owl-pika\",\n                    });\n                });\n            </script>")
+				templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css\"><script src=\"https://cdn.jsdelivr.net/npm/pikaday/pikaday.js\"></script> <script type=\"text/javascript\">\n                document.addEventListener(\"DOMContentLoaded\", function() {\n                    var picker = new Pikaday({\n                        field: document.getElementById(\"date\"),\n                    });\n                });\n            </script>")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}

@@ -8,7 +8,7 @@ package examples
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-var cardStyles = []string{"typography.css", "button.css", "card.css", "form.css"}
+var cardStyles = []string{"theme.css", "typography.css", "button.css", "card.css", "form.css"}
 
 func Card() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
@@ -65,7 +65,7 @@ func Card() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "\">Continue</button></div></div><div class=\"owl-card\"><div class=\"owl-card-header\"><h3 class=\"owl-card-title\">Spam</h3><p class=\"owl-card-description\">Let us spam you within an inch of your tolerance</p></div><div class=\"owl-card-content\"><div class=\"space-y-2\"><label class=\"owl-label\" for=\"email\">Email</label> <input class=\"owl-input\" id=\"email\" name=\"email\" type=\"email\" placeholder=\"email@example.com\"><p class=\"text-gray-500 text-sm\">Enter your email address.</p></div></div><div class=\"owl-card-footer grid\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "\">Continue</button></div></div><div class=\"owl-card\"><div class=\"owl-card-header\"><h3 class=\"owl-card-title\">Spam</h3><p class=\"owl-card-description\">Let us spam you within an inch of your tolerance</p></div><div class=\"owl-card-content\"><div class=\"space-y-2\"><label class=\"owl-label\" for=\"email\">Email</label> <input class=\"owl-input\" id=\"email\" name=\"email\" type=\"email\" placeholder=\"email@example.com\"><p class=\"owl-form-field-description\">Enter your email address.</p></div></div><div class=\"owl-card-footer grid\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

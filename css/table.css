@@ -3,16 +3,16 @@
         @apply w-full caption-bottom text-sm;
     }
     .owl-table-header {
-        @apply border-b border-b-gray-200;
+        @apply border-b border-b-border;
     }
     .owl-table-body {
         @apply [&_tr:last-child]:border-0;
     }
     .owl-table-footer {
-        @apply border-t border-t-gray-200 bg-gray-50 font-medium [&>tr]:last:border-b-0;
+        @apply border-t border-t-border bg-muted/50 font-medium [&>tr]:last:border-b-0;
     }
     .owl-table-row {
-        @apply border-b border-b-gray-200 transition-colors hover:bg-gray-50;
+        @apply border-b border-b-border transition-colors hover:bg-muted/50;
     }
     .owl-table-head {
         @apply h-12 px-4 text-left align-middle font-medium;
@@ -21,6 +21,6 @@
         @apply p-4 align-middle font-medium;
     }
     .owl-table-caption {
-        @apply mt-4 text-sm text-gray-500;
+        @apply mt-4 text-sm text-muted-foreground;
     }
 }

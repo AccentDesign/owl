@@ -3,7 +3,7 @@
         @apply fixed bottom-4 right-4 grid gap-4 max-w-[500px] ;
     }
     .owl-toast {
-        @apply flex items-center justify-between gap-6 rounded-sm bg-white text-black border border-gray-200 shadow-lg p-4 text-sm transition-all duration-200 translate-x-0 opacity-100 overflow-hidden;
+        @apply flex items-center justify-between gap-6 rounded-sm bg-background text-foreground border border-border shadow-lg p-4 text-sm transition-all duration-200 translate-x-0 opacity-100 overflow-hidden;
     }
     .owl-toast.htmx-swapping {
         @apply translate-x-full opacity-0;
@@ -13,6 +13,6 @@
     }
     .owl-toast-title {}
     .owl-toast-description {
-        @apply text-gray-500;
+        @apply text-muted-foreground;
     }
 }

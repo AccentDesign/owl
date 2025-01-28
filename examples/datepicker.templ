@@ -1,6 +1,6 @@
 package examples
 
-var datepickerStyles = []string{"typography.css", "pikaday.css", "form.css"}
+var datepickerStyles = []string{"theme.css", "typography.css", "form.css"}
 
 var datepickerHandle = templ.NewOnceHandle()
 
@@ -13,7 +13,6 @@ templ Datepicker() {
                 document.addEventListener("DOMContentLoaded", function() {
                     var picker = new Pikaday({
                         field: document.getElementById("date"),
-                        theme: "owl-pika",
                     });
                 });
             </script>
