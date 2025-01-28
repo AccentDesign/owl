@@ -3,16 +3,16 @@
         @apply w-full caption-bottom text-sm;
     }
     .owl-table-header {
-        @apply border-b;
+        @apply border-b border-b-gray-200;
     }
     .owl-table-body {
         @apply [&_tr:last-child]:border-0;
     }
     .owl-table-footer {
-        @apply border-t bg-gray-50 font-medium [&>tr]:last:border-b-0;
+        @apply border-t border-t-gray-200 bg-gray-50 font-medium [&>tr]:last:border-b-0;
     }
     .owl-table-row {
-        @apply border-b transition-colors hover:bg-gray-50;
+        @apply border-b border-b-gray-200 transition-colors hover:bg-gray-50;
     }
     .owl-table-head {
         @apply h-12 px-4 text-left align-middle font-medium;

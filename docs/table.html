@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script><script src="https://cdn.tailwindcss.com"></script><script src="icons/icons.js"></script><style type='text/tailwindcss'>@layer components {
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script><script src="https://unpkg.com/@tailwindcss/browser@4"></script><script src="icons/icons.js"></script><style type='text/tailwindcss'>@layer components {
     .owl-h1 {
         @apply text-3xl font-semibold tracking-tight;
     }
@@ -27,16 +27,16 @@
         @apply w-full caption-bottom text-sm;
     }
     .owl-table-header {
-        @apply border-b;
+        @apply border-b border-b-gray-200;
     }
     .owl-table-body {
         @apply [&_tr:last-child]:border-0;
     }
     .owl-table-footer {
-        @apply border-t bg-gray-50 font-medium [&>tr]:last:border-b-0;
+        @apply border-t border-t-gray-200 bg-gray-50 font-medium [&>tr]:last:border-b-0;
     }
     .owl-table-row {
-        @apply border-b transition-colors hover:bg-gray-50;
+        @apply border-b border-b-gray-200 transition-colors hover:bg-gray-50;
     }
     .owl-table-head {
         @apply h-12 px-4 text-left align-middle font-medium;

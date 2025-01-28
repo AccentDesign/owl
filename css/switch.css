@@ -3,7 +3,7 @@
         @apply relative inline-block w-10;
     }
     .owl-switch input {
-        @apply absolute block w-6 h-6 rounded-full bg-white border-2 appearance-none cursor-pointer transition-transform duration-200;
+        @apply absolute block w-6 h-6 rounded-full bg-white border-2 border-gray-200 appearance-none cursor-pointer transition-transform duration-200;
     }
     .owl-switch input:checked {
         @apply translate-x-4;
@@ -12,6 +12,6 @@
         @apply bg-black;
     }
     .owl-switch span {
-        @apply block h-6 rounded-full border bg-gray-200 cursor-pointer transition-colors duration-200;
+        @apply block h-6 rounded-full border border-gray-200 bg-gray-200 cursor-pointer transition-colors duration-200;
     }
 }

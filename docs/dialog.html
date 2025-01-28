@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script><script src="https://cdn.tailwindcss.com"></script><script src="icons/icons.js"></script><style type='text/tailwindcss'>@layer components {
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script><script src="https://unpkg.com/@tailwindcss/browser@4"></script><script src="icons/icons.js"></script><style type='text/tailwindcss'>@layer components {
     .owl-h1 {
         @apply text-3xl font-semibold tracking-tight;
     }
@@ -29,7 +29,7 @@
 }
 @layer components {
     .owl-button {
-        @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md h-10 px-4 py-2 text-sm font-medium bg-black text-white hover:bg-black/80;
+        @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md h-10 px-4 py-2 text-sm font-medium cursor-pointer bg-black text-white hover:bg-black/80;
     }
     .owl-button-icon {
         @apply size-10 p-0 text-base;
@@ -41,7 +41,7 @@
         @apply bg-red-500 text-white hover:bg-red-500/90;
     }
     .owl-button-outline {
-        @apply bg-transparent text-black border hover:bg-gray-100/80;
+        @apply bg-transparent text-black border border-gray-200 hover:bg-gray-100/80;
     }
     .owl-button-ghost {
         @apply bg-transparent text-black hover:bg-gray-100/80;
@@ -87,7 +87,7 @@
         @apply text-sm font-medium leading-none;
     }
     .owl-input, .owl-select, .owl-textarea {
-        @apply flex w-full rounded-md border px-3 py-2 text-sm;
+        @apply flex w-full rounded-md border border-gray-200 px-3 py-2 text-sm;
     }
     .owl-input {
         @apply h-10 file:border-0 file:bg-transparent file:text-sm file:font-medium;
@@ -99,7 +99,7 @@
         @apply min-h-[80px];
     }
     .owl-checkbox {
-        @apply size-4 shrink-0 rounded-sm border accent-black;
+        @apply size-4 shrink-0 rounded-sm border border-gray-200 accent-black;
     }
     .owl-form-field {
         @apply space-y-2;

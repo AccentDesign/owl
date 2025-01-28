@@ -3,7 +3,7 @@
         @apply text-sm font-medium leading-none;
     }
     .owl-input, .owl-select, .owl-textarea {
-        @apply flex w-full rounded-md border px-3 py-2 text-sm;
+        @apply flex w-full rounded-md border border-gray-200 px-3 py-2 text-sm;
     }
     .owl-input {
         @apply h-10 file:border-0 file:bg-transparent file:text-sm file:font-medium;
@@ -15,7 +15,7 @@
         @apply min-h-[80px];
     }
     .owl-checkbox {
-        @apply size-4 shrink-0 rounded-sm border accent-black;
+        @apply size-4 shrink-0 rounded-sm border border-gray-200 accent-black;
     }
     .owl-form-field {
         @apply space-y-2;

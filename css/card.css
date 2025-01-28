@@ -1,6 +1,6 @@
 @layer components {
     .owl-card {
-        @apply w-full rounded-lg border bg-white shadow-sm;
+        @apply w-full rounded-lg border border-gray-200 bg-white shadow-sm;
     }
     .owl-card-header {
         @apply flex flex-col space-y-1.5 p-6;
