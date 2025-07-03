@@ -5,7 +5,7 @@
     .owl-avatar-image {
         @apply h-full w-full aspect-square;
     }
-    .owl-avatar-image.owl-avatar-image-error {
+    .owl-avatar-image:where(.owl-avatar-image-error) {
         @apply hidden;
     }
     .owl-avatar-fallback {

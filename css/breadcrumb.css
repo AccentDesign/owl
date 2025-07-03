@@ -12,7 +12,7 @@
     .owl-breadcrumb-link {
         @apply hover:text-foreground;
     }
-    .owl-breadcrumb-link[aria-current=page] {
+    .owl-breadcrumb-link:where([aria-current=page]) {
         @apply text-foreground;
     }
 }

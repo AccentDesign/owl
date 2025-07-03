@@ -14,7 +14,7 @@ templ Card() {
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</div>
 				<div class="owl-card-footer">
-					<p>© Accent Design Group Ltd</p>
+					<p class="text-muted-foreground text-sm">© Accent Design Group Ltd</p>
 				</div>
 			</div>
 			<div class="owl-card">
@@ -42,6 +42,27 @@ templ Card() {
 				</div>
 				<div class="owl-card-footer grid">
 					<button class={ ButtonDefault }>Spam Me</button>
+				</div>
+			</div>
+			<div class="owl-card">
+				<div class="owl-card-header">
+					<h3 class="owl-card-title">Login</h3>
+					<p class="owl-card-description">Login to access nothing of value</p>
+				</div>
+				<div class="owl-card-content">
+					<div class="space-y-2">
+						<label class="owl-label" for="email">Email</label>
+						<input class="owl-input" id="email" name="email" type="email" placeholder="email@example.com"/>
+						<p class="owl-form-field-description">Enter your email address.</p>
+					</div>
+					<div class="space-y-2">
+						<label class="owl-label" for="password">Password</label>
+						<input class="owl-input" id="password" name="password" type="password" placeholder="password"/>
+						<p class="owl-form-field-description">Enter your password.</p>
+					</div>
+				</div>
+				<div class="owl-card-footer grid">
+					<button class={ ButtonDefault }>Login</button>
 				</div>
 			</div>
 		</div>
