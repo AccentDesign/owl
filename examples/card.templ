@@ -7,8 +7,8 @@ templ Card() {
 		<div class="grid gap-6 w-[380px]">
 			<div class="owl-card">
 				<div class="owl-card-header">
-					<h3 class="owl-card-title">Lorem Ipsum</h3>
-					<p class="owl-card-description">Lorem ipsum dolor sit amet</p>
+					<div class="owl-card-title">Lorem Ipsum</div>
+					<div class="owl-card-description">Lorem ipsum dolor sit amet</div>
 				</div>
 				<div class="owl-card-content">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -19,7 +19,7 @@ templ Card() {
 			</div>
 			<div class="owl-card">
 				<div class="owl-card-header">
-					<h3 class="owl-card-title">Lorem Ipsum</h3>
+					<div class="owl-card-title">Lorem Ipsum</div>
 				</div>
 				<div class="owl-card-content">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -30,8 +30,8 @@ templ Card() {
 			</div>
 			<div class="owl-card">
 				<div class="owl-card-header">
-					<h3 class="owl-card-title">Spam</h3>
-					<p class="owl-card-description">Let us spam you within an inch of your tolerance</p>
+					<div class="owl-card-title">Spam</div>
+					<div class="owl-card-description">Let us spam you within an inch of your tolerance</div>
 				</div>
 				<div class="owl-card-content">
 					<div class="space-y-2">
@@ -46,8 +46,8 @@ templ Card() {
 			</div>
 			<div class="owl-card">
 				<div class="owl-card-header">
-					<h3 class="owl-card-title">Login</h3>
-					<p class="owl-card-description">Login to access nothing of value</p>
+					<div class="owl-card-title">Login</div>
+					<div class="owl-card-description">Login to access nothing of value</div>
 				</div>
 				<div class="owl-card-content">
 					<div class="space-y-2">
@@ -63,6 +63,18 @@ templ Card() {
 				</div>
 				<div class="owl-card-footer grid">
 					<button class={ ButtonDefault }>Login</button>
+				</div>
+			</div>
+			<div class="owl-card">
+				<div class="owl-card-header">
+					<div class="owl-card-title">Actions</div>
+					<div class="owl-card-description">Card with an action</div>
+					<div class="owl-card-actions">
+					    <button class="owl-button owl-button-secondary">Action</button>
+					</div>
+				</div>
+				<div class="owl-card-content">
+					<p>Click the action</p>
 				</div>
 			</div>
 		</div>

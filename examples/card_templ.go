@@ -43,7 +43,7 @@ func Card() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"grid gap-6 w-[380px]\"><div class=\"owl-card\"><div class=\"owl-card-header\"><h3 class=\"owl-card-title\">Lorem Ipsum</h3><p class=\"owl-card-description\">Lorem ipsum dolor sit amet</p></div><div class=\"owl-card-content\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><div class=\"owl-card-footer\"><p class=\"text-muted-foreground text-sm\">© Accent Design Group Ltd</p></div></div><div class=\"owl-card\"><div class=\"owl-card-header\"><h3 class=\"owl-card-title\">Lorem Ipsum</h3></div><div class=\"owl-card-content\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div><div class=\"owl-card-footer\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"grid gap-6 w-[380px]\"><div class=\"owl-card\"><div class=\"owl-card-header\"><div class=\"owl-card-title\">Lorem Ipsum</div><div class=\"owl-card-description\">Lorem ipsum dolor sit amet</div></div><div class=\"owl-card-content\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><div class=\"owl-card-footer\"><p class=\"text-muted-foreground text-sm\">© Accent Design Group Ltd</p></div></div><div class=\"owl-card\"><div class=\"owl-card-header\"><div class=\"owl-card-title\">Lorem Ipsum</div></div><div class=\"owl-card-content\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div><div class=\"owl-card-footer\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -65,7 +65,7 @@ func Card() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "\">Continue</button></div></div><div class=\"owl-card\"><div class=\"owl-card-header\"><h3 class=\"owl-card-title\">Spam</h3><p class=\"owl-card-description\">Let us spam you within an inch of your tolerance</p></div><div class=\"owl-card-content\"><div class=\"space-y-2\"><label class=\"owl-label\" for=\"email\">Email</label> <input class=\"owl-input\" id=\"email\" name=\"email\" type=\"email\" placeholder=\"email@example.com\"><p class=\"owl-form-field-description\">Enter your email address.</p></div></div><div class=\"owl-card-footer grid\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "\">Continue</button></div></div><div class=\"owl-card\"><div class=\"owl-card-header\"><div class=\"owl-card-title\">Spam</div><div class=\"owl-card-description\">Let us spam you within an inch of your tolerance</div></div><div class=\"owl-card-content\"><div class=\"space-y-2\"><label class=\"owl-label\" for=\"email\">Email</label> <input class=\"owl-input\" id=\"email\" name=\"email\" type=\"email\" placeholder=\"email@example.com\"><p class=\"owl-form-field-description\">Enter your email address.</p></div></div><div class=\"owl-card-footer grid\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -87,7 +87,7 @@ func Card() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "\">Spam Me</button></div></div><div class=\"owl-card\"><div class=\"owl-card-header\"><h3 class=\"owl-card-title\">Login</h3><p class=\"owl-card-description\">Login to access nothing of value</p></div><div class=\"owl-card-content\"><div class=\"space-y-2\"><label class=\"owl-label\" for=\"email\">Email</label> <input class=\"owl-input\" id=\"email\" name=\"email\" type=\"email\" placeholder=\"email@example.com\"><p class=\"owl-form-field-description\">Enter your email address.</p></div><div class=\"space-y-2\"><label class=\"owl-label\" for=\"password\">Password</label> <input class=\"owl-input\" id=\"password\" name=\"password\" type=\"password\" placeholder=\"password\"><p class=\"owl-form-field-description\">Enter your password.</p></div></div><div class=\"owl-card-footer grid\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "\">Spam Me</button></div></div><div class=\"owl-card\"><div class=\"owl-card-header\"><div class=\"owl-card-title\">Login</div><div class=\"owl-card-description\">Login to access nothing of value</div></div><div class=\"owl-card-content\"><div class=\"space-y-2\"><label class=\"owl-label\" for=\"email\">Email</label> <input class=\"owl-input\" id=\"email\" name=\"email\" type=\"email\" placeholder=\"email@example.com\"><p class=\"owl-form-field-description\">Enter your email address.</p></div><div class=\"space-y-2\"><label class=\"owl-label\" for=\"password\">Password</label> <input class=\"owl-input\" id=\"password\" name=\"password\" type=\"password\" placeholder=\"password\"><p class=\"owl-form-field-description\">Enter your password.</p></div></div><div class=\"owl-card-footer grid\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -109,7 +109,7 @@ func Card() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 7, "\">Login</button></div></div></div>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 7, "\">Login</button></div></div><div class=\"owl-card\"><div class=\"owl-card-header\"><div class=\"owl-card-title\">Actions</div><div class=\"owl-card-description\">Card with an action</div><div class=\"owl-card-actions\"><button class=\"owl-button owl-button-secondary\">Action</button></div></div><div class=\"owl-card-content\"><p>Click the action</p></div></div></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
