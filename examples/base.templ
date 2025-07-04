@@ -22,7 +22,12 @@ templ Base(styles []string, title string) {
 						</svg>
 						<span>OWL</span>
 					</a>
-					<div>{ title }</div>
+					<div class="flex items-center gap-6">
+					    <div>{ title }</div>
+                        <a id="theme-switch" class="p-2 flex items-center text-xl cursor-pointer">
+                            <owl-icon icon="sun-moon"></owl-icon>
+                        </a>
+					</div>
 				</div>
 			</header>
 			<main class="flex gap-4 container mx-auto py-10">
@@ -67,6 +72,18 @@ templ Base(styles []string, title string) {
 					{ children... }
 				</div>
 			</main>
+			<script>
+                document.documentElement.classList.toggle(
+                    "dark",
+                    localStorage.theme === "dark" ||
+                    (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+                );
+                document.getElementById("theme-switch").addEventListener("click", () => {
+                    const isDark = document.documentElement.classList.contains("dark");
+                    document.documentElement.classList.toggle("dark", !isDark);
+                    localStorage.theme = isDark ? "light" : "dark";
+                });
+            </script>
 		</body>
 	</html>
 }
