@@ -3,8 +3,6 @@
     --color-foreground: oklch(0.145 0 0);
     --color-card: oklch(1 0 0);
     --color-card-foreground: oklch(0.145 0 0);
-    --color-popover: oklch(1 0 0);
-    --color-popover-foreground: oklch(0.145 0 0);
     --color-primary: oklch(0.205 0 0);
     --color-primary-foreground: oklch(0.985 0 0);
     --color-secondary: oklch(0.97 0 0);
@@ -39,7 +37,8 @@
         @apply leading-7 [&:not(:first-child)]:mt-6;
     }
     .owl-anchor {
-        @apply font-medium hover:underline hover:underline-offset-4;
+        @apply font-medium;
+        @apply hover:underline hover:underline-offset-4;
     }
     [icon] {
         @apply inline-flex;
@@ -57,10 +56,12 @@
         @apply [&_tr:last-child]:border-0;
     }
     .owl-table-footer {
-        @apply border-t border-t-border bg-muted/50 font-medium [&>tr]:last:border-b-0;
+        @apply border-t border-t-border bg-muted/50 font-medium;
+        @apply [&>tr]:last:border-b-0;
     }
     .owl-table-row {
-        @apply border-b border-b-border transition-colors hover:bg-muted/50;
+        @apply border-b border-b-border transition-colors;
+        @apply hover:bg-muted/50;
     }
     .owl-table-head {
         @apply h-12 px-4 text-left align-middle font-medium;

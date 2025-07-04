@@ -6,7 +6,8 @@
         @apply flex w-full rounded-md border border-input px-3 py-2 text-sm;
     }
     .owl-input {
-        @apply h-10 file:border-0 file:bg-transparent file:text-sm file:font-medium;
+        @apply h-10;
+        @apply file:border-0 file:bg-transparent file:text-sm file:font-medium;
     }
     .owl-select {
         @apply h-10;

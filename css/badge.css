@@ -1,5 +1,14 @@
 @layer components {
     .owl-badge {
-        @apply inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-primary text-primary-foreground;
+        @apply inline-flex items-center rounded px-2 py-0.5 text-xs font-semibold bg-primary text-primary-foreground;
+    }
+    .owl-badge-secondary {
+        @apply bg-secondary text-secondary-foreground;
+    }
+    .owl-badge-destructive {
+        @apply bg-destructive text-destructive-foreground;
+    }
+    .owl-badge-outline {
+        @apply bg-transparent text-foreground border border-input;
     }
 }

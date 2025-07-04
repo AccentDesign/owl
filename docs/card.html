@@ -3,8 +3,6 @@
     --color-foreground: oklch(0.145 0 0);
     --color-card: oklch(1 0 0);
     --color-card-foreground: oklch(0.145 0 0);
-    --color-popover: oklch(1 0 0);
-    --color-popover-foreground: oklch(0.145 0 0);
     --color-primary: oklch(0.205 0 0);
     --color-primary-foreground: oklch(0.985 0 0);
     --color-secondary: oklch(0.97 0 0);
@@ -39,7 +37,8 @@
         @apply leading-7 [&:not(:first-child)]:mt-6;
     }
     .owl-anchor {
-        @apply font-medium hover:underline hover:underline-offset-4;
+        @apply font-medium;
+        @apply hover:underline hover:underline-offset-4;
     }
     [icon] {
         @apply inline-flex;
@@ -48,25 +47,31 @@
 
 @layer components {
     .owl-button {
-        @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md h-10 px-4 py-2 text-sm font-medium cursor-pointer bg-primary text-primary-foreground hover:bg-primary/80;
+        @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md h-10 px-4 py-2 text-sm font-medium cursor-pointer bg-primary text-primary-foreground;
+        @apply hover:bg-primary/80;
     }
     .owl-button-icon {
         @apply size-10 p-0 text-base;
     }
     .owl-button-secondary {
-        @apply bg-secondary text-secondary-foreground hover:bg-secondary/80;
+        @apply bg-secondary text-secondary-foreground;
+        @apply hover:bg-secondary/80;
     }
     .owl-button-destructive {
-        @apply bg-destructive text-destructive-foreground hover:bg-destructive/90;
+        @apply bg-destructive text-destructive-foreground;
+        @apply hover:bg-destructive/90;
     }
     .owl-button-outline {
-        @apply bg-transparent text-foreground border border-input hover:bg-secondary/80;
+        @apply bg-transparent text-foreground border border-input;
+        @apply hover:bg-secondary/80;
     }
     .owl-button-ghost {
-        @apply bg-transparent text-foreground hover:bg-secondary/80;
+        @apply bg-transparent text-foreground;
+        @apply hover:bg-secondary/80;
     }
     .owl-button-link {
-        @apply bg-transparent text-foreground hover:bg-transparent hover:underline hover:underline-offset-4;
+        @apply bg-transparent text-foreground;
+        @apply hover:bg-transparent hover:underline hover:underline-offset-4;
     }
 }
 @layer components {
@@ -97,7 +102,8 @@
         @apply flex w-full rounded-md border border-input px-3 py-2 text-sm;
     }
     .owl-input {
-        @apply h-10 file:border-0 file:bg-transparent file:text-sm file:font-medium;
+        @apply h-10;
+        @apply file:border-0 file:bg-transparent file:text-sm file:font-medium;
     }
     .owl-select {
         @apply h-10;

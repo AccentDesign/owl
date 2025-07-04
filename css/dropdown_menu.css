@@ -15,6 +15,7 @@
         @apply -mx-1 my-1 h-px bg-muted;
     }
     .owl-dropdown-menu-item {
-        @apply w-full relative flex select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-secondary/80;
+        @apply w-full relative flex select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none;
+        @apply hover:bg-secondary/80;
     }
 }

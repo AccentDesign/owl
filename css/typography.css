@@ -15,7 +15,8 @@
         @apply leading-7 [&:not(:first-child)]:mt-6;
     }
     .owl-anchor {
-        @apply font-medium hover:underline hover:underline-offset-4;
+        @apply font-medium;
+        @apply hover:underline hover:underline-offset-4;
     }
     [icon] {
         @apply inline-flex;

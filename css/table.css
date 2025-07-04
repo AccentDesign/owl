@@ -9,10 +9,12 @@
         @apply [&_tr:last-child]:border-0;
     }
     .owl-table-footer {
-        @apply border-t border-t-border bg-muted/50 font-medium [&>tr]:last:border-b-0;
+        @apply border-t border-t-border bg-muted/50 font-medium;
+        @apply [&>tr]:last:border-b-0;
     }
     .owl-table-row {
-        @apply border-b border-b-border transition-colors hover:bg-muted/50;
+        @apply border-b border-b-border transition-colors;
+        @apply hover:bg-muted/50;
     }
     .owl-table-head {
         @apply h-12 px-4 text-left align-middle font-medium;
