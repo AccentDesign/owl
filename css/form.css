@@ -3,7 +3,7 @@
         @apply inline-block text-sm font-medium leading-none cursor-pointer;
     }
     .owl-input, .owl-select, .owl-textarea {
-        @apply flex w-full rounded-md border border-input px-3 py-2 text-sm;
+        @apply flex w-full bg-input/30 rounded-md border border-input px-3 py-2 text-sm;
     }
     .owl-input {
         @apply h-10;
